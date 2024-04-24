@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
 
     Rigidbody rb;
     float shotForce = 5000f;
-    int damage = 100;
+    int damage = 10;
     float range = 3f;
     float duration;
 
@@ -46,9 +46,19 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    //Collision Detection
     private void OnCollisionEnter(Collision collision)
     {
-        //Collision Code Goes Here
-        Debug.Log("Hit");
+        //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
+        if(collision.gameObject.tag == "EnemyWeakpoint")
+        {
+            if (collision.gameObject.GetComponent<Weakpoints>().canTakeDamage == true)
+            {
+                collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
+                collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;           
+            }
+        }
+        Destroy(gameObject);
+
     }
 }

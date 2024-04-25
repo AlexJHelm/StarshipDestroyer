@@ -6,10 +6,30 @@ public class GameManager : MonoBehaviour
 {
     //Variable Declaration
 
+    public static GameManager GM { get; private set; }
+
     public int enemyWeakpointsDestroyed = 0;
     public int allyWeakpointsDestroyed = 0;
 
+    int scrap;
+    int maxShipUpgradeTotal;
+    bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked;
+
+    int currentlyAllocated, fightersAllocated, bombersAllocated, defendersAllocated;
+
     //Methods
+
+    //Singleton to assign GameManager
+    private void Awake()
+    {
+        if (GM != null && GM != this)
+        {
+            Destroy(this);
+            return;
+        }
+
+        GM = this;
+    }
 
     // Start is called before the first frame update
     void Start()

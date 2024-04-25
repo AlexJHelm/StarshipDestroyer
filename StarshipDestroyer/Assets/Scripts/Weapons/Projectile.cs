@@ -57,8 +57,14 @@ public class Projectile : MonoBehaviour
                 collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
                 collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;           
             }
-        }
-        Destroy(gameObject);
 
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "CapitolShip")
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }

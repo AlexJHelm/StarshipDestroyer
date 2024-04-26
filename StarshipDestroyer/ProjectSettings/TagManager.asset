@@ -8,6 +8,7 @@ TagManager:
   - AllyWeakpoint
   - GameManager
   - CapitolShip
+  - Enemy
   layers:
   - Default
   - TransparentFX

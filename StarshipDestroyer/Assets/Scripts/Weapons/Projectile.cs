@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
     private void OnEnable()
     {
         //Adds force and sets the projectiles range when it is active
-        rb.AddForce(shotForce * transform.up);
+        rb.AddForce(shotForce * transform.forward);
         duration = range;
     }
 

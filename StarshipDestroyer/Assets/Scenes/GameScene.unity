@@ -2932,8 +2932,9 @@ GameObject:
   - component: {fileID: 5923117647676640023}
   - component: {fileID: 9081153587134002564}
   - component: {fileID: 7871859861710128758}
+  - component: {fileID: 9081153587134002565}
   m_Layer: 0
-  m_Name: Booster Speed
+  m_Name: BoosterSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3031,3 +3032,15 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6961693698998884743}
   m_Mesh: {fileID: 6014432761217593723, guid: 8fef30a228bd47c43810811265187ef7, type: 3}
+--- !u!114 &9081153587134002565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6961693698998884743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74aed40934e60484695560dce7eb55d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

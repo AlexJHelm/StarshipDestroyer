@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
     //Variable Declarations
 
@@ -50,7 +50,7 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
-        if(collision.gameObject.tag == "EnemyWeakpoint")
+        if(collision.gameObject.tag == "AllyWeakpoint")
         {
             if (collision.gameObject.GetComponent<Weakpoints>().canTakeDamage == true)
             {

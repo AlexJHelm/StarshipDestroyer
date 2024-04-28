@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] Transform target;
     //[SerializeField] Projectile shot;
-    public Projectile projectilePrefab;
+    public EnemyProjectile projectilePrefab;
     public Transform muzzle;
     public float shotCooldown = 0.25f;
     float shotDuration;

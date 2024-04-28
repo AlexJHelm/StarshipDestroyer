@@ -7,7 +7,7 @@ public class Laser : MonoBehaviour
 
     //Variable Declarations
 
-    public Projectile projectilePrefab;
+    public PlayerProjectile projectilePrefab;
     public Transform muzzle;
     public float laserCooldown = 10f;
     public float laserDuration = 2f;

@@ -65,6 +65,12 @@ public class EnemyProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<ShipController>().health -= damage;
+            Destroy(gameObject);
+        }
+
     }
 }

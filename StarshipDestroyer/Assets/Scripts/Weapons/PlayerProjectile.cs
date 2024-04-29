@@ -65,6 +65,12 @@ public class PlayerProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
+            Destroy(gameObject);
+        }
         
     }
 }

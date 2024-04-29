@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] Transform target;
+    public LayerMask aggroLayerMask;
+    private Collider[] aggroColliders;
     //[SerializeField] Projectile shot;
     public EnemyProjectile projectilePrefab;
     public Transform muzzle;
@@ -21,13 +23,24 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //InFront();
         //HaveLineOfSight();
-        if (CanFire && InFront() && HaveLineOfSight())
+
+        aggroColliders = Physics.OverlapSphere(transform.position, 40, aggroLayerMask);
+
+        if(aggroColliders.Length > 0)
         {
-            FireProjectile();
+            transform.gameObject.GetComponent<EnemyMovement>().isChasing = true;
+            if (CanFire && InFront() && HaveLineOfSight())
+            {
+                FireProjectile();
+            }
+        }
+        else
+        {
+            transform.gameObject.GetComponent<EnemyMovement>().isChasing = false;
         }
     }
 

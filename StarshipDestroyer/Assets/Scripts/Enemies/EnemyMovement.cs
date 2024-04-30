@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]Transform target;
+    [SerializeField]Transform playerTarget;
+    [SerializeField]Transform defaultTarget;
     [SerializeField]float rotationalDamp = .5f;
     [SerializeField]float movementSpeed = 10f;
     public bool isChasing = false;
@@ -25,7 +26,13 @@ public class EnemyMovement : MonoBehaviour
     {
         if(isChasing == true)
         {
-            Vector3 pos = target.position - transform.position;
+            Vector3 pos = playerTarget.position - transform.position;
+            Quaternion rotation = Quaternion.LookRotation(pos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
+        }
+        if (isChasing == false)
+        {
+            Vector3 pos = defaultTarget.position - transform.position;
             Quaternion rotation = Quaternion.LookRotation(pos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
         }

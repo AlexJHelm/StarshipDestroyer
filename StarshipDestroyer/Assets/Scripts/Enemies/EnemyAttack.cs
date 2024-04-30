@@ -11,6 +11,7 @@ public class EnemyAttack : MonoBehaviour
     public EnemyProjectile projectilePrefab;
     public Transform muzzle;
     public float shotCooldown = 0.25f;
+    public float aggroRadius = 40f;
     float shotDuration;
     float range = 3000f;
 
@@ -28,7 +29,7 @@ public class EnemyAttack : MonoBehaviour
         //InFront();
         //HaveLineOfSight();
 
-        aggroColliders = Physics.OverlapSphere(transform.position, 40, aggroLayerMask);
+        aggroColliders = Physics.OverlapSphere(transform.position, aggroRadius, aggroLayerMask);
 
         if(aggroColliders.Length > 0)
         {

@@ -796,9 +796,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1751651791369492175, guid: 560d5fa9b64f11c4e9140423dce8aa92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3637808629037241351, guid: 560d5fa9b64f11c4e9140423dce8aa92, type: 3}
       propertyPath: m_Name
       value: Player HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856041495093714140, guid: 560d5fa9b64f11c4e9140423dce8aa92, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8139796889074475833, guid: 560d5fa9b64f11c4e9140423dce8aa92, type: 3}
       propertyPath: m_RootOrder

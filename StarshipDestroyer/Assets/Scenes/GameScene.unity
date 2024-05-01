@@ -1711,6 +1711,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2298691223839552681, guid: baef9a94dfe6af749be5b9989aa76ab5, type: 3}
+      propertyPath: weakpointHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416865609302107618, guid: baef9a94dfe6af749be5b9989aa76ab5, type: 3}
+      propertyPath: weakpointHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784427909642352951, guid: baef9a94dfe6af749be5b9989aa76ab5, type: 3}
+      propertyPath: weakpointHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8502733845474968172, guid: baef9a94dfe6af749be5b9989aa76ab5, type: 3}
       propertyPath: m_RootOrder
       value: 1

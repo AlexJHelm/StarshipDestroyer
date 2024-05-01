@@ -20,6 +20,11 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void WinScene()
+    {
+        SceneManager.LoadScene(3);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

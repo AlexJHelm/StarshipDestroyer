@@ -6,7 +6,7 @@ public class BasicShot : MonoBehaviour
 {
     //Variable Declarations
 
-    public Projectile projectilePrefab;
+    public PlayerProjectile projectilePrefab;
     public Transform muzzle;
     public float shotCooldown = 0.25f;
     float shotDuration;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
     //Variable Declarations
 
@@ -57,8 +57,20 @@ public class Projectile : MonoBehaviour
                 collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
                 collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;           
             }
-        }
-        Destroy(gameObject);
 
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "CapitolShip")
+        {
+            Destroy(gameObject);
+        }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
+            Destroy(gameObject);
+        }
+        
     }
 }

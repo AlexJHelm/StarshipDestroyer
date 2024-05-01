@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197818944441410121, guid: 3def71ffbbd5bf5409b1c5559b4f87c2, type: 3}
       propertyPath: health
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3197818944441410121, guid: 3def71ffbbd5bf5409b1c5559b4f87c2, type: 3}
       propertyPath: target
@@ -804,7 +804,7 @@ PrefabInstance:
       objectReference: {fileID: 208898681}
     - target: {fileID: 5677476129161850375, guid: 3da6abf80d51e7143b1a6f4af8f896b0, type: 3}
       propertyPath: health
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5677476129161850375, guid: 3da6abf80d51e7143b1a6f4af8f896b0, type: 3}
       propertyPath: rollSpeed

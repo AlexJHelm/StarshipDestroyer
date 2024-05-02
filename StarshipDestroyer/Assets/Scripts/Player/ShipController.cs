@@ -11,7 +11,8 @@ public class ShipController : MonoBehaviour
     public float forwardSpeed = 25f, hoverSpeed = 5f, rollSpeed = 90f, rollAcceleration = 3.5f;
     private float activeForwardSpeed, activeHoverSpeed, rollInput;
 
-    public int health = 100;
+    public int maxHealth = 100;
+    public int health;
     public Vector3 respawnPos;
     public Camera mainCamera;
     public Camera overlookCamera;
@@ -44,6 +45,8 @@ public class ShipController : MonoBehaviour
 
         //Locks cursor to stay inside of screen
         Cursor.lockState = CursorLockMode.Confined;
+
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -63,7 +66,7 @@ public class ShipController : MonoBehaviour
             mouseDistance = Vector2.ClampMagnitude(mouseDistance, 0.5f);
 
             //Rotates ship based on x, y, and z speeds and mouse movements
-            transform.Rotate(mouseDistance.y * xLookRotateSpeed * Time.deltaTime, -mouseDistance.x * yLookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+            transform.Rotate(-mouseDistance.y * xLookRotateSpeed * Time.deltaTime, mouseDistance.x * yLookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
 
             //Updates speed in each direction
             activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);

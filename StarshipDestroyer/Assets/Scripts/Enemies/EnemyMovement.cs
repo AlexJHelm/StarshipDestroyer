@@ -12,6 +12,14 @@ public class EnemyMovement : MonoBehaviour
 
     public int health = 100;
 
+
+
+    public void Start()
+    {
+        playerTarget = GameObject.FindWithTag("Player").transform;
+        defaultTarget = GameObject.FindWithTag("EnemyDefaultTarget").transform;
+    }
+
     void Update()
     {
         if(health <= 0)

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager GM { get; private set; }
 
     public EnemyMovement enemyPrefab;
+    public BomberMovement bomberPrefab;
     public Transform enemyRespawnPos;
 
     public int enemyWeakpointsDestroyed = 0;
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
         if (canSpawn == true)
         {
             Instantiate(enemyPrefab, enemyRespawnPos.position, transform.rotation);
+            Instantiate(bomberPrefab, enemyRespawnPos.position, transform.rotation);
             StartCoroutine(RespawnTimer());
         }
 

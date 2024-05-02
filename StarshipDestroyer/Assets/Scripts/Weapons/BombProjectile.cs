@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProjectile : MonoBehaviour
+public class BombProjectile : MonoBehaviour
 {
-    //Variable Declarations
-
     Rigidbody rb;
-    float shotForce = 5000f;
+    float shotForce = 500f;
     int damage = 10;
     float range = 3f;
     float duration;
@@ -40,7 +38,7 @@ public class PlayerProjectile : MonoBehaviour
     private void Update()
     {
         //Destroys game object if projectile moves out of range
-        if(outOfRange)
+        if (outOfRange)
         {
             Destroy(gameObject);
         }
@@ -50,12 +48,12 @@ public class PlayerProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
-        if(collision.gameObject.tag == "EnemyWeakpoint")
+        if (collision.gameObject.tag == "AllyThrusters" || collision.gameObject.tag == "AllyBridge" || collision.gameObject.tag == "AllyWeapons")
         {
             if (collision.gameObject.GetComponent<Weakpoints>().canTakeDamage == true)
             {
                 collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
-                collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;           
+                collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;
             }
 
             Destroy(gameObject);
@@ -66,15 +64,9 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "EnemyBomber")
-        {
-            collision.gameObject.GetComponent<BomberMovement>().health -= damage;
+            collision.gameObject.GetComponent<ShipController>().health -= damage;
             Destroy(gameObject);
         }
 

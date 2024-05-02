@@ -24,6 +24,11 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
+    public void Awake()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+    }
+
     private void FixedUpdate()
     {
         //InFront();

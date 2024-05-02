@@ -5,11 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - EnemyWeakpoint
-  - AllyWeakpoint
   - GameManager
   - CapitolShip
   - Enemy
   - EnemyDefaultTarget
+  - AllyThrusters
+  - AllyBridge
+  - AllyWeapons
+  - EnemyBomber
   layers:
   - Default
   - TransparentFX

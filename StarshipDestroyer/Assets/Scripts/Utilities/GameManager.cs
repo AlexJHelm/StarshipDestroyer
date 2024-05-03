@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public EnemyMovement enemyPrefab;
     public BomberMovement bomberPrefab;
+    public DefenderMovement defenderPrefab;
     public Transform enemyRespawnPos;
 
     public int enemyWeakpointsDestroyed = 0;
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(enemyPrefab, enemyRespawnPos.position, transform.rotation);
             Instantiate(bomberPrefab, enemyRespawnPos.position, transform.rotation);
+            Instantiate(defenderPrefab, enemyRespawnPos.position, transform.rotation);
             StartCoroutine(RespawnTimer());
         }
 
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
         if (allyWeakpointsDestroyed >= 3)
         {
             //Lose Game
-            Debug.Log("You Lose...");
+            SceneManager.LoadScene(4);
         }
     }
 

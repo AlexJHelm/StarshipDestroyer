@@ -60,7 +60,7 @@ public class BomberMovement : MonoBehaviour
         }
         else if (GameManager.GM.allyWeakpointsDestroyed == 2)
         {
-            Vector3 pos = (mainTarget.position - new Vector3(50, 0, 0)) - transform.position;
+            Vector3 pos = (mainTarget.position - new Vector3(80, 0, 0)) - transform.position;
             Quaternion rotation = Quaternion.LookRotation(pos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
         }

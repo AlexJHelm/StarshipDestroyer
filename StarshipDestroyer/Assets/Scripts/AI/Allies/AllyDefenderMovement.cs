@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DefenderMovement : MonoBehaviour
+public class AllyDefenderMovement : MonoBehaviour
 {
-    [SerializeField] Transform playerTarget;
+    [SerializeField] Transform enemyTarget;
     [SerializeField] Transform patrolPoint;
     [SerializeField] float patrolRotationalDamp = .5f;
     [SerializeField] float chasingRotationalDamp = .5f;
@@ -17,8 +17,8 @@ public class DefenderMovement : MonoBehaviour
 
     public void Start()
     {
-        playerTarget = GameObject.FindWithTag("Player").transform;
-        patrolPoint = GameObject.FindWithTag("EnemyDefenderPatrolPos").transform;
+        //playerTarget = GameObject.FindWithTag("Player").transform;
+        patrolPoint = GameObject.FindWithTag("AllyDefenderPatrolPos").transform;
     }
 
     void Update()
@@ -35,7 +35,8 @@ public class DefenderMovement : MonoBehaviour
     {
         if (isChasing == true)
         {
-            Vector3 pos = playerTarget.position - transform.position;
+            enemyTarget = transform.gameObject.GetComponent<AllyDefenderAttack>().aggroColliders[0].transform;
+            Vector3 pos = enemyTarget.position - transform.position;
             Quaternion rotation = Quaternion.LookRotation(pos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, chasingRotationalDamp * Time.deltaTime);
         }

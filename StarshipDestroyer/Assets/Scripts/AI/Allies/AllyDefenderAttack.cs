@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class AllyDefenderAttack : MonoBehaviour
 {
     [SerializeField] Transform target;
     public LayerMask aggroLayerMask;
-    private Collider[] aggroColliders;
+    public Collider[] aggroColliders;
     //[SerializeField] Projectile shot;
-    public EnemyProjectile projectilePrefab;
+    public PlayerProjectile projectilePrefab;
     public Transform muzzle;
     public float shotCooldown = 0.25f;
     public float aggroRadius = 40f;
@@ -24,11 +24,6 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    public void Awake()
-    {
-        target = GameObject.FindWithTag("Player").transform;
-    }
-
     private void FixedUpdate()
     {
         //InFront();
@@ -36,9 +31,10 @@ public class EnemyAttack : MonoBehaviour
 
         aggroColliders = Physics.OverlapSphere(transform.position, aggroRadius, aggroLayerMask);
 
-        if(aggroColliders.Length > 0)
+        if (aggroColliders.Length > 0)
         {
-            transform.gameObject.GetComponent<EnemyMovement>().isChasing = true;
+            target = aggroColliders[0].transform;
+            transform.gameObject.GetComponent<AllyDefenderMovement>().isChasing = true;
             if (CanFire && InFront() && HaveLineOfSight())
             {
                 FireProjectile();
@@ -46,7 +42,7 @@ public class EnemyAttack : MonoBehaviour
         }
         else
         {
-            transform.gameObject.GetComponent<EnemyMovement>().isChasing = false;
+            transform.gameObject.GetComponent<AllyDefenderMovement>().isChasing = false;
         }
     }
 
@@ -55,7 +51,7 @@ public class EnemyAttack : MonoBehaviour
         Vector3 directionToTarget = transform.position - target.position;
         float angle = Vector3.Angle(transform.forward, directionToTarget);
 
-        if(Mathf.Abs(angle) > 90 && Mathf.Abs(angle) < 270)
+        if (Mathf.Abs(angle) > 90 && Mathf.Abs(angle) < 270)
         {
             Debug.DrawLine(transform.position, target.position, Color.green);
             return true;
@@ -72,9 +68,9 @@ public class EnemyAttack : MonoBehaviour
         Vector3 direction = target.position - transform.position;
         //Debug.DrawRay(shot.transform.position, direction, Color.red);
 
-        if(Physics.Raycast(muzzle.position, direction, out hit, range))
+        if (Physics.Raycast(muzzle.position, direction, out hit, range))
         {
-            if(hit.transform.CompareTag("Player"))
+            if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("EnemyBomber") || hit.transform.CompareTag("EnemyDefender"))
             {
                 Debug.Log("Player Hit");
                 return true;

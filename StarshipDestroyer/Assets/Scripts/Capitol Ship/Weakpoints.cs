@@ -28,7 +28,7 @@ public class Weakpoints : MonoBehaviour
         //Adds up total weak points destroyed
         if (weakpointHealth <= 0)
         {
-            if(gameObject.tag == "EnemyWeakpoint")
+            if(gameObject.tag == "EnemyThrusters" || gameObject.tag == "EnemyBridge" || gameObject.tag == "EnemyWeapons")
             {
                 gm.GetComponent<GameManager>().enemyWeakpointsDestroyed++;
             }

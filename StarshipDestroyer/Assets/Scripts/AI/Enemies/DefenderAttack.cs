@@ -6,7 +6,7 @@ public class DefenderAttack : MonoBehaviour
 {
     [SerializeField] Transform target;
     public LayerMask aggroLayerMask;
-    private Collider[] aggroColliders;
+    public Collider[] aggroColliders;
     //[SerializeField] Projectile shot;
     public EnemyProjectile projectilePrefab;
     public Transform muzzle;
@@ -24,11 +24,6 @@ public class DefenderAttack : MonoBehaviour
         }
     }
 
-    public void Awake()
-    {
-        target = GameObject.FindWithTag("Player").transform;
-    }
-
     private void FixedUpdate()
     {
         //InFront();
@@ -38,6 +33,7 @@ public class DefenderAttack : MonoBehaviour
 
         if (aggroColliders.Length > 0)
         {
+            target = aggroColliders[0].transform;
             transform.gameObject.GetComponent<DefenderMovement>().isChasing = true;
             if (CanFire && InFront() && HaveLineOfSight())
             {
@@ -74,7 +70,7 @@ public class DefenderAttack : MonoBehaviour
 
         if (Physics.Raycast(muzzle.position, direction, out hit, range))
         {
-            if (hit.transform.CompareTag("Player"))
+            if (hit.transform.CompareTag("Player") || hit.transform.CompareTag("Ally") || hit.transform.CompareTag("AllyBomber") || hit.transform.CompareTag("AllyDefender"))
             {
                 Debug.Log("Player Hit");
                 return true;

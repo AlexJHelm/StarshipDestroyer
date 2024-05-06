@@ -10,7 +10,7 @@ public class BomberAttack : MonoBehaviour
     public Transform muzzle;
     public float shotCooldown = 5f;
     float shotDuration;
-    float range = 500f;
+    float range = 100f;
 
     bool CanFire
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProjectile : MonoBehaviour
+public class AllyProjectile : MonoBehaviour
 {
     //Variable Declarations
 
@@ -40,7 +40,7 @@ public class PlayerProjectile : MonoBehaviour
     private void Update()
     {
         //Destroys game object if projectile moves out of range
-        if(outOfRange)
+        if (outOfRange)
         {
             Destroy(gameObject);
         }
@@ -50,14 +50,8 @@ public class PlayerProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
-        if(collision.gameObject.tag == "EnemyThrusters" || collision.gameObject.tag == "EnemyBridge" || collision.gameObject.tag == "EnemyWeapons")
+        if (collision.gameObject.tag == "EnemyWeakpoint")
         {
-            if (collision.gameObject.GetComponent<Weakpoints>().canTakeDamage == true)
-            {
-                collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
-                collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;           
-            }
-
             Destroy(gameObject);
         }
 
@@ -66,7 +60,7 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
             Destroy(gameObject);

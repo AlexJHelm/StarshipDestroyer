@@ -12,7 +12,11 @@ public class GameManager : MonoBehaviour
     public EnemyMovement enemyPrefab;
     public BomberMovement bomberPrefab;
     public DefenderMovement defenderPrefab;
+    public AllyMovement allyPrefab;
+    public AllyBomberMovement allyBomberPrefab;
+    public AllyDefenderMovement allyDefenderPrefab;
     public Transform enemyRespawnPos;
+    public Transform allyRespawnPos;
 
     public int enemyWeakpointsDestroyed = 0;
     public int allyWeakpointsDestroyed = 0;
@@ -53,6 +57,9 @@ public class GameManager : MonoBehaviour
             Instantiate(enemyPrefab, enemyRespawnPos.position, transform.rotation);
             Instantiate(bomberPrefab, enemyRespawnPos.position, transform.rotation);
             Instantiate(defenderPrefab, enemyRespawnPos.position, transform.rotation);
+            Instantiate(allyPrefab, allyRespawnPos.position, transform.rotation);
+            Instantiate(allyBomberPrefab, allyRespawnPos.position, transform.rotation);
+            Instantiate(allyDefenderPrefab, allyRespawnPos.position, transform.rotation);
             StartCoroutine(RespawnTimer());
         }
 
@@ -74,7 +81,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator RespawnTimer()
     {
         canSpawn = false;
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(60f);
         canSpawn = true;
     }
 }

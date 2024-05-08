@@ -20,11 +20,30 @@ public class AllyBomberMovement : MonoBehaviour
         }
         else if (GameManager.GM.enemyWeakpointsDestroyed == 1)
         {
-            mainTarget = GameObject.FindWithTag("EnemyBridge").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if(GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyBridge").transform;
+            }          
         }
         else
         {
-            mainTarget = GameObject.FindWithTag("EnemyWeapons").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if (GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyBridge").transform;
+            }
+            else
+            {
+                mainTarget = GameObject.FindWithTag("EnemyWeapons").transform;
+            }
+            
         }
     }
 
@@ -40,11 +59,30 @@ public class AllyBomberMovement : MonoBehaviour
         }
         else if (GameManager.GM.enemyWeakpointsDestroyed == 1)
         {
-            mainTarget = GameObject.FindWithTag("EnemyBridge").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if (GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyBridge").transform;
+            }
         }
         else
         {
-            mainTarget = GameObject.FindWithTag("EnemyWeapons").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if (GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                mainTarget = GameObject.FindWithTag("EnemyBridge").transform;
+            }
+            else
+            {
+                mainTarget = GameObject.FindWithTag("EnemyWeapons").transform;
+            }
+
         }
         Turn();
         Move();
@@ -52,15 +90,24 @@ public class AllyBomberMovement : MonoBehaviour
 
     void Turn()
     {
-        if (GameManager.GM.enemyWeakpointsDestroyed < 2)
+        if (GameManager.GM.enemyWeaponsDestroyed == false)
+        {
+            if (mainTarget == GameObject.FindWithTag("EnemyWeapons").transform)
+            {
+                Vector3 pos = (mainTarget.position + new Vector3(80, 0, 0)) - transform.position;
+                Quaternion rotation = Quaternion.LookRotation(pos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
+            }
+            else
+            {
+                Vector3 pos = (mainTarget.position - new Vector3(50, 0, 0)) - transform.position;
+                Quaternion rotation = Quaternion.LookRotation(pos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
+            }
+        }
+        else
         {
             Vector3 pos = (mainTarget.position - new Vector3(50, 0, 0)) - transform.position;
-            Quaternion rotation = Quaternion.LookRotation(pos);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
-        }
-        else if (GameManager.GM.enemyWeakpointsDestroyed == 2)
-        {
-            Vector3 pos = (mainTarget.position + new Vector3(80, 0, 0)) - transform.position;
             Quaternion rotation = Quaternion.LookRotation(pos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
         }

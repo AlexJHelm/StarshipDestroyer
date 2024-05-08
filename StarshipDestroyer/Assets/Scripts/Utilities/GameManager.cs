@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     public int enemyWeakpointsDestroyed = 0;
     public int allyWeakpointsDestroyed = 0;
 
+    public bool enemyWeaponsDestroyed;
+    public bool enemyBridgeDestroyed;
+    public bool enemyThrustersDestroyed;
+
     public bool canSpawn = true;
 
     int scrap;

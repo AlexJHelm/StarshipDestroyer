@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class AllyMovement : MonoBehaviour
 {
-    [SerializeField]Transform playerTarget;
-    [SerializeField]Transform defaultTarget;
-    [SerializeField]float rotationalDamp = .5f;
-    [SerializeField]float movementSpeed = 10f;
+    [SerializeField] Transform enemyTarget;
+    [SerializeField] Transform defaultTarget;
+    [SerializeField] float rotationalDamp = .5f;
+    [SerializeField] float movementSpeed = 10f;
     public bool isChasing = false;
 
     public int health = 100;
@@ -16,13 +16,13 @@ public class EnemyMovement : MonoBehaviour
 
     public void Start()
     {
-        playerTarget = GameObject.FindWithTag("Player").transform;
-        defaultTarget = GameObject.FindWithTag("EnemyDefaultTarget").transform;
+        //enemyTarget = GameObject.FindWithTag("Player").transform;
+        defaultTarget = GameObject.FindWithTag("AllyDefaultTarget").transform;
     }
 
     void Update()
     {
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
@@ -32,9 +32,10 @@ public class EnemyMovement : MonoBehaviour
 
     void Turn()
     {
-        if(isChasing == true)
+        if (isChasing == true)
         {
-            Vector3 pos = playerTarget.position - transform.position;
+            enemyTarget = transform.gameObject.GetComponent<AllyAttack>().aggroColliders[0].transform;
+            Vector3 pos = enemyTarget.position - transform.position;
             Quaternion rotation = Quaternion.LookRotation(pos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
         }
@@ -48,14 +49,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void Move()
     {
-        if(isChasing == true)
+        if (isChasing == true)
         {
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
         }
         else
         {
-            transform.position += transform.forward * movementSpeed/2 * Time.deltaTime;
+            transform.position += transform.forward * movementSpeed / 2 * Time.deltaTime;
         }
-        
+
     }
 }

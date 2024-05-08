@@ -23,6 +23,10 @@ public class Menu : MonoBehaviour
     public void WinScene()
     {
         SceneManager.LoadScene(3);
+    }    
+    public void LoseScene()
+    {
+        SceneManager.LoadScene(4);
     }
 
     public void QuitGame()

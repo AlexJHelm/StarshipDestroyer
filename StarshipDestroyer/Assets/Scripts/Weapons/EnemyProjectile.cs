@@ -52,12 +52,6 @@ public class EnemyProjectile : MonoBehaviour
         //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
         if(collision.gameObject.tag == "AllyWeakpoint")
         {
-            if (collision.gameObject.GetComponent<Weakpoints>().canTakeDamage == true)
-            {
-                collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
-                collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;           
-            }
-
             Destroy(gameObject);
         }
 

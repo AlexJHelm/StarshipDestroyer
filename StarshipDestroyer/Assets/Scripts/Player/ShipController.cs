@@ -45,6 +45,7 @@ public class ShipController : MonoBehaviour
 
         //Locks cursor to stay inside of screen
         Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
 
         health = maxHealth;
     }

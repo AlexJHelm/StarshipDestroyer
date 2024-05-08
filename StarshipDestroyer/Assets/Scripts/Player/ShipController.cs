@@ -43,10 +43,6 @@ public class ShipController : MonoBehaviour
         screenCenter.x = Screen.width * .5f;
         screenCenter.y = Screen.height * .5f;
 
-        //Locks cursor to stay inside of screen
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
-
         health = maxHealth;
     }
 

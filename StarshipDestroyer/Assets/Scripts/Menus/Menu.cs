@@ -7,54 +7,48 @@ public class Menu : MonoBehaviour
 {
     public void MainMenu()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        GameManager.GM.inGame = false;
         SceneManager.LoadScene(0);
     }
 
     public void PlayGame()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        GameManager.GM.inGame = false;
         SceneManager.LoadScene(1);
     }
 
     public void GameScene()
     {
+        GameManager.GM.inGame = true;
         SceneManager.LoadScene(2);
     }
 
     public void WinScene()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        GameManager.GM.inGame = false;
         SceneManager.LoadScene(3);
     }    
     public void LoseScene()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        GameManager.GM.inGame = false;
         SceneManager.LoadScene(4);
     }
 
     public void Instructions()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        GameManager.GM.inGame = false;
         SceneManager.LoadScene(5);
     }
 
     public void Credits()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        GameManager.GM.inGame = false;
         SceneManager.LoadScene(6);
     }
 
     public void Options()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        GameManager.GM.inGame = false;
         SceneManager.LoadScene(7);
     }
 

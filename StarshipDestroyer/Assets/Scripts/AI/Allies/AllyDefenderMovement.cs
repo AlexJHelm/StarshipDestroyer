@@ -25,6 +25,7 @@ public class AllyDefenderMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            GameManager.GM.defendersAlive -= 1;
             Destroy(gameObject);
         }
         Turn();

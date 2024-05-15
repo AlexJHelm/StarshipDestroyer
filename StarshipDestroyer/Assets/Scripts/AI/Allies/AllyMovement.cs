@@ -24,6 +24,7 @@ public class AllyMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            GameManager.GM.fightersAlive -= 1;
             Destroy(gameObject);
         }
         Turn();

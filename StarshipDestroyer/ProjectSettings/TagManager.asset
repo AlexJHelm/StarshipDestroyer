@@ -23,6 +23,18 @@ TagManager:
   - EnemyWeapons
   - AllyDefender
   - AllyDefenderPatrolPos
+  - UpgradeText
+  - RemainingText
+  - FighterText
+  - BomberText
+  - DefenderText
+  - EnemyRespawnPos1
+  - EnemyRespawnPos2
+  - EnemyRespawnPos3
+  - BaseText
+  - RespawnPos1
+  - RespawnPos2
+  - RespawnPos3
   layers:
   - Default
   - TransparentFX

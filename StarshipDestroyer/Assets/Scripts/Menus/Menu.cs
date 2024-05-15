@@ -13,12 +13,17 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
+        GameManager.GM.inSetup = true;
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(1);
     }
 
     public void GameScene()
     {
+        GameManager.GM.maxFighters = GameManager.GM.fightersAllocated;
+        GameManager.GM.maxBombers = GameManager.GM.bombersAllocated;
+        GameManager.GM.maxDefenders = GameManager.GM.defendersAllocated;
+        GameManager.GM.inSetup = false;
         GameManager.GM.inGame = true;
         SceneManager.LoadScene(2);
     }

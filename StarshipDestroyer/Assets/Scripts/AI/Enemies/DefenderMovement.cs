@@ -25,6 +25,7 @@ public class DefenderMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            GameManager.GM.enemyDefendersAlive -= 1;
             Destroy(gameObject);
         }
         Turn();

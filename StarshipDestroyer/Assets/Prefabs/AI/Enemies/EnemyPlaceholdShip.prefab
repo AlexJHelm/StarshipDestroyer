@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2478885683799673016}
   - component: {fileID: 356666894156080148}
   - component: {fileID: 8063442204848332276}
+  - component: {fileID: 6201247168095733788}
   m_Layer: 7
   m_Name: EnemyPlaceholdShip
   m_TagString: Enemy
@@ -66,7 +67,7 @@ Transform:
   m_Children:
   - {fileID: 330294816349897079}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7592459207542649293
 MeshFilter:
@@ -178,3 +179,30 @@ MonoBehaviour:
   muzzle: {fileID: 330294816349897079}
   shotCooldown: 0.25
   aggroRadius: 50
+--- !u!54 &6201247168095733788
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719970720696879626}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

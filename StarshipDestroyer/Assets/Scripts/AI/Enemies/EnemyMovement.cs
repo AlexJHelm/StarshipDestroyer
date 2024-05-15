@@ -24,6 +24,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if(health <= 0)
         {
+            GameManager.GM.enemyFightersAlive -= 1;
             Destroy(gameObject);
         }
         Turn();

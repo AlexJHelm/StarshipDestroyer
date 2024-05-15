@@ -51,6 +51,7 @@ public class AllyBomberMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            GameManager.GM.bombersAlive -= 1;
             Destroy(gameObject);
         }
         if (GameManager.GM.enemyWeakpointsDestroyed == 0)

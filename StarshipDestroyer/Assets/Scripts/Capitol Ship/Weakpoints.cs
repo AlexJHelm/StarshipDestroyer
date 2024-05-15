@@ -30,7 +30,19 @@ public class Weakpoints : MonoBehaviour
         {
             if(gameObject.tag == "EnemyThrusters" || gameObject.tag == "EnemyBridge" || gameObject.tag == "EnemyWeapons")
             {
-                gm.GetComponent<GameManager>().enemyWeakpointsDestroyed++;
+                if (gameObject.tag == "EnemyWeapons")
+                {
+                    gm.GetComponent<GameManager>().enemyWeaponsDestroyed = true;
+                }
+                else if (gameObject.tag == "EnemyBridge")
+                {
+                    gm.GetComponent<GameManager>().enemyBridgeDestroyed = true;
+                }
+                else
+                {
+                    gm.GetComponent<GameManager>().enemyThrustersDestroyed = true;
+                }
+                gm.GetComponent<GameManager>().enemyWeakpointsDestroyed++;               
             }
             else
             {

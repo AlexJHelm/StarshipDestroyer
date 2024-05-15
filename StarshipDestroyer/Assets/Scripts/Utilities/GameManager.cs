@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
     public int enemyWeakpointsDestroyed = 0;
     public int allyWeakpointsDestroyed = 0;
 
+    public bool enemyWeaponsDestroyed;
+    public bool enemyBridgeDestroyed;
+    public bool enemyThrustersDestroyed;
+
+    public bool inGame = false;
+
     public bool canSpawn = true;
 
     int scrap;
@@ -52,29 +58,43 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canSpawn == true)
+        if(inGame == true)
         {
-            Instantiate(enemyPrefab, enemyRespawnPos.position, transform.rotation);
-            Instantiate(bomberPrefab, enemyRespawnPos.position, transform.rotation);
-            Instantiate(defenderPrefab, enemyRespawnPos.position, transform.rotation);
-            Instantiate(allyPrefab, allyRespawnPos.position, transform.rotation);
-            Instantiate(allyBomberPrefab, allyRespawnPos.position, transform.rotation);
-            Instantiate(allyDefenderPrefab, allyRespawnPos.position, transform.rotation);
-            StartCoroutine(RespawnTimer());
-        }
+            if (canSpawn == true)
+            {
+                Instantiate(enemyPrefab, enemyRespawnPos.position, transform.rotation);
+                Instantiate(bomberPrefab, enemyRespawnPos.position, transform.rotation);
+                Instantiate(defenderPrefab, enemyRespawnPos.position, transform.rotation);
+                Instantiate(allyPrefab, allyRespawnPos.position, transform.rotation);
+                Instantiate(allyBomberPrefab, allyRespawnPos.position, transform.rotation);
+                Instantiate(allyDefenderPrefab, allyRespawnPos.position, transform.rotation);
+                StartCoroutine(RespawnTimer());
+            }
 
-        //Win triggered if all enemy weakpoints are destroyed
-        if(enemyWeakpointsDestroyed >= 3)
-        {
-            //Win Game
-            SceneManager.LoadScene(3);
-        }
+            //Win triggered if all enemy weakpoints are destroyed
+            if (enemyWeakpointsDestroyed >= 3)
+            {
+                //Win Game
+                SceneManager.LoadScene(3);
+            }
 
-        //Loss triggered if all ally weakpoints are destroyed
-        if (allyWeakpointsDestroyed >= 3)
+            //Loss triggered if all ally weakpoints are destroyed
+            if (allyWeakpointsDestroyed >= 3)
+            {
+                //Lose Game
+                SceneManager.LoadScene(4);
+            }
+        }   
+
+        if(inGame == true)
         {
-            //Lose Game
-            SceneManager.LoadScene(4);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

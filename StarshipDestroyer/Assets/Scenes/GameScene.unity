@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.2331076, g: 0.23627803, b: 0.27289605, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -316,10 +316,6 @@ PrefabInstance:
       propertyPath: defaultTarget
       value: 
       objectReference: {fileID: 1273134662}
-    - target: {fileID: 356666894156080148, guid: 2ad955a6a195f8b49aa9429e91d22d9e, type: 3}
-      propertyPath: rotationalDamp
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7545786589185205511, guid: 2ad955a6a195f8b49aa9429e91d22d9e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -633,6 +629,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2009866469241205103, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 447
+      objectReference: {fileID: 0}
     - target: {fileID: 4821391652839035020, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: healthBar
       value: 
@@ -701,10 +701,6 @@ PrefabInstance:
     - target: {fileID: 1075111625352831136, guid: 929dc921c24d9224f8f2e427e0a77675, type: 3}
       propertyPath: m_Name
       value: AllyDefenderPlaceholdShip
-      objectReference: {fileID: 0}
-    - target: {fileID: 2824139847414161341, guid: 929dc921c24d9224f8f2e427e0a77675, type: 3}
-      propertyPath: aggroRadius
-      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 5656718449588288167, guid: 929dc921c24d9224f8f2e427e0a77675, type: 3}
       propertyPath: m_RootOrder
@@ -1041,6 +1037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8280686728744364478, guid: 560d5fa9b64f11c4e9140423dce8aa92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8870177929200444131, guid: 560d5fa9b64f11c4e9140423dce8aa92, type: 3}
     m_RemovedGameObjects: []
@@ -1204,6 +1204,10 @@ MonoBehaviour:
   allyRespawnPos: {fileID: 232266155}
   enemyWeakpointsDestroyed: 0
   allyWeakpointsDestroyed: 0
+  enemyWeaponsDestroyed: 0
+  enemyBridgeDestroyed: 0
+  enemyThrustersDestroyed: 0
+  inGame: 1
   canSpawn: 1
 --- !u!212 &258467752626625402
 SpriteRenderer:
@@ -1636,29 +1640,9 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 524677438}
-    - target: {fileID: 1409734734454436060, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
-      propertyPath: bombPrefab
-      value: 
-      objectReference: {fileID: -180284562134591181, guid: b882f6e060cad2c439cc3e43b05be477, type: 3}
-    - target: {fileID: 1409734734454436060, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
-      propertyPath: shotCooldown
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3576119463856766200, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4533635710899036837, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
       propertyPath: m_Name
       value: EnemyBomberPlaceholder
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533635710899036837, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533635710899036837, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
-      propertyPath: m_TagString
-      value: EnemyBomber
       objectReference: {fileID: 0}
     - target: {fileID: 5888383185092820260, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
       propertyPath: m_RootOrder
@@ -1703,10 +1687,6 @@ PrefabInstance:
     - target: {fileID: 5888383185092820260, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7896171434644064756, guid: ce8c41465e7994a49850947c79c79c92, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1971,11 +1951,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5656718449588288167, guid: bae538d14b6afb04badd95e53e9e9152, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.668
+      value: 30.629
       objectReference: {fileID: 0}
     - target: {fileID: 5656718449588288167, guid: bae538d14b6afb04badd95e53e9e9152, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -210.7
+      value: -218.74
       objectReference: {fileID: 0}
     - target: {fileID: 5656718449588288167, guid: bae538d14b6afb04badd95e53e9e9152, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2004,10 +1984,6 @@ PrefabInstance:
     - target: {fileID: 5656718449588288167, guid: bae538d14b6afb04badd95e53e9e9152, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6233570898976912013, guid: bae538d14b6afb04badd95e53e9e9152, type: 3}
-      propertyPath: aggroRadius
-      value: 125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

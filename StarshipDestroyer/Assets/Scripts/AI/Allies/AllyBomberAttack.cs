@@ -29,11 +29,30 @@ public class AllyBomberAttack : MonoBehaviour
         }
         else if (GameManager.GM.enemyWeakpointsDestroyed == 1)
         {
-            target = GameObject.FindWithTag("EnemyBridge").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if (GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyBridge").transform;
+            }
         }
         else
         {
-            target = GameObject.FindWithTag("EnemyWeapons").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if (GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyBridge").transform;
+            }
+            else
+            {
+                target = GameObject.FindWithTag("EnemyWeapons").transform;
+            }
+
         }
     }
 
@@ -45,11 +64,30 @@ public class AllyBomberAttack : MonoBehaviour
         }
         else if (GameManager.GM.enemyWeakpointsDestroyed == 1)
         {
-            target = GameObject.FindWithTag("EnemyBridge").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if (GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyBridge").transform;
+            }
         }
         else
         {
-            target = GameObject.FindWithTag("EnemyWeapons").transform;
+            if (GameManager.GM.enemyThrustersDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyThrusters").transform;
+            }
+            else if (GameManager.GM.enemyBridgeDestroyed == false)
+            {
+                target = GameObject.FindWithTag("EnemyBridge").transform;
+            }
+            else
+            {
+                target = GameObject.FindWithTag("EnemyWeapons").transform;
+            }
+
         }
 
         if (CanFire && InFront() && HaveLineOfSight())

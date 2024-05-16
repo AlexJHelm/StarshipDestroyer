@@ -7,7 +7,7 @@ public class EnemyProjectile : MonoBehaviour
     //Variable Declarations
 
     Rigidbody rb;
-    float shotForce = 5000f;
+    float shotForce = 2500f;
     int damage = 10;
     float range = 3f;
     float duration;

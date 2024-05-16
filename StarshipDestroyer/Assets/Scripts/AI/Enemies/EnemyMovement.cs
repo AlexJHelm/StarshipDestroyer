@@ -10,6 +10,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]float movementSpeed = 10f;
     public bool isChasing = false;
 
+    public Scrap scrap;
+
     public int health = 100;
 
 
@@ -25,6 +27,7 @@ public class EnemyMovement : MonoBehaviour
         if(health <= 0)
         {
             GameManager.GM.enemyFightersAlive -= 1;
+            Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         Turn();

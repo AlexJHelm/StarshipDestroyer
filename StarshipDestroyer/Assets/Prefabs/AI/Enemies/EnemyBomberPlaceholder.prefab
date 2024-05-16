@@ -125,6 +125,7 @@ MonoBehaviour:
   rotationalDamp: 0.25
   movementSpeed: 10
   health: 10
+  scrap: {fileID: -7081677042374251514, guid: 162b3a6a065e24649b99c010efda57c9, type: 3}
 --- !u!114 &1409734734454436060
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class BomberMovement : MonoBehaviour
 
     public int health = 100;
 
-
+    public Scrap scrap;
 
     public void Start()
     {
@@ -33,6 +33,7 @@ public class BomberMovement : MonoBehaviour
         if (health <= 0)
         {
             GameManager.GM.enemyBombersAlive -= 1;
+            Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         if (GameManager.GM.allyWeakpointsDestroyed == 0)

@@ -8,7 +8,7 @@ public class AllyProjectile : MonoBehaviour
 
     Rigidbody rb;
     float shotForce = 5000f;
-    int damage = 10;
+    public int damage = 10;
     float range = 3f;
     float duration;
 
@@ -28,6 +28,10 @@ public class AllyProjectile : MonoBehaviour
     {
         //Assigns projectile rigidbody
         rb = GetComponent<Rigidbody>();
+        if (GameManager.GM.shipWeaponsUpgradeUnlocked == true)
+        {
+            damage = damage * 2;
+        }
     }
 
     private void OnEnable()

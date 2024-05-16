@@ -1703,6 +1703,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: scrap
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: inSetup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: shipHealthUpgradeUnlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: numOfIncreasedShipAllocations
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3565090866975754257, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: m_RootOrder
       value: 4

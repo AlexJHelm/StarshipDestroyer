@@ -74,4 +74,34 @@ public class ShipAllocation : MonoBehaviour
             }
         }
     }
+
+    public void UnlockHealthUpgrade()
+    {
+        if (GameManager.GM.scrap >= 25 && GameManager.GM.shipHealthUpgradeUnlocked == false)
+        {
+            GameManager.GM.scrap -= 25;
+            GameManager.GM.shipHealthUpgradeUnlocked = true;
+
+        }
+    }
+
+    public void UnlockSpacecraftUpgrade()
+    {
+        if (GameManager.GM.scrap >= 25 && GameManager.GM.numOfIncreasedShipAllocations < 10)
+        {
+            GameManager.GM.scrap -= 25;
+            GameManager.GM.numOfIncreasedShipAllocations += 1;
+            GameManager.GM.remainingAllocationSlots = GameManager.GM.numOfIncreasedShipAllocations + 5;
+
+        }
+    }
+
+    public void UnlockWeaponsUpgrade()
+    {
+        if (GameManager.GM.scrap >= 25 && GameManager.GM.shipWeaponsUpgradeUnlocked == false)
+        {
+            GameManager.GM.scrap -= 25;
+            GameManager.GM.shipWeaponsUpgradeUnlocked = true;
+        }
+    }
 }

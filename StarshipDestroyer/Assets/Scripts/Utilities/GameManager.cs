@@ -35,11 +35,11 @@ public class GameManager : MonoBehaviour
 
     public bool canSpawn = true;
 
-    int scrap;
+    public int scrap;
     int randomSpawnPos;
     public int numOfIncreasedShipAllocations = 1;
     public int remainingAllocationSlots;
-    bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked;
+    public bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked;
 
     public int currentlyAllocated, fightersAllocated, bombersAllocated, defendersAllocated = 0;
 
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public int maxFighters, maxBombers, maxDefenders;
 
-    public TMP_Text fighterText, bomberText, defenderText, baseText, upgradeText, remainingText;
+    public TMP_Text fighterText, bomberText, defenderText, baseText, upgradeText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText;
 
     //Methods
 
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
             {
                 while(enemyFightersAlive < maxFighters)
                 {
-                    randomSpawnPos = Random.Range(0, 3);
+                    randomSpawnPos = Random.Range(0, 4);
                     if(randomSpawnPos <= 1)
                     {
                         Instantiate(enemyPrefab, enemyRespawnPos1.position, transform.rotation);
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
 
                 while (enemyBombersAlive < maxBombers)
                 {
-                    randomSpawnPos = Random.Range(0, 3);
+                    randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
                     {
                         Instantiate(bomberPrefab, enemyRespawnPos1.position, transform.rotation);
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
 
                 while (enemyDefendersAlive < maxDefenders)
                 {
-                    randomSpawnPos = Random.Range(0, 3);
+                    randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
                     {
                         Instantiate(defenderPrefab, enemyRespawnPos1.position, transform.rotation);
@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
 
                 while (fightersAlive < maxFighters)
                 {
-                    randomSpawnPos = Random.Range(0, 3);
+                    randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
                     {
                         Instantiate(allyPrefab, allyRespawnPos1.position, transform.rotation);
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
 
                 while (bombersAlive < maxBombers)
                 {
-                    randomSpawnPos = Random.Range(0, 3);
+                    randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
                     {
                         Instantiate(allyBomberPrefab, allyRespawnPos1.position, transform.rotation);
@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
 
                 while (defendersAlive < maxDefenders)
                 {
-                    randomSpawnPos = Random.Range(0, 3);
+                    randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
                     {
                         Instantiate(allyDefenderPrefab, allyRespawnPos1.position, transform.rotation);
@@ -200,6 +200,7 @@ public class GameManager : MonoBehaviour
             {
                 //Win Game
                 SceneManager.LoadScene(3);
+                inGame = false;
             }
 
             //Loss triggered if all ally weakpoints are destroyed
@@ -207,6 +208,7 @@ public class GameManager : MonoBehaviour
             {
                 //Lose Game
                 SceneManager.LoadScene(4);
+                inGame = false;
             }
         }
         
@@ -218,6 +220,10 @@ public class GameManager : MonoBehaviour
             fighterText = GameObject.FindWithTag("FighterText").GetComponent<TMP_Text>();
             bomberText = GameObject.FindWithTag("BomberText").GetComponent<TMP_Text>();
             defenderText = GameObject.FindWithTag("DefenderText").GetComponent<TMP_Text>();
+            scrapText = GameObject.FindWithTag("ScrapCount").GetComponent<TMP_Text>();
+            healthUpgradeText = GameObject.FindWithTag("HealthUpgradeText").GetComponent<TMP_Text>();
+            weaponsUpgradeText = GameObject.FindWithTag("WeaponsUpgradeText").GetComponent<TMP_Text>();
+            spacecraftUpgradeText = GameObject.FindWithTag("SpacecraftUpgradeText").GetComponent<TMP_Text>();
 
             baseText.text = "Base: 5";
             upgradeText.text = $"Upgrades: {numOfIncreasedShipAllocations}";
@@ -225,6 +231,19 @@ public class GameManager : MonoBehaviour
             fighterText.text = $"{fightersAllocated}";
             bomberText.text = $"{bombersAllocated}";
             defenderText.text = $"{defendersAllocated}";
+            scrapText.text = $"{scrap} Scrap";
+            if(shipHealthUpgradeUnlocked == true)
+            {
+                healthUpgradeText.text = "Unlocked";
+            }
+            if (shipWeaponsUpgradeUnlocked == true)
+            {
+                weaponsUpgradeText.text = "Unlocked";
+            }
+            if (numOfIncreasedShipAllocations >= 10)
+            {
+                spacecraftUpgradeText.text = "Unlocked";
+            }
         }
 
         if(inGame == true)

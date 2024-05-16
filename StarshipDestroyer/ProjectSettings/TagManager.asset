@@ -35,6 +35,11 @@ TagManager:
   - RespawnPos1
   - RespawnPos2
   - RespawnPos3
+  - Scrap
+  - ScrapCount
+  - HealthUpgradeText
+  - SpacecraftUpgradeText
+  - WeaponsUpgradeText
   layers:
   - Default
   - TransparentFX

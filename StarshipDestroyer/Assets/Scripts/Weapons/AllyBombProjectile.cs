@@ -26,6 +26,10 @@ public class AllyBombProjectile : MonoBehaviour
     {
         //Assigns projectile rigidbody
         rb = GetComponent<Rigidbody>();
+        if (GameManager.GM.shipWeaponsUpgradeUnlocked == true)
+        {
+            damage = damage * 2;
+        }
     }
 
     private void OnEnable()

@@ -24,6 +24,8 @@ public class ShipController : MonoBehaviour
     public float xLookRotateSpeed = 90f, yLookRotateSpeed = 180f; 
     private Vector2 lookInput, screenCenter, mouseDistance;
 
+    public bool boosterActive;
+
     //Strafe variables (not currently used)
     //public float strafeSpeed = 7.5f;
     //private float activeStrafeSpeed, strafeAcceleration = 2.0f;
@@ -65,15 +67,26 @@ public class ShipController : MonoBehaviour
             //Rotates ship based on x, y, and z speeds and mouse movements
             transform.Rotate(-mouseDistance.y * xLookRotateSpeed * Time.deltaTime, mouseDistance.x * yLookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
 
+            //Moves ship
+            if (boosterActive == true)
+            {
+                forwardSpeed = 50f;
+                hoverSpeed = 30f;
+            }
+            else
+            {
+                forwardSpeed = 25f;
+                hoverSpeed = 15f;
+            }
+
             //Updates speed in each direction
             activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
             activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
             rollInput = Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime);
 
-            //Moves ship
             transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
             transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
-
+            
             //Strafe movement and speed updates (not currently used)
             //activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
             //transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
@@ -97,5 +110,16 @@ public class ShipController : MonoBehaviour
         transform.position = respawnPos;
         mesh.enabled = true;
 
+    }
+
+    public IEnumerator BoosterTimer()
+    {
+        yield return new WaitForSeconds(10f);
+        boosterActive = false;
+    }
+
+    public void StartBoosterTimer()
+    {
+        StartCoroutine(BoosterTimer());
     }
 }

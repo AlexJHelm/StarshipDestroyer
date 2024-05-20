@@ -40,6 +40,8 @@ TagManager:
   - HealthUpgradeText
   - SpacecraftUpgradeText
   - WeaponsUpgradeText
+  - Asteroid
+  - AsteroidSpawnPos
   layers:
   - Default
   - TransparentFX

@@ -88,5 +88,11 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.tag == "Asteroid")
+        {
+            collision.gameObject.GetComponent<Asteroid>().health -= damage;
+            Destroy(gameObject);
+        }
+
     }
 }

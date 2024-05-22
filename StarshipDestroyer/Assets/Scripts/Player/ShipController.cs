@@ -8,7 +8,7 @@ public class ShipController : MonoBehaviour
 
 
     //public and private variables for speeds and changing of speeds
-    public float forwardSpeed = 25f, hoverSpeed = 5f, rollSpeed = 90f, rollAcceleration = 3.5f;
+    public float hoverSpeed = 5f, rollSpeed = 90f, rollAcceleration = 3.5f, boostSpeed = 25f, baseForwardSpeed;
     private float activeForwardSpeed, activeHoverSpeed, rollInput;
 
     public int maxHealth = 100;
@@ -18,7 +18,7 @@ public class ShipController : MonoBehaviour
     public Camera overlookCamera;
 
     //private variables for acceleration
-    private float forwardAcceleration = 2.5f, hoverAcceleration = 2.0f;
+    private float forwardAcceleration = 2.5f, hoverAcceleration = 2.0f, forwardSpeed = 25f;
 
     //Variables for camera and mouse
     public float xLookRotateSpeed = 90f, yLookRotateSpeed = 180f; 
@@ -31,6 +31,7 @@ public class ShipController : MonoBehaviour
     //private float activeStrafeSpeed, strafeAcceleration = 2.0f;
 
     public MeshRenderer mesh;
+    Rigidbody rb;
 
     //Methods
 
@@ -38,6 +39,7 @@ public class ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         mainCamera.enabled = true;
         overlookCamera.enabled = false;
 
@@ -70,12 +72,12 @@ public class ShipController : MonoBehaviour
             //Moves ship
             if (boosterActive == true)
             {
-                forwardSpeed = 50f;
+                forwardSpeed = boostSpeed;
                 hoverSpeed = 30f;
             }
             else
             {
-                forwardSpeed = 25f;
+                forwardSpeed = baseForwardSpeed;
                 hoverSpeed = 15f;
             }
 
@@ -84,9 +86,19 @@ public class ShipController : MonoBehaviour
             activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
             rollInput = Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime);
 
+            /*if(Input.GetKeyDown(KeyCode.W))
+            {
+                activeForwardSpeed = Input.GetAxisRaw("Vertical") * forwardSpeed * Time.deltaTime;
+            }
+            else
+            {
+                activeForwardSpeed = 0;
+            }*/
+
             transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
-            transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
-            
+            //transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+            //rb.AddForce(transform.forward * activeForwardSpeed, ForceMode.Impulse);
+           
             //Strafe movement and speed updates (not currently used)
             //activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
             //transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;

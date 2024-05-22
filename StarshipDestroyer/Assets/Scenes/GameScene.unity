@@ -1130,9 +1130,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: boostSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: forwardSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: overlookCamera
       value: 
       objectReference: {fileID: 238053486}
+    - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: baseForwardSpeed
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3890,7 +3902,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCapitolShip
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8112802283740764245, guid: baef9a94dfe6af749be5b9989aa76ab5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8502733845474968172, guid: baef9a94dfe6af749be5b9989aa76ab5, type: 3}

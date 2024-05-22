@@ -1712,6 +1712,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: asteroid
+      value: 
+      objectReference: {fileID: 4603853467995750735, guid: aa82dc882c7681f449652a6ab4935f3c, type: 3}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: shipHealthUpgradeUnlocked
       value: 0
       objectReference: {fileID: 0}

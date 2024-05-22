@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7665510256076288559}
   - component: {fileID: 3576119463856766200}
   - component: {fileID: 1409734734454436060}
+  - component: {fileID: 2152743330861669636}
   m_Layer: 7
   m_Name: EnemyBomberPlaceholder
   m_TagString: EnemyBomber
@@ -35,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 7947996272542589533}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2563737923574603854
 MeshFilter:
@@ -124,6 +125,7 @@ MonoBehaviour:
   rotationalDamp: 0.25
   movementSpeed: 10
   health: 10
+  scrap: {fileID: -7081677042374251514, guid: 162b3a6a065e24649b99c010efda57c9, type: 3}
 --- !u!114 &1409734734454436060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +142,33 @@ MonoBehaviour:
   bombPrefab: {fileID: -180284562134591181, guid: b882f6e060cad2c439cc3e43b05be477, type: 3}
   muzzle: {fileID: 7947996272542589533}
   shotCooldown: 5
+--- !u!54 &2152743330861669636
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533635710899036837}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7896171434644064756
 GameObject:
   m_ObjectHideFlags: 0

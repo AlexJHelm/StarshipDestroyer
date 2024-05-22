@@ -13,7 +13,7 @@ public class DefenderMovement : MonoBehaviour
 
     public int health = 100;
 
-
+    public Scrap scrap;
 
     public void Start()
     {
@@ -25,6 +25,8 @@ public class DefenderMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            GameManager.GM.enemyDefendersAlive -= 1;
+            Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         Turn();

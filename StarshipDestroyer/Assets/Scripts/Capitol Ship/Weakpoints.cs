@@ -20,6 +20,13 @@ public class Weakpoints : MonoBehaviour
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager");
+        if(GameManager.GM.shipHealthUpgradeUnlocked == true)
+        {
+            if(gameObject.tag == "AllyThrusters" || gameObject.tag == "AllyBridge" || gameObject.tag == "AllyWeapons")
+            {
+                weakpointHealth = weakpointHealth * 2;
+            }
+        }
     }
     
     // Update is called once per frame

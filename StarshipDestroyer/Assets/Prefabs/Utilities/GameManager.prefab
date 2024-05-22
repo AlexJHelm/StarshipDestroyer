@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3565090866975754257}
   - component: {fileID: 1724005332963331816}
+  - component: {fileID: 4959567193672863697}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1724005332963331816
 MonoBehaviour:
@@ -50,12 +51,60 @@ MonoBehaviour:
   allyPrefab: {fileID: 3157964741177543924, guid: 30e7a3313b263674e8c7b6ea5f289629, type: 3}
   allyBomberPrefab: {fileID: 4842598071320023856, guid: cb7950857d80bf94f8b6c398a0b2623e, type: 3}
   allyDefenderPrefab: {fileID: 9002641682958310831, guid: 929dc921c24d9224f8f2e427e0a77675, type: 3}
-  enemyRespawnPos: {fileID: 0}
-  allyRespawnPos: {fileID: 0}
+  asteroid: {fileID: 3981537141398578226, guid: b88ec081815a7924c8bf34cdb7b446f5, type: 3}
+  enemyRespawnPos1: {fileID: 0}
+  enemyRespawnPos2: {fileID: 0}
+  enemyRespawnPos3: {fileID: 0}
+  allyRespawnPos1: {fileID: 0}
+  allyRespawnPos2: {fileID: 0}
+  allyRespawnPos3: {fileID: 0}
+  asteroidSpawnPos: {fileID: 0}
   enemyWeakpointsDestroyed: 0
   allyWeakpointsDestroyed: 0
   enemyWeaponsDestroyed: 0
   enemyBridgeDestroyed: 0
   enemyThrustersDestroyed: 0
   inGame: 0
+  inSetup: 0
   canSpawn: 1
+  asteroidCanSpawn: 1
+  scrap: 0
+  numOfIncreasedShipAllocations: 1
+  remainingAllocationSlots: 0
+  shipHealthUpgradeUnlocked: 0
+  shipWeaponsUpgradeUnlocked: 0
+  currentlyAllocated: 0
+  fightersAllocated: 0
+  bombersAllocated: 0
+  defendersAllocated: 0
+  fightersAlive: 0
+  bombersAlive: 0
+  defendersAlive: 0
+  enemyFightersAlive: 0
+  enemyBombersAlive: 0
+  enemyDefendersAlive: 0
+  maxFighters: 0
+  maxBombers: 0
+  maxDefenders: 0
+  fighterText: {fileID: 0}
+  bomberText: {fileID: 0}
+  defenderText: {fileID: 0}
+  baseText: {fileID: 0}
+  upgradeText: {fileID: 0}
+  remainingText: {fileID: 0}
+  scrapText: {fileID: 0}
+  healthUpgradeText: {fileID: 0}
+  spacecraftUpgradeText: {fileID: 0}
+  weaponsUpgradeText: {fileID: 0}
+--- !u!114 &4959567193672863697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659348874065839193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b21f9d4efb9ae49af3aa2ea9f3511c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

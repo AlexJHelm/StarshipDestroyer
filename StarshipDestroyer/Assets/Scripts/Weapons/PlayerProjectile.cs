@@ -8,7 +8,7 @@ public class PlayerProjectile : MonoBehaviour
 
     Rigidbody rb;
     float shotForce = 5000f;
-    int damage = 10;
+    public int damage = 10;
     float range = 3f;
     float duration;
 
@@ -28,6 +28,10 @@ public class PlayerProjectile : MonoBehaviour
     {
         //Assigns projectile rigidbody
         rb = GetComponent<Rigidbody>();
+        if (GameManager.GM.shipWeaponsUpgradeUnlocked == true)
+        {
+            damage = damage * 2;
+        }
     }
 
     private void OnEnable()
@@ -81,6 +85,12 @@ public class PlayerProjectile : MonoBehaviour
         if (collision.gameObject.tag == "EnemyDefender")
         {
             collision.gameObject.GetComponent<DefenderMovement>().health -= damage;
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Asteroid")
+        {
+            collision.gameObject.GetComponent<Asteroid>().health -= damage;
             Destroy(gameObject);
         }
 

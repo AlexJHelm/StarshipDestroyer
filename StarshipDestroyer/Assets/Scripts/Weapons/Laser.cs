@@ -9,6 +9,7 @@ public class Laser : MonoBehaviour
 
     public PlayerProjectile projectilePrefab;
     public Transform muzzle;
+    public float maxLaserCooldown = 10f;
     public float laserCooldown = 10f;
     public float laserDuration = 2f;
     float shotDuration;
@@ -51,7 +52,7 @@ public class Laser : MonoBehaviour
             laserDuration = 2f;
             laserActive = true;
             FireLaser();
-            laserCooldown = 10f;
+            laserCooldown = maxLaserCooldown;
             laserOffCooldown = false;
         }
 

@@ -8,7 +8,7 @@ public class ShipController : MonoBehaviour
 
 
     //public and private variables for speeds and changing of speeds
-    public float hoverSpeed = 5f, rollSpeed = 90f, rollAcceleration = 3.5f, boostSpeed = 25f, baseForwardSpeed;
+    public float hoverSpeed = 5f, rollSpeed = 90f, rollAcceleration = 3.5f, boostSpeed = 25f, baseForwardSpeed, boosterTimer, maxBoosterTimer = 10f;
     private float activeForwardSpeed, activeHoverSpeed, rollInput;
 
     public int maxHealth = 100;
@@ -73,12 +73,14 @@ public class ShipController : MonoBehaviour
             if (boosterActive == true)
             {
                 forwardSpeed = boostSpeed;
+                boosterTimer += 1;
                 hoverSpeed = 30f;
             }
             else
             {
                 forwardSpeed = baseForwardSpeed;
                 hoverSpeed = 15f;
+                boosterTimer = maxBoosterTimer;
             }
 
             //Updates speed in each direction

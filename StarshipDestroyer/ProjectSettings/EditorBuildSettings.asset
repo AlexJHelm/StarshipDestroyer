@@ -15,18 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/WinScene.unity
-    guid: fdd0753226d516c42952658d9bcd9598
+    path: Assets/Scenes/Win2 Scene.unity
+    guid: 27f6fb10ce7a79e4ca12446b02a4eeb4
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
     guid: c9ee7376a66f29d4aa63797fdcb10921
   - enabled: 1
-    path: Assets/Scenes/Instructions Screen.unity
-    guid: bb90dc6cd3a2f234eb0d813e90fb79eb
+    path: Assets/Scenes/Instructions2 Screen.unity
+    guid: 9d4d283cf7ca0914bb741d2b08dfd075
   - enabled: 1
-    path: Assets/Scenes/Credits Screen.unity
-    guid: 19f0dab5730688444a79506b225cd9a9
+    path: Assets/Scenes/Credits2 Screen.unity
+    guid: 0fb922f1575d84c44b3d6a53738346ea
   - enabled: 1
-    path: Assets/Scenes/Options Screen.unity
-    guid: 99d1c2cd160af0f458b205a86bdd04ed
+    path: Assets/Scenes/Options2 Screen.unity
+    guid: f5d955a74f9e96d4aae2442afba59922
   m_configObjects: {}

@@ -8,8 +8,9 @@ public class BasicShot : MonoBehaviour
 
     public PlayerProjectile projectilePrefab;
     public Transform muzzle;
+    public float maxShotCooldown = 0.25f;
     public float shotCooldown = 0.25f;
-    float shotDuration;
+    public float shotDuration;
 
     //Acts as a timer for the shot to last for
     bool CanFire

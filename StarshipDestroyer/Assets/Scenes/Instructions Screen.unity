@@ -184,8 +184,8 @@ MonoBehaviour:
   m_text: Destory the designated weawk points on the enemy capital ship to bring
     peace to our planet
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
+  m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -209,14 +209,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -320,8 +320,8 @@ MonoBehaviour:
   m_text: The enemy will send their own forces to destory what defences you have
     make sure to look keep an eye out
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
+  m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -345,14 +345,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -422,17 +422,17 @@ RectTransform:
   m_GameObject: {fileID: 297859299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90785354, y: 2.7142081, z: 1}
+  m_LocalScale: {x: 0.31347018, y: 0.28922725, z: 0.4152222}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 747013788}
-  m_Father: {fileID: 1041031229}
+  m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1200, y: -6905.9995}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 445.3446, y: -309.90625}
+  m_SizeDelta: {x: -362.77502, y: -186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297859301
 MonoBehaviour:
@@ -641,7 +641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398, y: 282.00024}
+  m_AnchoredPosition: {x: -398, y: 347}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670021702
@@ -667,8 +667,8 @@ MonoBehaviour:
   m_text: Choose your personal weapons system, and take flight to bring the fight
     to our enemies
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
+  m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -692,14 +692,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -871,8 +871,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: 308}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -101.517, y: -72.236}
+  m_SizeDelta: {x: 377.1, y: 269.949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747013789
 MonoBehaviour:
@@ -897,8 +897,8 @@ MonoBehaviour:
   m_text: Collect the scrap from destoryed enemy spacecraft to unlock powerful new
     ship and defense upgrades
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
+  m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -922,14 +922,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1091,23 +1091,16 @@ RectTransform:
   m_GameObject: {fileID: 1041031228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34528717, y: 0.106560454, z: 0.4152222}
+  m_LocalScale: {x: 0.5917531, y: 0.1065605, z: 0.4152222}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2068043104}
-  - {fileID: 1656110448}
-  - {fileID: 1679630432}
-  - {fileID: 1913440542}
-  - {fileID: 1140215732}
-  - {fileID: 1840888235}
-  - {fileID: 297859300}
+  m_Children: []
   m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3, y: 425.99997}
-  m_SizeDelta: {x: -362.7749, y: -186}
+  m_AnchoredPosition: {x: 31.000008, y: 425.99997}
+  m_SizeDelta: {x: -362.77502, y: -186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041031230
 MonoBehaviour:
@@ -1182,8 +1175,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -420.54993, y: 282}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -398, y: 189.44}
+  m_SizeDelta: {x: 254.903, y: 97.778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1069895806
 MonoBehaviour:
@@ -1208,8 +1201,8 @@ MonoBehaviour:
   m_text: Take your capital ship, allocate what space craft to deploy. fighters,
     bombers, or defenders
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
+  m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1233,14 +1226,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1310,17 +1303,17 @@ RectTransform:
   m_GameObject: {fileID: 1140215731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90785354, y: 2.4218864, z: 1}
+  m_LocalScale: {x: 0.31347018, y: 0.25807732, z: 0.4152222}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 110319831}
-  m_Father: {fileID: 1041031229}
+  m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1463.1, y: -4209}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 536.1898, y: -22.513184}
+  m_SizeDelta: {x: -362.77502, y: -186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140215733
 MonoBehaviour:
@@ -1387,7 +1380,7 @@ RectTransform:
   m_GameObject: {fileID: 1234072118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.000255, y: 3.8748083, z: 2.4083493}
+  m_LocalScale: {x: 0.5919041, y: 0.36589116, z: 2.408349}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656110448}
@@ -1395,7 +1388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -653.0002, y: 264.49365}
+  m_AnchoredPosition: {x: -381.10916, y: 33.59308}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234072120
@@ -1422,8 +1415,8 @@ MonoBehaviour:
     attack on our space fleet and we have taken heavy losses, You are one of our
     last remaining soldiers!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
+  m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1454,7 +1447,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1593,6 +1586,13 @@ RectTransform:
   m_Children:
   - {fileID: 1869876030}
   - {fileID: 1041031229}
+  - {fileID: 2068043104}
+  - {fileID: 1656110448}
+  - {fileID: 1679630432}
+  - {fileID: 1913440542}
+  - {fileID: 1140215732}
+  - {fileID: 1840888235}
+  - {fileID: 297859300}
   - {fileID: 365779334}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1629,17 +1629,17 @@ RectTransform:
   m_GameObject: {fileID: 1656110447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8954017, y: 2.4218864, z: 1}
+  m_LocalScale: {x: 1.689463, y: 2.733053, z: 0.4152222}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1234072119}
-  m_Father: {fileID: 1041031229}
+  m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -1736.1033}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 22.036, y: 217.448}
+  m_SizeDelta: {x: -987.66, y: -980.297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656110449
 MonoBehaviour:
@@ -1706,17 +1706,17 @@ RectTransform:
   m_GameObject: {fileID: 1679630431}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90785354, y: 2.4218864, z: 1}
+  m_LocalScale: {x: 0.31347018, y: 0.25807732, z: 0.4152222}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1069895805}
-  m_Father: {fileID: 1041031229}
+  m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1508.9001, y: -4209}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -497.336, y: -55.523987}
+  m_SizeDelta: {x: -187.765, y: -137.262}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679630433
 MonoBehaviour:
@@ -1851,17 +1851,17 @@ RectTransform:
   m_GameObject: {fileID: 1840888234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90785354, y: 2.7142081, z: 1}
+  m_LocalScale: {x: 0.31347018, y: 0.28922725, z: 0.4152222}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 272855629}
-  m_Father: {fileID: 1041031229}
+  m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1227, y: -6906}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -392.66736, y: -309.90674}
+  m_SizeDelta: {x: -362.77502, y: -186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840888236
 MonoBehaviour:
@@ -2004,17 +2004,17 @@ RectTransform:
   m_GameObject: {fileID: 1913440541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90785354, y: 2.4218864, z: 1}
+  m_LocalScale: {x: 0.31347018, y: 0.25807732, z: 0.4152222}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 670021701}
-  m_Father: {fileID: 1041031229}
+  m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -24.554993, y: -4209}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 31.822021, y: -55.678}
+  m_SizeDelta: {x: -303.434, y: -130.664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913440543
 MonoBehaviour:
@@ -2216,16 +2216,16 @@ RectTransform:
   m_GameObject: {fileID: 2068043103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8961399, y: 9.384345, z: 2.4083493}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1041031229}
+  m_Father: {fileID: 1532902429}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -326.00027, y: 201.97258}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -103, y: 434}
+  m_SizeDelta: {x: 586.8, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068043105
 MonoBehaviour:
@@ -2249,8 +2249,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Instructions
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e212dce4b144edb4f9fafb8fd9dbf7c2, type: 2}
+  m_sharedMaterial: {fileID: 1516519129339598330, guid: e212dce4b144edb4f9fafb8fd9dbf7c2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

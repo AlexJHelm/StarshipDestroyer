@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     public int maxFighters, maxBombers, maxDefenders;
 
-    public TMP_Text fighterText, bomberText, defenderText, baseText, upgradeText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText;
+    public TMP_Text fighterText, bomberText, defenderText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText;
 
     //Methods
 
@@ -224,8 +224,6 @@ public class GameManager : MonoBehaviour
         
         if(inSetup == true)
         {        
-            baseText = GameObject.FindWithTag("BaseText").GetComponent<TMP_Text>();
-            upgradeText = GameObject.FindWithTag("UpgradeText").GetComponent<TMP_Text>();
             remainingText = GameObject.FindWithTag("RemainingText").GetComponent<TMP_Text>();
             fighterText = GameObject.FindWithTag("FighterText").GetComponent<TMP_Text>();
             bomberText = GameObject.FindWithTag("BomberText").GetComponent<TMP_Text>();
@@ -235,8 +233,6 @@ public class GameManager : MonoBehaviour
             weaponsUpgradeText = GameObject.FindWithTag("WeaponsUpgradeText").GetComponent<TMP_Text>();
             spacecraftUpgradeText = GameObject.FindWithTag("SpacecraftUpgradeText").GetComponent<TMP_Text>();
 
-            baseText.text = "Base: 5";
-            upgradeText.text = $"Upgrades: {numOfIncreasedShipAllocations}";
             remainingText.text = $"Remaining: {remainingAllocationSlots}";
             fighterText.text = $"{fightersAllocated}";
             bomberText.text = $"{bombersAllocated}";

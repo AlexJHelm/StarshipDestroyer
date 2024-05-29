@@ -91,7 +91,7 @@ public class ShipAllocation : MonoBehaviour
         {
             GameManager.GM.scrap -= 25;
             GameManager.GM.numOfIncreasedShipAllocations += 1;
-            GameManager.GM.remainingAllocationSlots = GameManager.GM.numOfIncreasedShipAllocations + 5;
+            GameManager.GM.remainingAllocationSlots = GameManager.GM.remainingAllocationSlots + 1;
 
         }
     }

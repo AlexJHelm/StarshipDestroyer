@@ -1849,6 +1849,10 @@ PrefabInstance:
       propertyPath: baseForwardSpeed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: yLookRotateSpeed
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 8892658432333366364, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: laserCooldown
       value: 5

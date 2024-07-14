@@ -17,6 +17,8 @@ public class ShipController : MonoBehaviour
     public Camera mainCamera;
     public Camera overlookCamera;
 
+    public float deadZoneRadius = .10f;
+
     //private variables for acceleration
     private float forwardAcceleration = 2.5f, hoverAcceleration = 2.0f, forwardSpeed = 25f;
 
@@ -48,6 +50,7 @@ public class ShipController : MonoBehaviour
         screenCenter.y = Screen.height * .5f;
 
         health = maxHealth;
+
     }
 
     // Update is called once per frame
@@ -67,7 +70,14 @@ public class ShipController : MonoBehaviour
             mouseDistance = Vector2.ClampMagnitude(mouseDistance, 0.5f);
 
             //Rotates ship based on x, y, and z speeds and mouse movements
-            transform.Rotate(-mouseDistance.y * xLookRotateSpeed * Time.deltaTime, mouseDistance.x * yLookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+            if(-mouseDistance.y > -deadZoneRadius && -mouseDistance.y < deadZoneRadius && mouseDistance.x < deadZoneRadius && mouseDistance.x > -deadZoneRadius)
+            {
+                transform.Rotate(-mouseDistance.y * xLookRotateSpeed/2 * Time.deltaTime, mouseDistance.x * yLookRotateSpeed/2 * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+            }
+            else
+            {
+                transform.Rotate(-mouseDistance.y * xLookRotateSpeed * Time.deltaTime, mouseDistance.x * yLookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+            }
 
             //Moves ship
             if (boosterActive == true)

@@ -24,6 +24,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Options Screen.unity
     guid: 99d1c2cd160af0f458b205a86bdd04ed
   - enabled: 1
-    path: Assets/Scenes/Instructions Screen.unity
+    path: Assets/Scenes/Handbook OBJ Screen.unity
     guid: bb90dc6cd3a2f234eb0d813e90fb79eb
+  - enabled: 1
+    path: Assets/Scenes/Handbook Ship Screen.unity
+    guid: ce48658dddb33424497fb801e4328a96
+  - enabled: 1
+    path: Assets/Scenes/Handbook Fighters Screen.unity
+    guid: 30006bf2356982b40b6dda0d76cd5f43
+  - enabled: 1
+    path: Assets/Scenes/Handbook Secondary Screen.unity
+    guid: 4759067d7fbb77e4e924be35f5a7035a
+  - enabled: 1
+    path: Assets/Scenes/Handbook Missions Screen.unity
+    guid: 2cdd51543dbc2ab4d8a5030118f0b899
+  - enabled: 1
+    path: Assets/Scenes/News Screen.unity
+    guid: 92bfe1f06e62b334d8334aac1e7fde5a
   m_configObjects: {}

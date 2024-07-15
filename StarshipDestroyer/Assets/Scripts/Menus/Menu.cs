@@ -34,10 +34,36 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
-    public void Instructions()
+    public void HandbookOBJ()
     {
         SceneManager.LoadScene(6);
     }
+
+    public void HandbookShip()
+    {
+        SceneManager.LoadScene(7);
+    }
+
+    public void HandbookFighter()
+    {
+        SceneManager.LoadScene(8);
+    }
+
+    public void HandbookSecond()
+    {
+        SceneManager.LoadScene(9);
+    }
+
+    public void HandbookMission()
+    {
+        SceneManager.LoadScene(10);
+    }
+
+    public void News()
+    {
+        SceneManager.LoadScene(11);
+    }
+
 
     public void QuitGame()
     {

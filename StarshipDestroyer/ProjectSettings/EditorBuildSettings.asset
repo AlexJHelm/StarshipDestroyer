@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Handbook Secondary Screen J.unity
     guid: 4759067d7fbb77e4e924be35f5a7035a
   - enabled: 1
+    path: Assets/Scenes/Handbook Missions Screen.unity
+    guid: 2cdd51543dbc2ab4d8a5030118f0b899
+  - enabled: 1
     path: Assets/Scenes/News Screen J.unity
     guid: 92bfe1f06e62b334d8334aac1e7fde5a
   m_configObjects: {}

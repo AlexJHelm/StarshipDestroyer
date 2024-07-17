@@ -88,16 +88,16 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(10);
     }
 
-    /*public void HandbookMission()
+    public void HandbookMission()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(11);
-    }*/
+    }
 
     public void News()
     {
         GameManager.GM.inGame = false;
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(12);
     }
 
     public void QuitGame()

@@ -52,22 +52,52 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
-    public void Instructions()
+    public void Credits()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(5);
     }
 
-    public void Credits()
+    public void Options()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(6);
     }
 
-    public void Options()
+    public void HandbookOBJ()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(7);
+    }
+
+    public void HandbookShip()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(8);
+    }
+
+    public void HandbookFighter()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(9);
+    }
+
+    public void HandbookSecond()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(10);
+    }
+
+    /*public void HandbookMission()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(11);
+    }*/
+
+    public void News()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(11);
     }
 
     public void QuitGame()

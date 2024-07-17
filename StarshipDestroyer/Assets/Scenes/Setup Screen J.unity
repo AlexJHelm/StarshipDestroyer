@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -216,6 +216,9 @@ MonoBehaviour:
   HoverPanel1: {fileID: 1739670647}
   HoverPanel2: {fileID: 578075101}
   HoverPanel3: {fileID: 1148741266}
+  panelPosition: {x: 0, y: 0, z: 0}
+  inFocusPosition: {x: 311, y: 215, z: 0}
+  outOfFocusPosition: {x: -1000, y: -1000, z: 0}
 --- !u!1 &21356334
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +938,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 122594569}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: UnlockHealthUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &122594569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1082,9 @@ MonoBehaviour:
   HoverPanel1: {fileID: 1739670647}
   HoverPanel2: {fileID: 578075101}
   HoverPanel3: {fileID: 1148741266}
+  panelPosition: {x: 0, y: 0, z: 0}
+  inFocusPosition: {x: 311, y: 215, z: 0}
+  outOfFocusPosition: {x: -1000, y: -1000, z: 0}
 --- !u!1 &185455868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1427,9 @@ MonoBehaviour:
   HoverPanel1: {fileID: 1739670647}
   HoverPanel2: {fileID: 578075101}
   HoverPanel3: {fileID: 1148741266}
+  panelPosition: {x: 0, y: 0, z: 0}
+  inFocusPosition: {x: 311, y: 215, z: 0}
+  outOfFocusPosition: {x: -1000, y: -1000, z: 0}
 --- !u!1 &340308505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +1936,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 373172967}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: MinusBomber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &373172967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,7 +2476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4959567193672863697, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: GameScene
         m_Mode: 1
@@ -3092,7 +3125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &578075102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3115,7 +3148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -158, y: 15}
+  m_AnchoredPosition: {x: -1759, y: 15}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578075103
@@ -3818,7 +3851,7 @@ GameObject:
   - component: {fileID: 800400783}
   m_Layer: 5
   m_Name: Scrap Count
-  m_TagString: Untagged
+  m_TagString: ScrapCount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4486,7 +4519,7 @@ GameObject:
   - component: {fileID: 896712877}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: HealthUpgradeText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4531,7 +4564,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scrap
+  m_text: 25 Scrap
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
@@ -4826,7 +4859,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 951216353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: PlusBomber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &951216353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,7 +5150,7 @@ GameObject:
   - component: {fileID: 987448022}
   m_Layer: 5
   m_Name: Num
-  m_TagString: Untagged
+  m_TagString: DefenderText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5542,7 +5587,7 @@ RectTransform:
   m_GameObject: {fileID: 1070138097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2910636, y: 0.12484026, z: 0.20715198}
+  m_LocalScale: {x: 0.29106358, y: 0.12484027, z: 0.207152}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 122594567}
@@ -5551,7 +5596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 543.3, y: 260}
+  m_AnchoredPosition: {x: 543.3001, y: 259.99994}
   m_SizeDelta: {x: -763, y: -320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070138099
@@ -6285,7 +6330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1148741267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6308,7 +6353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -158, y: 15}
+  m_AnchoredPosition: {x: -1816, y: 15}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148741268
@@ -6362,7 +6407,7 @@ GameObject:
   - component: {fileID: 1168778604}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: SpacecraftUpgradeText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6407,7 +6452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scrap
+  m_text: 25 Scrap
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
@@ -7103,7 +7148,7 @@ GameObject:
   - component: {fileID: 1315227410}
   m_Layer: 5
   m_Name: Num
-  m_TagString: Untagged
+  m_TagString: FighterText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7782,7 +7827,7 @@ GameObject:
   - component: {fileID: 1363315494}
   m_Layer: 5
   m_Name: Ammount Left
-  m_TagString: Untagged
+  m_TagString: RemainingText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7993,7 +8038,7 @@ GameObject:
   - component: {fileID: 1408191250}
   m_Layer: 5
   m_Name: Num
-  m_TagString: Untagged
+  m_TagString: BomberText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8490,7 +8535,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4959567193672863697, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -8699,7 +8744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1545335154}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: MinusDefender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1545335154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9045,7 +9102,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1717930489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: UnlockSpacecraftUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1717930489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9167,7 +9236,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1723887641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: MinusFighter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1723887641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9302,7 +9383,7 @@ GameObject:
   - component: {fileID: 1774106775}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: WeaponsUpgradeText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9347,7 +9428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scrap
+  m_text: 25 Scrap
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
@@ -9508,13 +9589,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 3650f5fae6a44c044b1c54038f37c0ae, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: PlusFighter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9717,7 +9798,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1882849911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: PlusDefender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1882849911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10673,7 +10766,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2108379584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213327443}
+        m_TargetAssemblyTypeName: ShipAllocation, Assembly-CSharp
+        m_MethodName: UnlockWeaponsUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2108379584
 MonoBehaviour:
   m_ObjectHideFlags: 0

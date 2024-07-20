@@ -14,10 +14,13 @@ GameObject:
   - component: {fileID: 916889565535979936}
   - component: {fileID: 6447727756929426519}
   - component: {fileID: 566255673607467546}
-  - component: {fileID: 8892658432333366364}
   - component: {fileID: 4821391652839035020}
+  - component: {fileID: 7575485677233103648}
+  - component: {fileID: 2875835967643664329}
+  - component: {fileID: 5281742284777077805}
+  - component: {fileID: 8237814783493882729}
   m_Layer: 3
-  m_Name: PlayerPlaceholderShip
+  m_Name: PlayerBombShip
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +41,7 @@ Transform:
   - {fileID: 1244309547336588068}
   - {fileID: 11490721286094814}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &4694674270666593304
 MeshFilter:
@@ -125,17 +128,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e09a1373b5f3d4f8db4ad923645b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 25
   hoverSpeed: 15
   rollSpeed: 180
   rollAcceleration: 3.5
-  maxHealth: 30
+  boostSpeed: 50
+  baseForwardSpeed: 25
+  boosterTimer: 0
+  maxBoosterTimer: 10
+  maxHealth: 50
   health: 30
   respawnPos: {x: 2.62, y: 0.13, z: 4.23}
   mainCamera: {fileID: 2009866469241205103}
   overlookCamera: {fileID: 0}
+  deadZoneRadius: 0.1
   xLookRotateSpeed: 180
   yLookRotateSpeed: 180
+  boosterActive: 0
   mesh: {fileID: 4306783881810890256}
 --- !u!114 &566255673607467546
 MonoBehaviour:
@@ -151,23 +159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3259696283892874802, guid: ff401a9373333db44a0556ccf495defd, type: 3}
   muzzle: {fileID: 11490721286094814}
+  maxShotCooldown: 0.75
   shotCooldown: 0.75
---- !u!114 &8892658432333366364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265171298746088158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27f522e49702f74e92dffe01c49c2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 3259696283892874802, guid: ff401a9373333db44a0556ccf495defd, type: 3}
-  muzzle: {fileID: 11490721286094814}
-  laserCooldown: 3
-  laserDuration: 3
+  shotDuration: 0
 --- !u!114 &4821391652839035020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +176,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   playerHealth: {fileID: 6447727756929426519}
+--- !u!114 &7575485677233103648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265171298746088158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5786e62fad9bef24ba6b893f02d69e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicShotBar: {fileID: 0}
+  shotCooldown: {fileID: 566255673607467546}
+--- !u!114 &2875835967643664329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265171298746088158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d244d5bb46a1314294e0d40584223d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaBar: {fileID: 0}
+  boosterTimer: {fileID: 6447727756929426519}
+--- !u!114 &5281742284777077805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265171298746088158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0c6622c3f8d124dba31027d13d8d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: -8170740403644173222, guid: d08e1313d4388c74ab9350e1c0da3845, type: 3}
+  muzzle: {fileID: 11490721286094814}
+  maxBombCooldown: 5
+  bombCooldown: 5
+  Duration: 2
+--- !u!114 &8237814783493882729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265171298746088158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287ee6cea729e65419cae067f668db73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoBar: {fileID: 0}
+  bombCooldown: {fileID: 5281742284777077805}
 --- !u!1 &899843363533497964
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +338,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 447
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     public bool canSpawn = true;
     public bool asteroidCanSpawn = true;
 
-    public int scrap;
+    public int scrap = 30;
     int randomSpawnPos;
     public int numOfIncreasedShipAllocations = 1;
     public int remainingAllocationSlots;

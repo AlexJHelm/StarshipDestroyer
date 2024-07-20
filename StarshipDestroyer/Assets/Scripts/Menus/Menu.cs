@@ -37,6 +37,7 @@ public class Menu : MonoBehaviour
         GameManager.GM.canSpawn = true;
         GameManager.GM.asteroidCanSpawn = true;
         GameManager.GM.inSetup = false;
+        GameManager.GM.shipSelected = false;
         GameManager.GM.inGame = true;
         SceneManager.LoadScene(2);
     }

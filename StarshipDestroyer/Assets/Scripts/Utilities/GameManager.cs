@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager GM { get; private set; }
 
+    public GameObject playerMissile;
+    public GameObject playerLaser;
+    public GameObject playerBomb;
     public EnemyMovement enemyPrefab;
     public BomberMovement bomberPrefab;
     public DefenderMovement defenderPrefab;
@@ -34,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     public bool inGame = false;
     public bool inSetup = false;
+    public bool shipSelected = false;
 
     public bool canSpawn = true;
     public bool asteroidCanSpawn = true;
@@ -44,13 +48,15 @@ public class GameManager : MonoBehaviour
     public int remainingAllocationSlots;
     public bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked;
 
+    public bool laserSystemActive, bombSystemActive, missileSystemActive;
+
     public int currentlyAllocated, fightersAllocated, bombersAllocated, defendersAllocated = 0;
 
     public int fightersAlive, bombersAlive, defendersAlive, enemyFightersAlive, enemyBombersAlive, enemyDefendersAlive = 0;
 
     public int maxFighters, maxBombers, maxDefenders;
 
-    public TMP_Text fighterText, bomberText, defenderText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText;
+    public TMP_Text fighterText, bomberText, defenderText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText, laserText, bombText, missileText;
 
     //Methods
 
@@ -61,7 +67,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
             return;
-        }
+        }      
 
         GM = this;
         DontDestroyOnLoad(gameObject);
@@ -71,6 +77,32 @@ public class GameManager : MonoBehaviour
     {
         canSpawn = true;
         remainingAllocationSlots = numOfIncreasedShipAllocations + 5;
+
+        if (inGame == true)
+        {
+            playerLaser = GameObject.FindWithTag("PlayerLaser");
+            playerBomb = GameObject.FindWithTag("PlayerBomb");
+            playerMissile = GameObject.FindWithTag("PlayerMissile");
+
+            if (laserSystemActive == true)
+            {
+                playerLaser.SetActive(true);
+                playerBomb.SetActive(false);
+                playerMissile.SetActive(false);
+            }
+            else if (bombSystemActive == true)
+            {
+                playerLaser.SetActive(false);
+                playerBomb.SetActive(true);
+                playerMissile.SetActive(false);
+            }
+            else if (missileSystemActive == true)
+            {
+                playerLaser.SetActive(false);
+                playerBomb.SetActive(false);
+                playerMissile.SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -85,6 +117,32 @@ public class GameManager : MonoBehaviour
             enemyRespawnPos3 = GameObject.FindWithTag("EnemyRespawnPos3").transform;
             allyRespawnPos3 = GameObject.FindWithTag("RespawnPos3").transform;
             asteroidSpawnPos = GameObject.FindWithTag("AsteroidSpawnPos").transform;
+
+            playerLaser = GameObject.FindWithTag("PlayerLaser");
+            playerBomb = GameObject.FindWithTag("PlayerBomb");
+            playerMissile = GameObject.FindWithTag("PlayerMissile");
+
+            if (laserSystemActive == true && shipSelected == false)
+            {
+                playerLaser.SetActive(true);
+                playerBomb.SetActive(false);
+                playerMissile.SetActive(false);
+                shipSelected = true;
+            }
+            else if (bombSystemActive == true && shipSelected == false)
+            {
+                playerLaser.SetActive(false);
+                playerBomb.SetActive(true);
+                playerMissile.SetActive(false);
+                shipSelected = true;
+            }
+            else if (missileSystemActive == true && shipSelected == false)
+            {
+                playerLaser.SetActive(false);
+                playerBomb.SetActive(false);
+                playerMissile.SetActive(true);
+                shipSelected = true;
+            }
 
             if (canSpawn == true)
             {
@@ -232,6 +290,9 @@ public class GameManager : MonoBehaviour
             healthUpgradeText = GameObject.FindWithTag("HealthUpgradeText").GetComponent<TMP_Text>();
             weaponsUpgradeText = GameObject.FindWithTag("WeaponsUpgradeText").GetComponent<TMP_Text>();
             spacecraftUpgradeText = GameObject.FindWithTag("SpacecraftUpgradeText").GetComponent<TMP_Text>();
+            laserText = GameObject.FindWithTag("LaserText").GetComponent<TMP_Text>();
+            bombText = GameObject.FindWithTag("BombText").GetComponent<TMP_Text>();
+            missileText = GameObject.FindWithTag("MissileText").GetComponent<TMP_Text>();
 
             remainingText.text = $"Remaining: {remainingAllocationSlots}";
             fighterText.text = $"{fightersAllocated}";
@@ -249,6 +310,24 @@ public class GameManager : MonoBehaviour
             if (numOfIncreasedShipAllocations >= 10)
             {
                 spacecraftUpgradeText.text = "Unlocked";
+            }
+            if(laserSystemActive == true)
+            {
+                laserText.text = "Selected";
+                bombText.text = "Select";
+                missileText.text = "Select";
+            }
+            if (bombSystemActive == true)
+            {
+                laserText.text = "Select";
+                bombText.text = "Selected";
+                missileText.text = "Select";
+            }
+            if (missileSystemActive == true)
+            {
+                laserText.text = "Select";
+                bombText.text = "Select";
+                missileText.text = "Selected";
             }
         }
 

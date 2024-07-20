@@ -64,7 +64,7 @@ public class BombProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
             collision.gameObject.GetComponent<ShipController>().health -= damage;
             Destroy(gameObject);

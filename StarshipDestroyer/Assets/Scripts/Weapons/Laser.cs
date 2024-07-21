@@ -47,13 +47,24 @@ public class Laser : MonoBehaviour
 
         /*Once the laser is off cooldown, can fire is true, and the right mouse button is clicked,
          the laser is fired and the duration begins to count down*/
-        if(CanFire && laserOffCooldown && Input.GetMouseButton(1))
+        if(CanFire && laserOffCooldown && Input.GetMouseButton(1) || laserOffCooldown && Input.GetMouseButton(1) && GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().ammoBoosterActive == true)
         { 
-            laserDuration = 2f;
-            laserActive = true;
-            FireLaser();
-            laserCooldown = maxLaserCooldown;
-            laserOffCooldown = false;
+            if(GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().ammoBoosterActive == true)
+            {
+                laserDuration = 2f;
+                laserActive = true;
+                FireLaser();
+                laserCooldown = 0;
+                laserOffCooldown = true;
+            }
+            else
+            {
+                laserDuration = 2f;
+                laserActive = true;
+                FireLaser();
+                laserCooldown = maxLaserCooldown;
+                laserOffCooldown = false;
+            }          
         }
 
         //Continously fires projectiles while laser is active

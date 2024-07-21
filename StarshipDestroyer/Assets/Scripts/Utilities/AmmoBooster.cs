@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Booster : MonoBehaviour
+public class AmmoBooster : MonoBehaviour
 {
     Rigidbody rb;
 
@@ -18,20 +18,20 @@ public class Booster : MonoBehaviour
         {
             if (collision.gameObject.tag == "PlayerLaser")
             {
-                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().boosterActive = true;
-                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().StartBoosterTimer();
+                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().ammoBoosterActive = true;
+                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().StartAmmoBoosterTimer();
                 Destroy(gameObject);
             }
             else if (collision.gameObject.tag == "PlayerBomb")
             {
-                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().boosterActive = true;
-                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().StartBoosterTimer();
+                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().ammoBoosterActive = true;
+                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().StartAmmoBoosterTimer();
                 Destroy(gameObject);
             }
             else if (collision.gameObject.tag == "PlayerMissile")
             {
-                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().boosterActive = true;
-                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().StartBoosterTimer();
+                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().ammoBoosterActive = true;
+                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().StartAmmoBoosterTimer();
                 Destroy(gameObject);
             }
 

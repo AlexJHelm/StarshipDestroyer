@@ -352,7 +352,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator AsteroidTimer()
     {
         asteroidCanSpawn = false;
-        yield return new WaitForSeconds(60f);
+        yield return new WaitForSeconds(5f);
         asteroidCanSpawn = true;
     }  
 }

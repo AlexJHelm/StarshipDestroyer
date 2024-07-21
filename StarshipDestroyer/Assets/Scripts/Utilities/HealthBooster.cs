@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Booster : MonoBehaviour
+public class HealthBooster : MonoBehaviour
 {
     Rigidbody rb;
 
@@ -16,22 +16,19 @@ public class Booster : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
-            if (collision.gameObject.tag == "PlayerLaser")
+            if(collision.gameObject.tag == "PlayerLaser")
             {
-                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().boosterActive = true;
-                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().StartBoosterTimer();
+                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().health += 10;
                 Destroy(gameObject);
             }
             else if (collision.gameObject.tag == "PlayerBomb")
             {
-                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().boosterActive = true;
-                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().StartBoosterTimer();
+                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().health += 10;
                 Destroy(gameObject);
             }
             else if (collision.gameObject.tag == "PlayerMissile")
             {
-                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().boosterActive = true;
-                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().StartBoosterTimer();
+                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().health += 10;
                 Destroy(gameObject);
             }
 

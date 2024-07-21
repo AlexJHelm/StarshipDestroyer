@@ -44,11 +44,21 @@ public class Missile : MonoBehaviour
 
         /*Once the bomb is off cooldown, can fire is true, and the right mouse button is clicked,
          the laser is fired and the duration begins to count down*/
-        if (CanFire && missileOffCooldown && Input.GetMouseButton(1))
+        if (CanFire && missileOffCooldown && Input.GetMouseButton(1) || missileOffCooldown && Input.GetMouseButton(1) && GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().ammoBoosterActive == true)
         {
-            FireMissile();
-            missileCooldown = maxMissileCooldown;
-            missileOffCooldown = false;
+            if(GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().ammoBoosterActive == true)
+            {
+                FireMissile();
+                missileCooldown = 0;
+                missileOffCooldown = true;
+            }
+            else
+            {
+                FireMissile();
+                missileCooldown = maxMissileCooldown;
+                missileOffCooldown = false;
+            }
+           
         }
     }
 

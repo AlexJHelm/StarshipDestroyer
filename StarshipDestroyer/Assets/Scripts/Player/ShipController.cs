@@ -26,7 +26,7 @@ public class ShipController : MonoBehaviour
     public float xLookRotateSpeed = 90f, yLookRotateSpeed = 180f; 
     private Vector2 lookInput, screenCenter, mouseDistance;
 
-    public bool boosterActive;
+    public bool boosterActive, ammoBoosterActive = false;
 
     //Strafe variables (not currently used)
     //public float strafeSpeed = 7.5f;
@@ -145,5 +145,16 @@ public class ShipController : MonoBehaviour
     public void StartBoosterTimer()
     {
         StartCoroutine(BoosterTimer());
+    }
+
+    public IEnumerator AmmoBoosterTimer()
+    {
+        yield return new WaitForSeconds(10f);
+        ammoBoosterActive = false;
+    }
+
+    public void StartAmmoBoosterTimer()
+    {
+        StartCoroutine(AmmoBoosterTimer());
     }
 }

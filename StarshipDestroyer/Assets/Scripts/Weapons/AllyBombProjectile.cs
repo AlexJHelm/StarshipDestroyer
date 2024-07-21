@@ -68,5 +68,29 @@ public class AllyBombProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "EnemyBomber")
+        {
+            collision.gameObject.GetComponent<BomberMovement>().health -= damage;
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "EnemyDefender")
+        {
+            collision.gameObject.GetComponent<DefenderMovement>().health -= damage;
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Asteroid")
+        {
+            collision.gameObject.GetComponent<Asteroid>().health -= damage;
+            Destroy(gameObject);
+        }
+
     }
 }

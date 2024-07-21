@@ -43,11 +43,21 @@ public class Bomb : MonoBehaviour
 
         /*Once the bomb is off cooldown, can fire is true, and the right mouse button is clicked,
          the laser is fired and the duration begins to count down*/
-        if (CanFire && bombOffCooldown && Input.GetMouseButton(1))
+        if (CanFire && bombOffCooldown && Input.GetMouseButton(1) || bombOffCooldown && Input.GetMouseButton(1) && GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().ammoBoosterActive == true)
         {
-            FireBomb();
-            bombCooldown = maxBombCooldown;
-            bombOffCooldown = false;
+            if(GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().ammoBoosterActive == true)
+            {
+                FireBomb();
+                bombCooldown = 0;
+                bombOffCooldown = true;
+            }
+            else
+            {
+                FireBomb();
+                bombCooldown = maxBombCooldown;
+                bombOffCooldown = false;
+            }
+            
         }
     }
 

@@ -70,7 +70,7 @@ public class EnemyAttack : MonoBehaviour
 
         if(Physics.Raycast(muzzle.position, direction, out hit, range))
         {
-            if(hit.transform.CompareTag("Player") || hit.transform.CompareTag("Ally") || hit.transform.CompareTag("AllyBomber") || hit.transform.CompareTag("AllyDefender"))
+            if(hit.transform.CompareTag("PlayerLaser") || hit.transform.CompareTag("PlayerBomb") || hit.transform.CompareTag("PlayerMissile") || hit.transform.CompareTag("Ally") || hit.transform.CompareTag("AllyBomber") || hit.transform.CompareTag("AllyDefender"))
             {
                 return true;
             }

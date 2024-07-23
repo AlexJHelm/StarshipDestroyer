@@ -104,4 +104,25 @@ public class ShipAllocation : MonoBehaviour
             GameManager.GM.shipWeaponsUpgradeUnlocked = true;
         }
     }
+
+    public void LaserSystemActive()
+    {
+        GameManager.GM.laserSystemActive = true;
+        GameManager.GM.bombSystemActive = false;
+        GameManager.GM.missileSystemActive = false;
+    }
+
+    public void BombSystemActive()
+    {
+        GameManager.GM.laserSystemActive = false;
+        GameManager.GM.bombSystemActive = true;
+        GameManager.GM.missileSystemActive = false;
+    }
+
+    public void MissileSystemActive()
+    {
+        GameManager.GM.laserSystemActive = false;
+        GameManager.GM.bombSystemActive = false;
+        GameManager.GM.missileSystemActive = true;
+    }
 }

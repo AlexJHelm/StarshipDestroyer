@@ -14,11 +14,27 @@ public class Booster : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
-            GameObject.FindWithTag("Player").GetComponent<ShipController>().boosterActive = true;
-            GameObject.FindWithTag("Player").GetComponent<ShipController>().StartBoosterTimer();
-            Destroy(gameObject);
+            if (collision.gameObject.tag == "PlayerLaser")
+            {
+                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().boosterActive = true;
+                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().StartBoosterTimer();
+                Destroy(gameObject);
+            }
+            else if (collision.gameObject.tag == "PlayerBomb")
+            {
+                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().boosterActive = true;
+                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().StartBoosterTimer();
+                Destroy(gameObject);
+            }
+            else if (collision.gameObject.tag == "PlayerMissile")
+            {
+                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().boosterActive = true;
+                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().StartBoosterTimer();
+                Destroy(gameObject);
+            }
+
         }
     }
 }

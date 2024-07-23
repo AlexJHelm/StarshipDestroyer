@@ -13,6 +13,7 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
+        GameManager.GM.laserSystemActive = true;
         GameManager.GM.inSetup = true;
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(1);
@@ -20,26 +21,29 @@ public class Menu : MonoBehaviour
 
     public void GameScene()
     {
-        GameManager.GM.maxFighters = GameManager.GM.fightersAllocated;
-        GameManager.GM.maxBombers = GameManager.GM.bombersAllocated;
-        GameManager.GM.maxDefenders = GameManager.GM.defendersAllocated;
-        GameManager.GM.enemyWeakpointsDestroyed = 0;
-        GameManager.GM.allyWeakpointsDestroyed = 0;
-        GameManager.GM.enemyBridgeDestroyed = false;
-        GameManager.GM.enemyWeaponsDestroyed = false;
-        GameManager.GM.enemyThrustersDestroyed = false;
-        GameManager.GM.fightersAlive = 0;
-        GameManager.GM.enemyFightersAlive = 0;
-        GameManager.GM.bombersAlive = 0;
-        GameManager.GM.enemyBombersAlive = 0;
-        GameManager.GM.defendersAlive = 0;
-        GameManager.GM.enemyDefendersAlive = 0;
-        GameManager.GM.canSpawn = true;
-        GameManager.GM.asteroidCanSpawn = true;
-        GameManager.GM.inSetup = false;
-        GameManager.GM.shipSelected = false;
-        GameManager.GM.inGame = true;
-        SceneManager.LoadScene(2);
+        if(GameManager.GM.remainingAllocationSlots == 0)
+        {
+            GameManager.GM.maxFighters = GameManager.GM.fightersAllocated;
+            GameManager.GM.maxBombers = GameManager.GM.bombersAllocated;
+            GameManager.GM.maxDefenders = GameManager.GM.defendersAllocated;
+            GameManager.GM.enemyWeakpointsDestroyed = 0;
+            GameManager.GM.allyWeakpointsDestroyed = 0;
+            GameManager.GM.enemyBridgeDestroyed = false;
+            GameManager.GM.enemyWeaponsDestroyed = false;
+            GameManager.GM.enemyThrustersDestroyed = false;
+            GameManager.GM.fightersAlive = 0;
+            GameManager.GM.enemyFightersAlive = 0;
+            GameManager.GM.bombersAlive = 0;
+            GameManager.GM.enemyBombersAlive = 0;
+            GameManager.GM.defendersAlive = 0;
+            GameManager.GM.enemyDefendersAlive = 0;
+            GameManager.GM.canSpawn = true;
+            GameManager.GM.asteroidCanSpawn = true;
+            GameManager.GM.inSetup = false;
+            GameManager.GM.shipSelected = false;
+            GameManager.GM.inGame = true;
+            SceneManager.LoadScene(2);
+        }     
     }
 
     public void WinScene()

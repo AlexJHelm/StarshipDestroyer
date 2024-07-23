@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6f281ef5695b9a847963a02c28d49813, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bdea5668b306a254881f0d2af3ba8740, type: 2}
     - target: {fileID: 919132149155446097, guid: 6f281ef5695b9a847963a02c28d49813, type: 3}
       propertyPath: m_Name
       value: EnemyFighterTexture
@@ -236,6 +240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1198eb28d38ebdc4e9c466f1e8565d40, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2631915eb2b25744c9a303bee09ad3f3, type: 2}
     - target: {fileID: 919132149155446097, guid: 1198eb28d38ebdc4e9c466f1e8565d40, type: 3}
       propertyPath: m_Name
       value: AllyDefenderTexture
@@ -358,6 +366,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e2ccbd6c282b8924a925540ac2ef9353, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0389ba35d58816842b4494812da136b3, type: 2}
     - target: {fileID: 919132149155446097, guid: e2ccbd6c282b8924a925540ac2ef9353, type: 3}
       propertyPath: m_Name
       value: EnemeyBomberTexture
@@ -636,6 +648,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b710a5523a501c142b07bcdacd2f30cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c294a15eb4ccd294f87779b2e82d6478, type: 2}
     - target: {fileID: 919132149155446097, guid: b710a5523a501c142b07bcdacd2f30cd, type: 3}
       propertyPath: m_Name
       value: AsteroidTexture3
@@ -697,6 +713,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8147110914975260466, guid: 47f4f600111c44941a86cce25e13cb1c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fc868f512fe69274c89623fe78b80d7c, type: 2}
     - target: {fileID: 919132149155446097, guid: 47f4f600111c44941a86cce25e13cb1c, type: 3}
       propertyPath: m_Name
       value: PlayerShipTexture
@@ -758,6 +778,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 334db256906eaa94aa9af598b123a5ac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c1370a32605e514eb02178475a1554f, type: 2}
     - target: {fileID: 919132149155446097, guid: 334db256906eaa94aa9af598b123a5ac, type: 3}
       propertyPath: m_Name
       value: EnemyDefenderTexture
@@ -819,6 +843,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 831cf8343f65b234a8fe5bd82861835a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 411aaabe2dafdcb408f7ded8ad7ad0f9, type: 2}
     - target: {fileID: 919132149155446097, guid: 831cf8343f65b234a8fe5bd82861835a, type: 3}
       propertyPath: m_Name
       value: AllyBomberTexture
@@ -880,6 +908,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d0bc21f069670c94f88b907bb10c7686, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7389d47cddb461249842f3fbdf42067b, type: 2}
     - target: {fileID: 919132149155446097, guid: d0bc21f069670c94f88b907bb10c7686, type: 3}
       propertyPath: m_Name
       value: AsteroidTexture2
@@ -1310,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1730fec1a6b7ab147b886be7b8de2621, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9cc55dd85d224fe4188b28a5fa49bdda, type: 2}
     - target: {fileID: 919132149155446097, guid: 1730fec1a6b7ab147b886be7b8de2621, type: 3}
       propertyPath: m_Name
       value: AsteroidTexture1

@@ -17,5 +17,6 @@ public class FollowTransform : MonoBehaviour
     void Update()
     {
         transform.position = target.transform.position + Offset;
+
     }
 }

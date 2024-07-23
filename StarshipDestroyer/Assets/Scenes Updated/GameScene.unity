@@ -286,11 +286,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59227833}
   m_CullTransparentMesh: 1
---- !u!4 &104188570 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4870748265745658296, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
-  m_PrefabInstance: {fileID: 642860175}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &134953940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,6 +4190,10 @@ PrefabInstance:
       value: PlayerMissileShip
       objectReference: {fileID: 0}
     - target: {fileID: 265171298746088158, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 265171298746088158, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
       propertyPath: m_TagString
       value: PlayerMissile
       objectReference: {fileID: 0}
@@ -5257,20 +5256,6 @@ Transform:
   m_Father: {fileID: 543450652870306277}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &197774337120240682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7622241747948279723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3807cc8160fae3e4281e99b0b81c9a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 104188570}
-  Offset: {x: 0, y: 0, z: 0}
 --- !u!114 &233660788063526460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,7 +5393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3129857957210392519}
-  - component: {fileID: 2784957897927614368}
+  - component: {fileID: 3129857957210392520}
   m_Layer: 0
   m_Name: PlayerMarkerPivoit
   m_TagString: Untagged
@@ -6036,7 +6021,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5928528738453150276}
-  - component: {fileID: 6973020008801263006}
   m_Layer: 0
   m_Name: BoosterMarkerParent
   m_TagString: Untagged
@@ -6060,20 +6044,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2784957897927614368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728524680828690571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3807cc8160fae3e4281e99b0b81c9a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 104188570}
-  Offset: {x: 0, y: 0, z: 0}
 --- !u!4 &2787136900282368510
 Transform:
   m_ObjectHideFlags: 0
@@ -6148,6 +6118,20 @@ Transform:
   m_Father: {fileID: 3174083351474994193}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3129857957210392520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728524680828690571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f449198a3e4670419f9cc7aaf4513be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  Offset: {x: 0, y: 0, z: 0}
 --- !u!4 &3158929269349404654
 Transform:
   m_ObjectHideFlags: 0
@@ -6301,7 +6285,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863014260146900835}
-  - component: {fileID: 4228973326233534760}
   m_Layer: 0
   m_Name: EnemyMarkerParent
   m_TagString: Untagged
@@ -6514,20 +6497,6 @@ Transform:
   m_Father: {fileID: 3615614517432973366}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3967001508423873338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9011684469677563920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3807cc8160fae3e4281e99b0b81c9a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  Offset: {x: 0, y: 0, z: 0}
 --- !u!222 &4052230817858258849
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6551,20 +6520,6 @@ Transform:
   m_Father: {fileID: 3174083351474994193}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4228973326233534760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3318411275505490088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3807cc8160fae3e4281e99b0b81c9a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  Offset: {x: 0, y: 0, z: 0}
 --- !u!4 &4282952754425599456
 Transform:
   m_ObjectHideFlags: 0
@@ -7283,20 +7238,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6973020008801263006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2696012884283619052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3807cc8160fae3e4281e99b0b81c9a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  Offset: {x: 0, y: 0, z: 0}
 --- !u!1 &7027111994362645520
 GameObject:
   m_ObjectHideFlags: 0
@@ -7560,7 +7501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835798976320537180}
-  - component: {fileID: 197774337120240682}
+  - component: {fileID: 7622241747948279724}
   m_Layer: 0
   m_Name: CameraParent
   m_TagString: Untagged
@@ -7568,6 +7509,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7622241747948279724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622241747948279723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f449198a3e4670419f9cc7aaf4513be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  Offset: {x: 0, y: 0, z: 0}
 --- !u!114 &7653837278429181504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8013,7 +7968,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3757630965256790563}
-  - component: {fileID: 3967001508423873338}
   m_Layer: 0
   m_Name: AestriodMarketParent
   m_TagString: Untagged

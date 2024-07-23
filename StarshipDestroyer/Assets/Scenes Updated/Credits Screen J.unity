@@ -1291,7 +1291,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Derek Pena
 
-    Jacob Souza'
+    Jacob Souza
+
+    Kyle Sangillo'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}
   m_sharedMaterial: {fileID: 1516519129339598330, guid: 45b5f089d78d72f4b8a1948b14df268e, type: 2}

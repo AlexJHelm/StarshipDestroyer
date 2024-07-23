@@ -42,6 +42,12 @@ TagManager:
   - WeaponsUpgradeText
   - Asteroid
   - AsteroidSpawnPos
+  - PlayerLaser
+  - PlayerBomb
+  - PlayerMissile
+  - LaserText
+  - BombText
+  - MissileText
   layers:
   - Default
   - TransparentFX

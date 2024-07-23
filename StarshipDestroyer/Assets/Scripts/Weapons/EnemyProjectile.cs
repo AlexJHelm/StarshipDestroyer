@@ -60,9 +60,27 @@ public class EnemyProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
             collision.gameObject.GetComponent<ShipController>().health -= damage;
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Ally")
+        {
+            collision.gameObject.GetComponent<AllyMovement>().health -= damage;
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "AllyBomber")
+        {
+            collision.gameObject.GetComponent<AllyMovement>().health -= damage;
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "AllyDefender")
+        {
+            collision.gameObject.GetComponent<AllyMovement>().health -= damage;
             Destroy(gameObject);
         }
 

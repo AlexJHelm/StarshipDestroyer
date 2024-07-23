@@ -122,6 +122,8 @@ MonoBehaviour:
   health: 100
   movementSpeed: 10
   booster: {fileID: 4543581257395493467, guid: 44235f16ee673744495caee5f3c18d7f, type: 3}
+  healthBooster: {fileID: 246116703388735289, guid: 728bbf549f9515d4784466aa0f7fe8e6, type: 3}
+  ammoBooster: {fileID: -7398558913016834990, guid: 5979b6dcb3a46b74cab14118a533b3cd, type: 3}
 --- !u!54 &2870671955189763665
 Rigidbody:
   m_ObjectHideFlags: 0

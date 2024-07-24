@@ -8,7 +8,19 @@ public class HealthBar : MonoBehaviour
     public ShipController playerHealth;
     private void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<ShipController>();
+        if(GameManager.GM.laserSystemActive == true)
+        {
+            playerHealth = GameObject.FindGameObjectWithTag("PlayerLaser").GetComponent<ShipController>();
+        }
+        else if (GameManager.GM.bombSystemActive == true)
+        {
+            playerHealth = GameObject.FindGameObjectWithTag("PlayerBomb").GetComponent<ShipController>();
+        }
+        else if (GameManager.GM.missileSystemActive == true)
+        {
+            playerHealth = GameObject.FindGameObjectWithTag("PlayerMissile").GetComponent<ShipController>();
+        }
+
         //healthBar = GetComponent<Slider>();
         healthBar.maxValue = playerHealth.maxHealth;
         healthBar.value = playerHealth.maxHealth;

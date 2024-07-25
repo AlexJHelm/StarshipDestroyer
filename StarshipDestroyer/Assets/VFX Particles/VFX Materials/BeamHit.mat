@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LaserbeamMaterial
+  m_Name: BeamHit
   m_Shader: {fileID: -6465566751694194690, guid: 924f500ef5c67c04d879682676c57eaa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -61,11 +61,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainText:
-        m_Texture: {fileID: 2800000, guid: 3612216a0765fa94aba2d95f6ff251ba, type: 3}
+        m_Texture: {fileID: 2800000, guid: c89e783642d677a4eafd92adac68548e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTexture:
-        m_Texture: {fileID: 2800000, guid: b3d484907d5212e4283eba615f425893, type: 3}
+        m_Texture: {fileID: 2800000, guid: c89e783642d677a4eafd92adac68548e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -87,15 +87,15 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Dissolve_Amoint: -1.04
+    - _Dissolve_Amoint: 1.12
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseAmount: -0
-    - _NoisePower: -0.7
+    - _NoiseAmount: 0.21
+    - _NoisePower: 1.95
     - _NoiseScale: 50
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -108,6 +108,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1803.9255, g: 1803.9255, b: 1803.9255, a: 0}
-    - _NoiseSpeed: {r: -1, g: -1, b: 0, a: 0}
-    - _TextureSpeed: {r: -1, g: 0, b: 0, a: 0}
+    - _NoiseSpeed: {r: -1, g: -0.3, b: 0, a: 0}
+    - _TextureSpeed: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

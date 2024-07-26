@@ -4882,8 +4882,12 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3264348967784096358, guid: 52a641125bc66dc449ebe452c6e067d1, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264348967784096358, guid: 52a641125bc66dc449ebe452c6e067d1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3264348967784096358, guid: 52a641125bc66dc449ebe452c6e067d1, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
@@ -4958,8 +4962,12 @@ PrefabInstance:
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6943782912344152243, guid: 52a641125bc66dc449ebe452c6e067d1, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943782912344152243, guid: 52a641125bc66dc449ebe452c6e067d1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8062164542719786818, guid: 52a641125bc66dc449ebe452c6e067d1, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar

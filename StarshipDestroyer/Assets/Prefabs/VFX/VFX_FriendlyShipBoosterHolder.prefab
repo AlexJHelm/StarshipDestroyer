@@ -40,6 +40,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1683925977165876760}
     m_Modifications:
+    - target: {fileID: 3340781483610449138, guid: 27df46d0536f6b64ba87cd3183d7c987, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5803581813058043093, guid: 27df46d0536f6b64ba87cd3183d7c987, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -87,6 +91,10 @@ PrefabInstance:
     - target: {fileID: 6597677787754302583, guid: 27df46d0536f6b64ba87cd3183d7c987, type: 3}
       propertyPath: m_Name
       value: VFX_FriendlyShip ExhaustBooster
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021552083999612553, guid: 27df46d0536f6b64ba87cd3183d7c987, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

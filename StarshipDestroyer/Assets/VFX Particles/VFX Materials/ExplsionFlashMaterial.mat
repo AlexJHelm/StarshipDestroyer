@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ExplsionFlashMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 924f500ef5c67c04d879682676c57eaa, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 80485eb9ec1b4b446a0297fe8f90cd1f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

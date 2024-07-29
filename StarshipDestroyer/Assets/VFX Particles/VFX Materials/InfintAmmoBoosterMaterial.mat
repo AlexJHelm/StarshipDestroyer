@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_New Shader Graph
+  m_Name: InfintAmmoBoosterMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 924f500ef5c67c04d879682676c57eaa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -43,18 +43,18 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Dissolve_Amoint: 1
+    - _Dissolve_Amoint: -1
     - _Float: 0
     - _InnerGlow: 0
     - _NoiseAmount: 1
-    - _NoisePower: 2.5
+    - _NoisePower: 2
     - _NoiseScale: 400
     - _Outer_Glow: -0.2
     - _Power: 1.42
     m_Colors:
     - _Color: {r: 1, g: 0.31127846, b: 0, a: 0}
     - _FadeAlpha: {r: -1, g: 1, b: 0, a: 0}
-    - _MainColor: {r: 191.74902, g: 86.19257, b: 0, a: 0}
+    - _MainColor: {r: 0.74901956, g: 0.004602136, b: 0, a: 0}
     - _NoiseSpeed: {r: 0, g: 0.5, b: 0, a: 0}
     - _TextureSpeed: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

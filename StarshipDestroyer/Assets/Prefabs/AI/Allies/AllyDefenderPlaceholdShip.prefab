@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 5443221796415866703}
   - component: {fileID: 9002641682958310831}
   - component: {fileID: 2824139847414161341}
-  - component: {fileID: 5373083871941428731}
   - component: {fileID: 1009217701976389067}
+  - component: {fileID: 7531261075589786700}
   m_Layer: 8
   m_Name: AllyDefenderPlaceholdShip
   m_TagString: AllyDefender
@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 1075111625352831136}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 41.2, y: 30.668, z: 145.2}
-  m_LocalScale: {x: 5.443119, y: 5.147018, z: 4.070185}
+  m_LocalScale: {x: 3.9998214, y: 3.7822347, z: 2.9909348}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3169446167474414126}
@@ -76,7 +76,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075111625352831136}
-  m_Mesh: {fileID: 5113198794625825576, guid: 4364d62dbbbbcc14fa0698c273b4ca27, type: 3}
+  m_Mesh: {fileID: -4719541215101494876, guid: 1198eb28d38ebdc4e9c466f1e8565d40, type: 3}
 --- !u!23 &5443221796415866703
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ada32fd5b9415fa45ad7a4945e2f46f0, type: 2}
+  - {fileID: 2100000, guid: 2631915eb2b25744c9a303bee09ad3f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -159,27 +159,6 @@ MonoBehaviour:
   muzzle: {fileID: 3169446167474414126}
   shotCooldown: 0.25
   aggroRadius: 125
---- !u!65 &5373083871941428731
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075111625352831136}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.49594328, y: 0.19860476, z: 1.0625359}
-  m_Center: {x: 0, y: -0.0034004194, z: -0.14230053}
 --- !u!54 &1009217701976389067
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -207,3 +186,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7531261075589786700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075111625352831136}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7513381, y: 0.21636459, z: 0.9735997}
+  m_Center: {x: -0.000000074505806, y: 0.00047693774, z: -0.06401341}

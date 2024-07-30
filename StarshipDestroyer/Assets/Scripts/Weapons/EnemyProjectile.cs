@@ -74,13 +74,13 @@ public class EnemyProjectile : MonoBehaviour
 
         if (collision.gameObject.tag == "AllyBomber")
         {
-            collision.gameObject.GetComponent<AllyMovement>().health -= damage;
+            collision.gameObject.GetComponent<AllyBomberMovement>().health -= damage;
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "AllyDefender")
         {
-            collision.gameObject.GetComponent<AllyMovement>().health -= damage;
+            collision.gameObject.GetComponent<AllyDefenderMovement>().health -= damage;
             Destroy(gameObject);
         }
 

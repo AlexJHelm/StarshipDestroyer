@@ -157,6 +157,7 @@ MonoBehaviour:
   rotationalDamp: 0.5
   movementSpeed: 12
   isChasing: 0
+  marked: 0
   scrap: {fileID: -7081677042374251514, guid: 162b3a6a065e24649b99c010efda57c9, type: 3}
   health: 10
 --- !u!114 &8063442204848332276

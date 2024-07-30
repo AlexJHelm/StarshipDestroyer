@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowTransform : MonoBehaviour
+public class EnemyDefenderFollowTransform : MonoBehaviour
 {
     public Transform target;
     public Vector3 Offset;
@@ -16,7 +16,10 @@ public class FollowTransform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.transform.position + Offset;
-
+        if (GameManager.GM.enemyDefendersAlive > 0)
+        {
+            target = GameObject.FindWithTag("EnemyDefender").transform;
+            transform.position = target.transform.position + Offset;
+        }
     }
 }

@@ -3,17 +3,61 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EnemyWeakpoint
+  - GameManager
+  - CapitolShip
+  - Enemy
+  - EnemyDefaultTarget
+  - AllyThrusters
+  - AllyBridge
+  - AllyWeapons
+  - EnemyBomber
+  - EnemyDefenderPatrolPos
+  - EnemyDefender
+  - Ally
+  - AllyDefaultTarget
+  - AllyBomber
+  - EnemyThrusters
+  - EnemyBridge
+  - EnemyWeapons
+  - AllyDefender
+  - AllyDefenderPatrolPos
+  - UpgradeText
+  - RemainingText
+  - FighterText
+  - BomberText
+  - DefenderText
+  - EnemyRespawnPos1
+  - EnemyRespawnPos2
+  - EnemyRespawnPos3
+  - BaseText
+  - RespawnPos1
+  - RespawnPos2
+  - RespawnPos3
+  - Scrap
+  - ScrapCount
+  - HealthUpgradeText
+  - SpacecraftUpgradeText
+  - WeaponsUpgradeText
+  - Asteroid
+  - AsteroidSpawnPos
+  - PlayerLaser
+  - PlayerBomb
+  - PlayerMissile
+  - LaserText
+  - BombText
+  - MissileText
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - MiniMapObjects
+  - Enemy
+  - Ally
   - 
   - 
   - 

@@ -10,6 +10,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]float movementSpeed = 10f;
     public bool isChasing = false;
 
+    public bool marked = false;
+
     public Scrap scrap;
 
     public int health = 100;

@@ -8,6 +8,8 @@ public class BomberMovement : MonoBehaviour
     [SerializeField] float rotationalDamp = .5f;
     [SerializeField] float movementSpeed = 10f;
 
+    public bool marked = false;
+
     public int health = 100;
 
     public Scrap scrap;

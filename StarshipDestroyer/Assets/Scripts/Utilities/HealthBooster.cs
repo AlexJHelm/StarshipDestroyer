@@ -18,19 +18,27 @@ public class HealthBooster : MonoBehaviour
         {
             if(collision.gameObject.tag == "PlayerLaser")
             {
-                GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().health += 10;
-                Destroy(gameObject);
+                if(GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().health < GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().maxHealth)
+                {
+                    GameObject.FindWithTag("PlayerLaser").GetComponent<ShipController>().health += 10;
+                }             
+                
             }
             else if (collision.gameObject.tag == "PlayerBomb")
             {
-                GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().health += 10;
-                Destroy(gameObject);
+                if(GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().health < GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().maxHealth)
+                {
+                    GameObject.FindWithTag("PlayerBomb").GetComponent<ShipController>().health += 10;
+                }
             }
             else if (collision.gameObject.tag == "PlayerMissile")
             {
-                GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().health += 10;
-                Destroy(gameObject);
+                if(GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().health < GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().maxHealth)
+                {
+                    GameObject.FindWithTag("PlayerMissile").GetComponent<ShipController>().health += 10;
+                }
             }
+            Destroy(gameObject);
 
         }
     }

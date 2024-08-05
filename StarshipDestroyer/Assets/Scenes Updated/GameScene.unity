@@ -1592,6 +1592,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 3259696283892874802, guid: ff401a9373333db44a0556ccf495defd, type: 3}
+    - target: {fileID: 2009866469241205103, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: far clip plane
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 2875835967643664329, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: staminaBar
       value: 
@@ -4462,6 +4466,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PlayerBomb
       objectReference: {fileID: 0}
+    - target: {fileID: 2009866469241205103, guid: 4e76565f8359f8b4ca1ac31cded1d33f, type: 3}
+      propertyPath: far clip plane
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 2875835967643664329, guid: 4e76565f8359f8b4ca1ac31cded1d33f, type: 3}
       propertyPath: staminaBar
       value: 
@@ -5064,7 +5072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2009866469241205103, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
       propertyPath: far clip plane
-      value: 2500
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 2009866469241205103, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
       propertyPath: near clip plane
@@ -5952,6 +5960,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_Star
       objectReference: {fileID: 0}
+    - target: {fileID: 4018899975974114626, guid: d7f1400f47d0398499a73b3a08976fc5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5200887074756518724, guid: d7f1400f47d0398499a73b3a08976fc5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8410409694409979528, guid: d7f1400f47d0398499a73b3a08976fc5, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5966,7 +5982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8410409694409979528, guid: d7f1400f47d0398499a73b3a08976fc5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1593
+      value: -1413
       objectReference: {fileID: 0}
     - target: {fileID: 8410409694409979528, guid: d7f1400f47d0398499a73b3a08976fc5, type: 3}
       propertyPath: m_LocalRotation.w

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -43,12 +42,11 @@ public class Asteroid : MonoBehaviour
             }
             
         }
-        transform.Rotate(0.2f, 0, 0.2f);
-        //Move();
+        Move();
     }
 
     private void Move()
     {
-        transform.Translate(new Vector3(-0.2f, 0, 0));      
+        transform.position += -transform.right * movementSpeed * Time.deltaTime;
     }
 }

@@ -19,15 +19,14 @@ public class GameManager : MonoBehaviour
     public AllyMovement allyPrefab;
     public AllyBomberMovement allyBomberPrefab;
     public AllyDefenderMovement allyDefenderPrefab;
-    public Asteroid asteroid1;
-    public Asteroid asteroid2;
-    public Asteroid asteroid3;
+    public Asteroid asteroid;
     public Transform enemyRespawnPos1;
     public Transform enemyRespawnPos2;
     public Transform enemyRespawnPos3;
     public Transform allyRespawnPos1;
     public Transform allyRespawnPos2;
     public Transform allyRespawnPos3;
+    public Transform asteroidSpawnPos;
 
     public int enemyWeakpointsDestroyed = 0;
     public int allyWeakpointsDestroyed = 0;
@@ -44,7 +43,7 @@ public class GameManager : MonoBehaviour
     public bool asteroidCanSpawn = true;
 
     public int scrap = 30;
-    int randomSpawnX, randomSpawnY, randomSpawnZ, randomSpawnPos, randomAsteroidNum;
+    int randomSpawnPos;
     public int numOfIncreasedShipAllocations = 1;
     public int remainingAllocationSlots;
     public bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked;
@@ -117,6 +116,7 @@ public class GameManager : MonoBehaviour
             allyRespawnPos2 = GameObject.FindWithTag("RespawnPos2").transform;
             enemyRespawnPos3 = GameObject.FindWithTag("EnemyRespawnPos3").transform;
             allyRespawnPos3 = GameObject.FindWithTag("RespawnPos3").transform;
+            asteroidSpawnPos = GameObject.FindWithTag("AsteroidSpawnPos").transform;
 
             playerLaser = GameObject.FindWithTag("PlayerLaser");
             playerBomb = GameObject.FindWithTag("PlayerBomb");
@@ -259,23 +259,7 @@ public class GameManager : MonoBehaviour
             }
             if (asteroidCanSpawn == true)
             {
-                randomSpawnX = Random.Range(-250, 380);
-                randomSpawnY = Random.Range(-50, 140);
-                randomSpawnZ = Random.Range(-290, 50);
-                randomAsteroidNum = Random.Range(0, 4);
-                if (randomAsteroidNum <= 1)
-                {
-                    Instantiate(asteroid1, new Vector3(randomSpawnX, randomSpawnY, randomSpawnZ), transform.rotation);
-                }
-                else if(randomAsteroidNum > 1 && randomAsteroidNum <= 2)
-                {
-                    Instantiate(asteroid2, new Vector3(randomSpawnX, randomSpawnY, randomSpawnZ), transform.rotation);
-                }
-                else
-                {
-                    Instantiate(asteroid3, new Vector3(randomSpawnX, randomSpawnY, randomSpawnZ), transform.rotation);
-                }
-                                   
+                Instantiate(asteroid, asteroidSpawnPos.position, transform.rotation);
                 StartCoroutine(AsteroidTimer());
             }
 

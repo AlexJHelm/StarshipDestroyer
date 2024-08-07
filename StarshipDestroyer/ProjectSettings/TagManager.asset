@@ -48,6 +48,10 @@ TagManager:
   - LaserText
   - BombText
   - MissileText
+  - AsteroidSpawnPos2
+  - AsteroidSpawnPos3
+  - Asteroid2
+  - Asteroid3
   layers:
   - Default
   - TransparentFX
@@ -58,7 +62,7 @@ TagManager:
   - MiniMapObjects
   - Enemy
   - Ally
-  - 
+  - Icons
   - 
   - 
   - 

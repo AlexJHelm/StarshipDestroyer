@@ -3949,7 +3949,7 @@ PrefabInstance:
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: asteroid1
       value: 
-      objectReference: {fileID: 3981537141398578226, guid: b88ec081815a7924c8bf34cdb7b446f5, type: 3}
+      objectReference: {fileID: 4603853467995750735, guid: aa82dc882c7681f449652a6ab4935f3c, type: 3}
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: asteroid2
       value: 

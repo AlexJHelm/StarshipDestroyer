@@ -2757,6 +2757,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyThrusters
       objectReference: {fileID: 0}
+    - target: {fileID: -801559082004733379, guid: e6385a6a9875f3b469fcb53bfd07457c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4fb344b07312014aaa2b0e1f28540e1, type: 2}
     - target: {fileID: -795654534573840329, guid: e6385a6a9875f3b469fcb53bfd07457c, type: 3}
       propertyPath: m_TagString
       value: EnemyBridge
@@ -2769,6 +2773,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyWeapons
       objectReference: {fileID: 0}
+    - target: {fileID: 2262973225583151512, guid: e6385a6a9875f3b469fcb53bfd07457c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 861b403d8f0d6764a81dcc14697e77b1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

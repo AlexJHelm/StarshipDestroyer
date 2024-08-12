@@ -43,7 +43,7 @@ Transform:
   - {fileID: 5278840566045910575}
   - {fileID: 7493300192666838409}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &4694674270666593304
 MeshFilter:
@@ -497,6 +497,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914981693145285510, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: m_MaxParticleSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}

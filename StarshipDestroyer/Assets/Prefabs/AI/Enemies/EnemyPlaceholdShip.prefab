@@ -377,6 +377,14 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 5e00f1412b2f4684c8fa92c00086f975, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 5e00f1412b2f4684c8fa92c00086f975, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: 5e00f1412b2f4684c8fa92c00086f975, type: 3}
       propertyPath: m_Name
       value: VFX_EnemyFighterExhaustHolder

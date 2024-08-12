@@ -355,6 +355,14 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6492601477129339501, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.6321432
@@ -549,6 +557,14 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
       propertyPath: m_Name
       value: VFX_EnemyBomberExhaustHolder (1)
@@ -733,6 +749,14 @@ PrefabInstance:
     - target: {fileID: 5310250386512537748, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: 0f90574b47a0a3c4abbbf0f94b0db0a9, type: 3}
       propertyPath: m_Name

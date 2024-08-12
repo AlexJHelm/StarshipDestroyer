@@ -326,6 +326,14 @@ PrefabInstance:
       propertyPath: m_RenderAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
       propertyPath: m_Name
       value: VFX_ShipDefenderExhaustHolder (1)
@@ -532,6 +540,14 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790523090615366035, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
       propertyPath: m_RenderMode
       value: 0
@@ -681,6 +697,14 @@ PrefabInstance:
     - target: {fileID: 4914981693145285510, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
       propertyPath: m_RenderAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: 2df3f8657a8695f408697f4dd095b903, type: 3}
       propertyPath: m_Name

@@ -348,6 +348,14 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
       propertyPath: m_Name
       value: VFX_EnemyDefenderExhaustHolder (1)
@@ -526,6 +534,14 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
       propertyPath: m_Name
       value: VFX_EnemyDefenderExhaustHolder (2)
@@ -703,6 +719,14 @@ PrefabInstance:
     - target: {fileID: 5310250386512537748, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: d8ffd3beaca6e1242931cb1666544801, type: 3}
       propertyPath: m_Name

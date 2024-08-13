@@ -5286,6 +5286,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5864691353753199119, guid: 4d95e6faceffd3346b0494e18a66022b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47b5b04e19afb1f48bc1418bfcb00cf6, type: 2}
     - target: {fileID: 6977996848099218333, guid: 4d95e6faceffd3346b0494e18a66022b, type: 3}
       propertyPath: m_Name
       value: EnemyTurret4

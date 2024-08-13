@@ -91,7 +91,7 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Dissolve_Amoint: 0
+    - _Dissolve_Amoint: 0.36
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -99,7 +99,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NoiseAmount: 0.08
-    - _NoisePower: 0.13
+    - _NoisePower: 0.4
     - _NoiseScale: 50
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -111,7 +111,7 @@ Material:
     m_Colors:
     - _Color: {r: 31.626799, g: 1.3246827, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainColor: {r: 78.79325, g: 10.528213, b: 0, a: 0}
+    - _MainColor: {r: 271.1741, g: 271.1741, b: 271.1741, a: 0}
     - _NoiseSpeed: {r: 5, g: 5, b: 0, a: 0}
     - _TextureSpeed: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

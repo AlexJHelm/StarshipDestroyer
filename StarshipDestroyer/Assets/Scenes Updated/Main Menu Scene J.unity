@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cd490d4feb37a9f40b6e853477c2c2eb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.2331076, g: 0.23627803, b: 0.27289605, a: 1}
+  m_IndirectSpecularColor: {r: 0.45383745, g: 0.5251203, b: 0.6740634, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3946,6 +3946,18 @@ PrefabInstance:
       propertyPath: scrap
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: asteroid1
+      value: 
+      objectReference: {fileID: 3981537141398578226, guid: b88ec081815a7924c8bf34cdb7b446f5, type: 3}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: asteroid2
+      value: 
+      objectReference: {fileID: 3981537141398578226, guid: eeeb4da72d55f944a81344aaf2c50840, type: 3}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: asteroid3
+      value: 
+      objectReference: {fileID: 3981537141398578226, guid: e024051076fdc3d44aaffd57e5ed9db0, type: 3}
     - target: {fileID: 3565090866975754257, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: m_RootOrder
       value: 4

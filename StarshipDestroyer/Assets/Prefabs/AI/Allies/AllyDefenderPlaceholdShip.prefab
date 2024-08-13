@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2824139847414161341}
   - component: {fileID: 1009217701976389067}
   - component: {fileID: 7531261075589786700}
+  - component: {fileID: 2715101829370946762}
   m_Layer: 8
   m_Name: AllyDefenderPlaceholdShip
   m_TagString: AllyDefender
@@ -210,6 +211,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7513381, y: 0.21636459, z: 0.9735997}
   m_Center: {x: -0.000000074505806, y: 0.00047693774, z: -0.06401341}
+--- !u!114 &2715101829370946762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075111625352831136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.21568628, g: 0.47058824, b: 0.69411767, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &3650674476062028474
 PrefabInstance:
   m_ObjectHideFlags: 0

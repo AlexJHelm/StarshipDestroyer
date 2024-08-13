@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class ShipController : MonoBehaviour
@@ -18,13 +19,18 @@ public class ShipController : MonoBehaviour
     public Camera overlookCamera;
 
     public float deadZoneRadius = .10f;
+    public float mouseSensitivity = 1.0f;
 
     //private variables for acceleration
     private float forwardAcceleration = 2.5f, hoverAcceleration = 2.0f, forwardSpeed = 25f;
 
+    public float rotationSmoothSpeed = 0.1f; // Smooth speed for weighty feel
+
     //Variables for camera and mouse
     public float xLookRotateSpeed = 90f, yLookRotateSpeed = 180f; 
     private Vector2 lookInput, screenCenter, mouseDistance;
+
+    private Quaternion targetRotation;
 
     public bool boosterActive, ammoBoosterActive = false;
 
@@ -44,6 +50,7 @@ public class ShipController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         mainCamera.enabled = true;
         overlookCamera.enabled = false;
+        targetRotation = transform.rotation;
 
         //Sets screen center
         screenCenter.x = Screen.width * .5f;
@@ -54,10 +61,14 @@ public class ShipController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(health > 0)
         {
+            // Mouse control for pitch and yaw
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+
             //Updates location of mouse
             lookInput.x = Input.mousePosition.x;
             lookInput.y = Input.mousePosition.y;
@@ -107,10 +118,20 @@ public class ShipController : MonoBehaviour
                 activeForwardSpeed = 0;
             }*/
 
+            //transform.position = Vector3.Lerp(transform.position, desiredPosition, positionSmoothSpeed);
             transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
+
+            /*
+            // Adjust target rotation based on mouse input
+            targetRotation *= Quaternion.Euler(-mouseY, mouseX, 0);
+
+            // Smoothly interpolate towards the target rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSmoothSpeed);
+            */
+
             //transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
             //rb.AddForce(transform.forward * activeForwardSpeed, ForceMode.Impulse);
-           
+
             //Strafe movement and speed updates (not currently used)
             //activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
             //transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;

@@ -11,7 +11,7 @@ public class CameraScript : MonoBehaviour
     private Queue<Quaternion> prevRotations = new Queue<Quaternion>();
 
     // How many frames behind we want the camera to be
-    public int cameraLag = 10;
+    public float cameraLag = 10f;
     // Where the camera should be relative to the ship (like, behind and above it)
     public Vector3 thirdPersonOffset = new Vector3(0.0f, 5.0f, -10.0f);
     // How slowly the camera should move to new positions
@@ -21,13 +21,30 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
-        // Find the ship the camera should follow
-        targetShip = transform.parent.gameObject;
-        // Detach the camera from the ship so it can move independently
-        transform.parent = null;
+        if(GameManager.GM.laserSystemActive == true)
+        {
+            // Find the ship the camera should follow
+            targetShip = GameObject.FindWithTag("PlayerLaser").gameObject;
+            /*// Detach the camera from the ship so it can move independently
+            transform.parent = null;*/
+        }
+        else if (GameManager.GM.bombSystemActive == true)
+        {
+            // Find the ship the camera should follow
+            targetShip = GameObject.FindWithTag("PlayerBomb").gameObject;
+            /*// Detach the camera from the ship so it can move independently
+            transform.parent = null;*/
+        }
+        else if (GameManager.GM.missileSystemActive == true)
+        {
+            // Find the ship the camera should follow
+            targetShip = GameObject.FindWithTag("PlayerMissile").gameObject;
+            /*// Detach the camera from the ship so it can move independently
+            transform.parent = null;*/
+        }
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         // Add the current position and rotation of the ship to our history queues
         prevPositions.Enqueue(targetShip.transform.position);

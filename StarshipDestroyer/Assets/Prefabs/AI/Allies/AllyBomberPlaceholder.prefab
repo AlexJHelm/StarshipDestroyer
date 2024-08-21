@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 9937580174990395}
   - component: {fileID: 4113573799248107634}
   - component: {fileID: 6901970505337592539}
-  - component: {fileID: 8231673344120280939}
   m_Layer: 8
   m_Name: AllyBomberPlaceholder
   m_TagString: AllyBomber
@@ -166,24 +165,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9726398, y: 0.36878505, z: 1.3295952}
   m_Center: {x: -0.0000008791685, y: -0.05287245, z: 0.0754601}
---- !u!114 &8231673344120280939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4533635710899036837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.21568628, g: 0.47058824, b: 0.69411767, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &7896171434644064756
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +344,14 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6492601477129339501, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -492,6 +481,14 @@ PrefabInstance:
     - target: {fileID: 333764747216917057, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 333764747216917057, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 333764747216917057, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 617716785656516440, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -628,6 +625,14 @@ PrefabInstance:
     - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6492601477129339501, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: m_LocalRotation.w

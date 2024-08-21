@@ -7,6 +7,7 @@ public class EnemyProjectile : MonoBehaviour
     //Variable Declarations
 
     Rigidbody rb;
+    public GameObject hitVFX;
     float shotForce = 2500f;
     int damage = 10;
     float range = 3f;
@@ -52,35 +53,41 @@ public class EnemyProjectile : MonoBehaviour
         //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
         if(collision.gameObject.tag == "AllyWeakpoint")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "CapitolShip")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
             collision.gameObject.GetComponent<ShipController>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Ally")
         {
             collision.gameObject.GetComponent<AllyMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "AllyBomber")
         {
             collision.gameObject.GetComponent<AllyBomberMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "AllyDefender")
         {
             collision.gameObject.GetComponent<AllyDefenderMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 

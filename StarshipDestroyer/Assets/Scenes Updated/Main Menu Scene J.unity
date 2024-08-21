@@ -3949,7 +3949,7 @@ PrefabInstance:
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: asteroid1
       value: 
-      objectReference: {fileID: 3981537141398578226, guid: b88ec081815a7924c8bf34cdb7b446f5, type: 3}
+      objectReference: {fileID: 4603853467995750735, guid: aa82dc882c7681f449652a6ab4935f3c, type: 3}
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: asteroid2
       value: 
@@ -3958,6 +3958,10 @@ PrefabInstance:
       propertyPath: asteroid3
       value: 
       objectReference: {fileID: 3981537141398578226, guid: e024051076fdc3d44aaffd57e5ed9db0, type: 3}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: f26d0102f4560df41b3cbad81e6b7ae7, type: 3}
     - target: {fileID: 3565090866975754257, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: m_RootOrder
       value: 4

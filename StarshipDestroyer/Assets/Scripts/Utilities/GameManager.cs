@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
     public Transform allyRespawnPos2;
     public Transform allyRespawnPos3;
 
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.ForceSoftware;
+    public Vector2 hotSpot = Vector2.zero;
+
     public int enemyWeakpointsDestroyed = 0;
     public int allyWeakpointsDestroyed = 0;
 
@@ -349,13 +353,16 @@ public class GameManager : MonoBehaviour
 
         if(inGame == true)
         {
+            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
             Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = false;
+            //Cursor.visible = false;
+            
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+            Cursor.lockState = CursorLockMode.None;           
+            //Cursor.visible = true;
         }
     }
 

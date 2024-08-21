@@ -2904,9 +2904,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: hoverSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: overlookCamera
       value: 
       objectReference: {fileID: 238053486}
+    - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: baseForwardSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7575485677233103648, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: basicShotBar
       value: 
@@ -2953,6 +2961,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05600261, y: 0.011164635, z: 0.040466435}
   m_Center: {x: 0.0000000027939677, y: 0.0024361406, z: 0.0023467364}
+--- !u!4 &642860178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4870748265745658296, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+  m_PrefabInstance: {fileID: 642860175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &672985745
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,7 +10031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f449198a3e4670419f9cc7aaf4513be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 3608774229847900091}
   Offset: {x: 0, y: 0, z: 0}
 --- !u!4 &3158929269349404654
 Transform:
@@ -10977,7 +10990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -9}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6755040041340425829
@@ -11247,7 +11260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f449198a3e4670419f9cc7aaf4513be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 642860178}
   Offset: {x: 0, y: 0, z: 0}
 --- !u!114 &7653837278429181504
 MonoBehaviour:
@@ -11269,7 +11282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3ada283a3d903b6469bce0800fecd846, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b586c3f85cd671409fc5c1173da6649, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

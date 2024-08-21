@@ -52,6 +52,8 @@ TagManager:
   - AsteroidSpawnPos3
   - Asteroid2
   - Asteroid3
+  - EnemyCapitolShip
+  - AllyCapitolShip
   layers:
   - Default
   - TransparentFX

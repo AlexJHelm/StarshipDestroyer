@@ -5,6 +5,7 @@ using UnityEngine;
 public class BombProjectile : MonoBehaviour
 {
     Rigidbody rb;
+    public GameObject hitVFX;
     float shotForce = 500f;
     int damage = 10;
     float range = 3f;
@@ -54,6 +55,7 @@ public class BombProjectile : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
                 collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;
+                Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             }
 
             Destroy(gameObject);
@@ -61,12 +63,14 @@ public class BombProjectile : MonoBehaviour
 
         if (collision.gameObject.tag == "CapitolShip")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
             collision.gameObject.GetComponent<ShipController>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 

@@ -4835,7 +4835,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c294a15eb4ccd294f87779b2e82d6478, type: 2}
+  - {fileID: 379190293830321323, guid: b710a5523a501c142b07bcdacd2f30cd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4867,7 +4867,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 0
+  m_RenderAlignment: 2
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
@@ -4877,9 +4877,9 @@ ParticleSystemRenderer:
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 7064111684170314764, guid: d0bc21f069670c94f88b907bb10c7686, type: 3}
-  m_Mesh1: {fileID: 0}
-  m_Mesh2: {fileID: 0}
+  m_Mesh: {fileID: 5910992280928448044, guid: 3f61152ac20976746a902feb325cc73b, type: 3}
+  m_Mesh1: {fileID: 378437738640918983, guid: d73a6ff8decc6f547a342dd96dd85607, type: 3}
+  m_Mesh2: {fileID: -6008510576621632036, guid: 8b7febfad9e91b94d98b6326ad7ff4f2, type: 3}
   m_Mesh3: {fileID: 0}
   m_MeshWeighting: 1
   m_MeshWeighting1: 1
@@ -9804,7 +9804,7 @@ Transform:
   - {fileID: 3358667813913964490}
   - {fileID: 1260141190497044920}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8395923445137608110
 GameObject:

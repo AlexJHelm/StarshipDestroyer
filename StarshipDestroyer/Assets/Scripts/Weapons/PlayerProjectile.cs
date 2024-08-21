@@ -11,6 +11,7 @@ public class PlayerProjectile : MonoBehaviour
     public int damage = 10;
     float range = 3f;
     float duration;
+    public GameObject hitVFX;
 
     //Checks to see if projectile moves past it's range
     bool outOfRange
@@ -56,43 +57,49 @@ public class PlayerProjectile : MonoBehaviour
         //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
         if(collision.gameObject.tag == "EnemyThrusters" || collision.gameObject.tag == "EnemyBridge" || collision.gameObject.tag == "EnemyWeapons")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             if (collision.gameObject.GetComponent<Weakpoints>().canTakeDamage == true)
             {
                 collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
-                collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;           
-            }
-
+                collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;
+            }          
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "CapitolShip")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if(collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "EnemyBomber")
         {
             collision.gameObject.GetComponent<BomberMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "EnemyDefender")
         {
             collision.gameObject.GetComponent<DefenderMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Asteroid" || collision.gameObject.tag == "Asteroid2" || collision.gameObject.tag == "Asteroid3")
         {
             collision.gameObject.GetComponent<Asteroid>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
+        
     }
 }

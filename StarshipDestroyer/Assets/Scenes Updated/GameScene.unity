@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45383745, g: 0.5251203, b: 0.6740634, a: 1}
+  m_IndirectSpecularColor: {r: 0.45383734, g: 0.52512455, b: 0.6740622, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -563,7 +563,6 @@ GameObject:
   m_Component:
   - component: {fileID: 118442156}
   - component: {fileID: 118442158}
-  - component: {fileID: 118442159}
   m_Layer: 9
   m_Name: Defend Icon 2
   m_TagString: Untagged
@@ -627,7 +626,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b53c622b66c35324496cb7fb8f25c7e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 268f2b0c1896106448d3af64e45a4e85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -638,21 +637,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &118442159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118442155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fc3e9caac7f0e41b4b23bcb24c0e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconTarget1: {fileID: 1505421349}
-  iconTarget2: {fileID: 1515992839}
-  iconTarget3: {fileID: 1682887939}
 --- !u!1 &134953940
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,14 +767,13 @@ GameObject:
   m_Component:
   - component: {fileID: 160133414}
   - component: {fileID: 160133416}
-  - component: {fileID: 160133417}
   m_Layer: 9
-  m_Name: Icon3
+  m_Name: Defend Icon 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &160133414
 Transform:
   m_ObjectHideFlags: 0
@@ -847,7 +830,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4331aa6ce064699499b60e9285d581d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 268f2b0c1896106448d3af64e45a4e85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -858,21 +841,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &160133417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160133413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fc3e9caac7f0e41b4b23bcb24c0e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconTarget1: {fileID: 1505421349}
-  iconTarget2: {fileID: 1515992839}
-  iconTarget3: {fileID: 1682887939}
 --- !u!4 &169973990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7754358003503958311, guid: 4d95e6faceffd3346b0494e18a66022b, type: 3}
@@ -1364,7 +1332,6 @@ GameObject:
   m_Component:
   - component: {fileID: 342826012}
   - component: {fileID: 342826014}
-  - component: {fileID: 342826015}
   m_Layer: 9
   m_Name: Defend Icon 1
   m_TagString: Untagged
@@ -1428,7 +1395,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b53c622b66c35324496cb7fb8f25c7e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 268f2b0c1896106448d3af64e45a4e85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1439,21 +1406,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &342826015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342826011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fc3e9caac7f0e41b4b23bcb24c0e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconTarget1: {fileID: 1505421349}
-  iconTarget2: {fileID: 1515992839}
-  iconTarget3: {fileID: 1682887939}
 --- !u!1 &364432068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,6 +2795,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PlayerLaser
       objectReference: {fileID: 0}
+    - target: {fileID: 2009866469241205103, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 447
+      objectReference: {fileID: 0}
     - target: {fileID: 2875835967643664329, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: staminaBar
       value: 
@@ -3832,7 +3788,6 @@ GameObject:
   m_Component:
   - component: {fileID: 822079001}
   - component: {fileID: 822079003}
-  - component: {fileID: 822079004}
   m_Layer: 9
   m_Name: Attack Icon 3
   m_TagString: Untagged
@@ -3896,7 +3851,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 724251ba2e6d1824a9d98dd3705effab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70711e49ddf230142a961148f888b925, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3907,21 +3862,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &822079004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822079000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fc3e9caac7f0e41b4b23bcb24c0e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconTarget1: {fileID: 1505421349}
-  iconTarget2: {fileID: 1515992839}
-  iconTarget3: {fileID: 1682887939}
 --- !u!1 &940716185
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,7 +4113,6 @@ GameObject:
   m_Component:
   - component: {fileID: 978087565}
   - component: {fileID: 978087567}
-  - component: {fileID: 978087568}
   m_Layer: 9
   m_Name: Attack Icon 1
   m_TagString: Untagged
@@ -4237,7 +4176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 724251ba2e6d1824a9d98dd3705effab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70711e49ddf230142a961148f888b925, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4248,21 +4187,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &978087568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978087564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fc3e9caac7f0e41b4b23bcb24c0e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconTarget1: {fileID: 1505421349}
-  iconTarget2: {fileID: 1515992839}
-  iconTarget3: {fileID: 1682887939}
 --- !u!1 &987717701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,11 +6770,6 @@ RectTransform:
   m_AnchoredPosition: {x: 18.3, y: -13}
   m_SizeDelta: {x: 113.1273, y: 99.998}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1505421349 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7338104487859861989, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
-  m_PrefabInstance: {fileID: 642860175}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1505421352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1244309547336588068, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
@@ -7093,11 +7012,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05600261, y: 0.011164635, z: 0.040466435}
   m_Center: {x: 0.0000000027939677, y: 0.0024361406, z: 0.0023467364}
---- !u!1 &1515992839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7338104487859861989, guid: 4e76565f8359f8b4ca1ac31cded1d33f, type: 3}
-  m_PrefabInstance: {fileID: 1515992836}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1515992840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1244309547336588068, guid: 4e76565f8359f8b4ca1ac31cded1d33f, type: 3}
@@ -7889,11 +7803,6 @@ PrefabInstance:
 --- !u!1 &1682887938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 265171298746088158, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
-  m_PrefabInstance: {fileID: 1682887937}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1682887939 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7338104487859861989, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
   m_PrefabInstance: {fileID: 1682887937}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1682887940 stripped
@@ -9032,7 +8941,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1968840607}
   - component: {fileID: 1968840609}
-  - component: {fileID: 1968840610}
   m_Layer: 9
   m_Name: Attack Icon 2
   m_TagString: Untagged
@@ -9096,7 +9004,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 724251ba2e6d1824a9d98dd3705effab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70711e49ddf230142a961148f888b925, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9107,21 +9015,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1968840610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968840606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fc3e9caac7f0e41b4b23bcb24c0e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconTarget1: {fileID: 1505421349}
-  iconTarget2: {fileID: 1515992839}
-  iconTarget3: {fileID: 1682887939}
 --- !u!1 &1997688033
 GameObject:
   m_ObjectHideFlags: 0

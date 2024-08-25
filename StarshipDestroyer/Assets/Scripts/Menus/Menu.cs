@@ -69,31 +69,31 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(6);
     }
 
-    public void HandbookOBJ()
+    public void HandbookPlayer()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(7);
     }
 
-    public void HandbookShip()
+    public void HandbookOBJ()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(8);
     }
 
-    public void HandbookFighter()
+    public void HandbookBoost()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(9);
     }
 
-    public void HandbookSecond()
+    public void HandbookScrap()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(10);
     }
 
-    public void HandbookMission()
+    public void HandbookShips()
     {
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(11);

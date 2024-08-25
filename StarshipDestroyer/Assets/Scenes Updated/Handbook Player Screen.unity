@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 627001808}
   - component: {fileID: 627001807}
   m_Layer: 5
-  m_Name: Weakpoints Txt
+  m_Name: Combat Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,8 +1433,8 @@ RectTransform:
   - {fileID: 824272035}
   - {fileID: 2017769130}
   - {fileID: 989342004}
-  - {fileID: 627001806}
   - {fileID: 1917070839}
+  - {fileID: 627001806}
   - {fileID: 1547126986}
   - {fileID: 903568276}
   - {fileID: 626519916}

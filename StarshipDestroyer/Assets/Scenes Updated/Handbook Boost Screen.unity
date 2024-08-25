@@ -3477,7 +3477,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Collectables ingame - buff the player'
+    Ingame collectables - buff the player'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77ad86847612d884b87ded0105439c5a, type: 2}
   m_sharedMaterial: {fileID: 5192993848974311574, guid: 77ad86847612d884b87ded0105439c5a, type: 2}

@@ -314,7 +314,7 @@ public class GameManager : MonoBehaviour
             fighterText.text = $"{fightersAllocated}";
             bomberText.text = $"{bombersAllocated}";
             defenderText.text = $"{defendersAllocated}";
-            scrapText.text = $"{scrap} Scrap";
+            scrapText.text = $"{scrap}";
             if(shipHealthUpgradeUnlocked == true)
             {
                 healthUpgradeText.text = "Unlocked";

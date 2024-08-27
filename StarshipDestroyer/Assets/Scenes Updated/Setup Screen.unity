@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45383734, g: 0.52512455, b: 0.6740622, a: 1}
+  m_IndirectSpecularColor: {r: 0.45383745, g: 0.5251203, b: 0.6740634, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -811,7 +811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &79771245
 Transform:
   m_ObjectHideFlags: 0
@@ -6409,7 +6409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Capital Ship Weapon Upgrade
+  m_text: Capital Ship Health Upgrade
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9046330967d00634a872ad6cef9eab21, type: 2}
   m_sharedMaterial: {fileID: 1171131639105092522, guid: 9046330967d00634a872ad6cef9eab21, type: 2}
@@ -11080,7 +11080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1232260787
 Transform:
   m_ObjectHideFlags: 0

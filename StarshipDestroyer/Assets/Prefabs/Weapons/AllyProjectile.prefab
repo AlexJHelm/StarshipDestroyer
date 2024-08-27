@@ -203,6 +203,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
       propertyPath: m_Positions.Array.data[1].z
       value: -6
       objectReference: {fileID: 0}
@@ -256,6 +260,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
       propertyPath: m_Parameters.colorGradient.key2.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
+      propertyPath: m_Parameters.generateLightingData
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7554903231812077658, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}

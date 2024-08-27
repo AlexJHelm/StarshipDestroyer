@@ -105,6 +105,18 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(12);
     }
 
+    public void Allocations()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(13);
+    }
+
+    public void Weapons()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(14);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

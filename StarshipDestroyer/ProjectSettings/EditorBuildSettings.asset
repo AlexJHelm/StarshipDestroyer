@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes Updated/Main Menu Scene.unity
     guid: d90c3cc3f030ccc4a955383c75c803f9
   - enabled: 1
-    path: Assets/Scenes Updated/Setup Screen.unity
+    path: Assets/Scenes Updated/Setup Upgrades Screen.unity
     guid: 912a6fa2ddc0fd14ca958a6c7a0ecf3e
   - enabled: 1
     path: Assets/Scenes Updated/GameScene.unity
@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes Updated/News Screen.unity
     guid: 92bfe1f06e62b334d8334aac1e7fde5a
+  - enabled: 1
+    path: Assets/Scenes Updated/Setup Allocation Screen.unity
+    guid: d1d51e21d042d344387c4cec9c353288
+  - enabled: 1
+    path: Assets/Scenes Updated/Setup Weapons  Screen.unity
+    guid: 761b930e50d35994cb4a6c523d68f4aa
   m_configObjects: {}

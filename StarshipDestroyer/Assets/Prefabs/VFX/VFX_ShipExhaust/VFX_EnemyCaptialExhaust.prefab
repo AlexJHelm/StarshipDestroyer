@@ -32,7 +32,7 @@ Transform:
   - {fileID: 7991672254134054338}
   - {fileID: 2216327665720923427}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1457569145179234047
 PrefabInstance:
@@ -42,9 +42,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753505256906604960}
     m_Modifications:
+    - target: {fileID: 206222638322804006, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 271554634366731908, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_Name
       value: EnemyCaptialBottomExaust (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 3889233933564982668, guid: 5eed8db641c3b444d90ba8b96e36d09d, type: 3}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.rangeCurve.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_RootOrder
@@ -52,15 +84,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.310013
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.40000153
+      value: 0.553
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.699982
+      value: 0.202
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -108,9 +140,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753505256906604960}
     m_Modifications:
+    - target: {fileID: 206222638322804006, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 271554634366731908, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_Name
       value: EnemyCaptialBottomExaust
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 3889233933564982668, guid: b0d0544c44ff98846b5a49c1efa9a2bc, type: 3}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.rangeCurve.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_RootOrder
@@ -118,15 +182,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.310013
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.40000153
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.400024
+      value: 1.427
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -174,9 +238,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7753505256906604960}
     m_Modifications:
+    - target: {fileID: 206222638322804006, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 271554634366731908, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_Name
       value: EnemyCaptialBottomExaust (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 3889233933564982668, guid: 468309c09eac31143ad4d5ae7cdb8617, type: 3}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.rangeCurve.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091204906112562768, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_RootOrder
@@ -184,15 +280,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.310013
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.5
+      value: 1.436
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.8000183
+      value: 0.825
       objectReference: {fileID: 0}
     - target: {fileID: 8850220849815040829, guid: 596e8dc03b2045244af00e9bdc4ad2dd, type: 3}
       propertyPath: m_LocalRotation.w

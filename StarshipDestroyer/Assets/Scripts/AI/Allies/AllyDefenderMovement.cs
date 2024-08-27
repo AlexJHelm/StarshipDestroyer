@@ -13,7 +13,7 @@ public class AllyDefenderMovement : MonoBehaviour
 
     public int health = 100;
 
-
+    public GameObject destructionVFX;
 
     public void Start()
     {
@@ -25,6 +25,7 @@ public class AllyDefenderMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
             GameManager.GM.defendersAlive -= 1;
             Destroy(gameObject);
         }

@@ -14,6 +14,8 @@ public class BomberMovement : MonoBehaviour
 
     public Scrap scrap;
 
+    public GameObject destructionVFX;
+
     public void Start()
     {
         if (GameManager.GM.allyWeakpointsDestroyed == 0)
@@ -34,6 +36,7 @@ public class BomberMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
             GameManager.GM.enemyBombersAlive -= 1;
             Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);

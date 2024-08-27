@@ -106,6 +106,7 @@ MonoBehaviour:
   rotationalDamp: 0.5
   movementSpeed: 10
   health: 100
+  destructionVFX: {fileID: 8264013618906672741, guid: f184143f515c34b41bde9db34645003f, type: 3}
 --- !u!114 &9937580174990395
 MonoBehaviour:
   m_ObjectHideFlags: 0

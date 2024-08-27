@@ -164,6 +164,7 @@ MonoBehaviour:
   marked: 0
   health: 100
   scrap: {fileID: -7081677042374251514, guid: 162b3a6a065e24649b99c010efda57c9, type: 3}
+  destructionVFX: {fileID: 1267192337071103082, guid: 9a61c2663280a1e45b9c43cc8ea3c4b0, type: 3}
 --- !u!54 &454004079271630620
 Rigidbody:
   m_ObjectHideFlags: 0

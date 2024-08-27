@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CollisionScript : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Entered");
-        if (other.gameObject.tag == "PlayerLaser" || other.gameObject.tag == "PlayerBomb" || other.gameObject.tag == "PlayerMissile")
+        if (collision.gameObject.tag == "CapitolShip" || collision.gameObject.tag == "Asteroid" || collision.gameObject.tag == "Asteroid2" || collision.gameObject.tag == "Asteroid3")
         {
-            other.gameObject.GetComponent<ShipController>().health = 0;
+            gameObject.GetComponent<ShipController>().health = 0;
             Debug.Log("Destroyed");
         }
     }

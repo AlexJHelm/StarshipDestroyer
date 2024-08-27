@@ -159,6 +159,7 @@ MonoBehaviour:
   movementSpeed: 10
   isChasing: 0
   health: 100
+  destructionVFX: {fileID: 505726893580628872, guid: 3648470dec02cc046bbf1d2f281921bd, type: 3}
 --- !u!54 &5766005999749955206
 Rigidbody:
   m_ObjectHideFlags: 0

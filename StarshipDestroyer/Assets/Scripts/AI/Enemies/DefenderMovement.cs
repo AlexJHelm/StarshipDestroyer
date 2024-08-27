@@ -17,6 +17,8 @@ public class DefenderMovement : MonoBehaviour
 
     public Scrap scrap;
 
+    public GameObject destructionVFX;
+
     public void Start()
     {
         //playerTarget = GameObject.FindWithTag("Player").transform;
@@ -27,6 +29,7 @@ public class DefenderMovement : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
             GameManager.GM.enemyDefendersAlive -= 1;
             Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);

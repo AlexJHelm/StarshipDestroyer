@@ -12,6 +12,8 @@ public class Asteroid : MonoBehaviour
     public HealthBooster healthBooster;
     public AmmoBooster ammoBooster;
 
+    public GameObject destructionVFX;
+
     int boosterNum;
 
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class Asteroid : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
             boosterNum = Random.Range(1, 4);
             if(boosterNum == 1)
             {

@@ -17,6 +17,7 @@ public class ShipController : MonoBehaviour
     public Vector3 respawnPos;
     public Camera mainCamera;
     public Camera overlookCamera;
+    public bool explosionPlayed, respawnTimerActive;
 
     public float deadZoneRadius = .10f;
     public float mouseSensitivity = 1.0f;
@@ -40,6 +41,8 @@ public class ShipController : MonoBehaviour
 
     public MeshRenderer mesh;
     Rigidbody rb;
+
+    public GameObject destructionVFX;
 
     //Methods
 
@@ -105,8 +108,8 @@ public class ShipController : MonoBehaviour
             }
 
             //Updates speed in each direction
-            activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
-            activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
+            activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, forwardSpeed, forwardAcceleration * Time.deltaTime);
+            activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, hoverSpeed, hoverAcceleration * Time.deltaTime);
             rollInput = Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime);
 
             /*if(Input.GetKeyDown(KeyCode.W))
@@ -139,22 +142,39 @@ public class ShipController : MonoBehaviour
 
         else
         {
+            mainCamera.transform.position = GameObject.FindWithTag("DeathCameraPos").transform.position;
             mesh.enabled = false;
-            mainCamera.enabled = false;
-            overlookCamera.enabled = true;
-            StartCoroutine(RespawnTimer());
+            if (explosionPlayed == false)
+            {               
+                Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
+                explosionPlayed = true;
+                StartCoroutine(ExplosionTimer());
+            }
         }
     }
 
     public IEnumerator RespawnTimer()
     {
+        respawnTimerActive = true;
         yield return new WaitForSeconds(3f);
+        respawnTimerActive = false;
         health = 100;
-        overlookCamera.enabled = false;
         mainCamera.enabled = true;
+        overlookCamera.enabled = false;
+        mainCamera.transform.position = respawnPos;
         transform.position = respawnPos;
         mesh.enabled = true;
+        explosionPlayed = false;
 
+    }
+
+    public IEnumerator ExplosionTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        mesh.enabled = false;
+        mainCamera.enabled = false;
+        overlookCamera.enabled = true;
+        StartCoroutine(RespawnTimer());
     }
 
     public IEnumerator BoosterTimer()

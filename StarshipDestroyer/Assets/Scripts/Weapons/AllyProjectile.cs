@@ -7,6 +7,7 @@ public class AllyProjectile : MonoBehaviour
     //Variable Declarations
 
     Rigidbody rb;
+    public GameObject hitVFX;
     float shotForce = 5000f;
     public int damage = 10;
     float range = 3f;
@@ -56,29 +57,34 @@ public class AllyProjectile : MonoBehaviour
         //If it collides with an enemy weakpoint, deal damage and starting the invulnerability window, then destroy the projectile
         if (collision.gameObject.tag == "EnemyWeakpoint")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "CapitolShip")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "EnemyBomber")
         {
             collision.gameObject.GetComponent<BomberMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "EnemyDefender")
         {
             collision.gameObject.GetComponent<DefenderMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 

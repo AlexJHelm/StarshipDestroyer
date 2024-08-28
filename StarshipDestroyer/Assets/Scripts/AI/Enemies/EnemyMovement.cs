@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
 
     public int health = 100;
 
-
+    public GameObject destructionVFX;
 
     public void Start()
     {
@@ -28,6 +28,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if(health <= 0)
         {
+            Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
             GameManager.GM.enemyFightersAlive -= 1;
             Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);

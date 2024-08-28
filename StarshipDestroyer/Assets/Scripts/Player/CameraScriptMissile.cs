@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraScript : MonoBehaviour
+public class CameraScriptMissile : MonoBehaviour
 {
     // The ship we're following
     private GameObject targetShip;
@@ -21,26 +21,16 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
-        if(GameManager.GM.laserSystemActive == true)
+        if (GameManager.GM.laserSystemActive == true)
         {
             // Find the ship the camera should follow
-            targetShip = GameObject.FindWithTag("PlayerLaser").gameObject;
-            /*// Detach the camera from the ship so it can move independently
-            transform.parent = null;*/
+            targetShip = transform.parent.gameObject;
+            // Detach the camera from the ship so it can move independently
+            transform.parent = null;
         }
-        else if (GameManager.GM.bombSystemActive == true)
+        else
         {
-            // Find the ship the camera should follow
-            targetShip = GameObject.FindWithTag("PlayerBomb").gameObject;
-            /*// Detach the camera from the ship so it can move independently
-            transform.parent = null;*/
-        }
-        else if (GameManager.GM.missileSystemActive == true)
-        {
-            // Find the ship the camera should follow
-            targetShip = GameObject.FindWithTag("PlayerMissile").gameObject;
-            /*// Detach the camera from the ship so it can move independently
-            transform.parent = null;*/
+            this.gameObject.SetActive(false);
         }
     }
 

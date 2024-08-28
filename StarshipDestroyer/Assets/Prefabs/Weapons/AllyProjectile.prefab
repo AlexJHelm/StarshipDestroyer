@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8f2e8c1db53624fa8d0c707cbc4434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVFX: {fileID: 9182558627068436094, guid: d2476262fc8b6d84196fd579c17f7d9f, type: 3}
   damage: 10
 --- !u!1001 &2439426144861294559
 PrefabInstance:
@@ -200,10 +201,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4139855334728215668, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
-      propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
@@ -260,10 +257,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
       propertyPath: m_Parameters.colorGradient.key2.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846203335812472673, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}
-      propertyPath: m_Parameters.generateLightingData
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7554903231812077658, guid: 47762ec0f7292db4d849c24ee5c3289b, type: 3}

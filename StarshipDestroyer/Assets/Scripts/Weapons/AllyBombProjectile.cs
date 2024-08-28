@@ -5,6 +5,7 @@ using UnityEngine;
 public class AllyBombProjectile : MonoBehaviour
 {
     Rigidbody rb;
+    public GameObject hitVFX;
     float shotForce = 500f;
     int damage = 10;
     float range = 3f;
@@ -58,6 +59,7 @@ public class AllyBombProjectile : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
                 collision.gameObject.GetComponent<Weakpoints>().weakpointHealth -= damage;
+                Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             }
 
             Destroy(gameObject);
@@ -65,30 +67,35 @@ public class AllyBombProjectile : MonoBehaviour
 
         if (collision.gameObject.tag == "CapitolShip")
         {
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "EnemyBomber")
         {
             collision.gameObject.GetComponent<BomberMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "EnemyDefender")
         {
             collision.gameObject.GetComponent<DefenderMovement>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Asteroid")
         {
             collision.gameObject.GetComponent<Asteroid>().health -= damage;
+            Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 

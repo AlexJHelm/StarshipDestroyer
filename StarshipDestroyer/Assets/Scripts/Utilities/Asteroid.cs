@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline;
+//using UnityEditor.Timeline;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -11,6 +11,8 @@ public class Asteroid : MonoBehaviour
     public Booster booster;
     public HealthBooster healthBooster;
     public AmmoBooster ammoBooster;
+
+    public GameObject destructionVFX;
 
     int boosterNum;
 
@@ -25,6 +27,7 @@ public class Asteroid : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
             boosterNum = Random.Range(1, 4);
             if(boosterNum == 1)
             {

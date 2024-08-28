@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  hitVFX: {fileID: 9182558627068436094, guid: d2476262fc8b6d84196fd579c17f7d9f, type: 3}
 --- !u!136 &5965248375233660759
 CapsuleCollider:
   m_ObjectHideFlags: 0

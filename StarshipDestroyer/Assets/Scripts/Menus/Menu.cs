@@ -116,6 +116,11 @@ public class Menu : MonoBehaviour
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(14);
     }
+    public void Launch()
+    {
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(15);
+    }
 
     public void QuitGame()
     {

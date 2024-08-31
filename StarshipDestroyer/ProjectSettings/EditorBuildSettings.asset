@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes Updated/Setup Weapons  Screen.unity
     guid: 761b930e50d35994cb4a6c523d68f4aa
+  - enabled: 1
+    path: Assets/Scenes Updated/Setup Launch  Screen.unity
+    guid: 30f090a5bfe2c7e4b96b05185b0f8e65
   m_configObjects: {}

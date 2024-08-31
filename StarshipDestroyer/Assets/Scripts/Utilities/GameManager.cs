@@ -351,6 +351,8 @@ public class GameManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
+            scrapText = GameObject.FindWithTag("ScrapCount").GetComponent<TMP_Text>();
+            scrapText.text = $"{scrap}";
         }
         else
         {

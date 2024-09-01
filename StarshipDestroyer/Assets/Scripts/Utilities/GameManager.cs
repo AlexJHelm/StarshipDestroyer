@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
         }      
 
         GM = this;
+        AudioManagerScript.instance.Play("MenuMusic");
         DontDestroyOnLoad(gameObject);
     }
     // Start is called before the first frame update

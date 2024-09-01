@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     public void MainMenu()
     {
         GameManager.GM.inGame = false;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);       
     }
 
     public void PlayGame()

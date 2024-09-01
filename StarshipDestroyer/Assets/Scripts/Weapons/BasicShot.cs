@@ -30,6 +30,7 @@ public class BasicShot : MonoBehaviour
         //Fires projectile if left mouse button is clicked
         if(CanFire && Input.GetMouseButton(0))
         {
+            //AudioManager.instance.Play("YouLose");
             FireProjectile();
         }
     }

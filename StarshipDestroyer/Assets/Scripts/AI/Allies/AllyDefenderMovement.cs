@@ -26,6 +26,7 @@ public class AllyDefenderMovement : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Explosion");
             GameManager.GM.defendersAlive -= 1;
             Destroy(gameObject);
         }

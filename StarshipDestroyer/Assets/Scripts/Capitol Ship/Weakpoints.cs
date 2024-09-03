@@ -61,6 +61,7 @@ public class Weakpoints : MonoBehaviour
         //Destroys weakpoint when its health reaches 0
         if(isDestroyed == true)
         {
+            AudioManagerScript.instance.Play("Explosion");
             Destroy(gameObject);
         }
 

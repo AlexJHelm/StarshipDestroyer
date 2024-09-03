@@ -13,6 +13,7 @@ public class PanelHoverScript : MonoBehaviour
 
     public void CapitolShipPanel()
     {
+        AudioManagerScript.instance.Play("Click");
         HoverPanel1.transform.position = inFocusPos.transform.position;
         HoverPanel2.transform.position = outOfFocusPos.transform.position;
         HoverPanel3.transform.position = outOfFocusPos.transform.position;
@@ -20,6 +21,7 @@ public class PanelHoverScript : MonoBehaviour
 
     public void AllocationPanel()
     {
+        AudioManagerScript.instance.Play("Click");
         HoverPanel1.transform.position = outOfFocusPos.transform.position;
         HoverPanel2.transform.position = inFocusPos.transform.position;
         HoverPanel3.transform.position = outOfFocusPos.transform.position;
@@ -27,6 +29,7 @@ public class PanelHoverScript : MonoBehaviour
 
     public void WeaponsPanel()
     {
+        AudioManagerScript.instance.Play("Click");
         HoverPanel1.transform.position = outOfFocusPos.transform.position;
         HoverPanel2.transform.position = outOfFocusPos.transform.position;
         HoverPanel3.transform.position = inFocusPos.transform.position;

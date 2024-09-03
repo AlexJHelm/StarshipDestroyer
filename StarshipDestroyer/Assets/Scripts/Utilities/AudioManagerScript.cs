@@ -29,7 +29,10 @@ public class AudioManagerScript : MonoBehaviour
 			s.source.pitch = s.pitch;
 			s.source.loop = s.loop;
 		}
-	}
+
+		AudioManagerScript.instance.Play("MenuMusic");
+        Debug.Log("Playing");
+    }
 
 	public void Play(string sound)
 	{

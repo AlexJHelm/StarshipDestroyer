@@ -58,6 +58,7 @@ public class PlayerProjectile : MonoBehaviour
         if(collision.gameObject.tag == "EnemyThrusters" || collision.gameObject.tag == "EnemyBridge" || collision.gameObject.tag == "EnemyWeapons")
         {
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Hit");
             if (collision.gameObject.GetComponent<Weakpoints>().canTakeDamage == true)
             {
                 collision.gameObject.GetComponent<Weakpoints>().takingDamage = true;
@@ -69,6 +70,7 @@ public class PlayerProjectile : MonoBehaviour
         if (collision.gameObject.tag == "CapitolShip")
         {
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Hit");
             Destroy(gameObject);
         }
 
@@ -76,6 +78,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyMovement>().health -= damage;
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Hit");
             Destroy(gameObject);
         }
 
@@ -83,6 +86,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             collision.gameObject.GetComponent<BomberMovement>().health -= damage;
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Hit");
             Destroy(gameObject);
         }
 
@@ -90,6 +94,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             collision.gameObject.GetComponent<DefenderMovement>().health -= damage;
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Hit");
             Destroy(gameObject);
         }
 
@@ -97,6 +102,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             collision.gameObject.GetComponent<Asteroid>().health -= damage;
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Hit");
             Destroy(gameObject);
         }
 

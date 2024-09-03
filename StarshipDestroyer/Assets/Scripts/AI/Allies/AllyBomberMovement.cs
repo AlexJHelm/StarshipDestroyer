@@ -52,6 +52,7 @@ public class AllyBomberMovement : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Explosion");
             GameManager.GM.bombersAlive -= 1;
             Destroy(gameObject);
         }

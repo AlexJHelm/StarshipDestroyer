@@ -147,6 +147,7 @@ public class ShipController : MonoBehaviour
             if (explosionPlayed == false)
             {               
                 Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
+                AudioManagerScript.instance.Play("Explosion");
                 explosionPlayed = true;
                 StartCoroutine(ExplosionTimer());
             }

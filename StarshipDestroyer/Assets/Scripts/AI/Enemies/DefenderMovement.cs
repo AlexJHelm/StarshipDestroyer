@@ -30,6 +30,7 @@ public class DefenderMovement : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Explosion");
             GameManager.GM.enemyDefendersAlive -= 1;
             Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);

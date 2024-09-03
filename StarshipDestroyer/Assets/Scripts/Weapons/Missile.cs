@@ -68,5 +68,6 @@ public class Missile : MonoBehaviour
         Instantiate(projectilePrefab, muzzle1.position, transform.rotation);
         Instantiate(projectilePrefab, muzzle2.position, transform.rotation);
         shotDuration = Duration;
+        AudioManagerScript.instance.Play("Missiles");
     }
 }

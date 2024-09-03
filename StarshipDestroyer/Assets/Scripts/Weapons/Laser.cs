@@ -85,5 +85,6 @@ public class Laser : MonoBehaviour
     void FireLaser()
     {
         shotDuration = laserDuration;
+        AudioManagerScript.instance.Play("Laser");
     }
 }

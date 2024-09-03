@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public bool inGame = false;
     public bool inSetup = false;
     public bool shipSelected = false;
+    public bool menuMusicPlaying = true;
 
     public bool canSpawn = true;
     public bool asteroidCanSpawn = true;
@@ -288,6 +289,9 @@ public class GameManager : MonoBehaviour
             {
                 //Win Game
                 SceneManager.LoadScene(3);
+                AudioManagerScript.instance.Stop("GameMusic");
+                AudioManagerScript.instance.Stop("Engine");
+                AudioManagerScript.instance.Play("WinMusic");
                 inGame = false;
             }
 
@@ -296,6 +300,9 @@ public class GameManager : MonoBehaviour
             {
                 //Lose Game
                 SceneManager.LoadScene(4);
+                AudioManagerScript.instance.Stop("GameMusic");
+                AudioManagerScript.instance.Stop("Engine");
+                AudioManagerScript.instance.Play("LoseMusic");
                 inGame = false;
             }
         }

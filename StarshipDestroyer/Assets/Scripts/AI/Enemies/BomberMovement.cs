@@ -37,6 +37,7 @@ public class BomberMovement : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Explosion");
             GameManager.GM.enemyBombersAlive -= 1;
             Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);

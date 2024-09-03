@@ -28,6 +28,7 @@ public class Asteroid : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManagerScript.instance.Play("Explosion");
             boosterNum = Random.Range(1, 4);
             if(boosterNum == 1)
             {

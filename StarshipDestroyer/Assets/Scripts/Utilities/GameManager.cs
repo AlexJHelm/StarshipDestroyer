@@ -325,7 +325,7 @@ public class GameManager : MonoBehaviour
             fighterText.text = $"{fightersAllocated}";
             bomberText.text = $"{bombersAllocated}";
             defenderText.text = $"{defendersAllocated}";
-            scrapText.text = $"{scrap} Scrap";
+            scrapText.text = $"{scrap}";
             if(shipHealthUpgradeUnlocked == true)
             {
                 healthUpgradeText.text = "Unlocked";
@@ -362,8 +362,10 @@ public class GameManager : MonoBehaviour
         {
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
             Cursor.lockState = CursorLockMode.Confined;
+            scrapText = GameObject.FindWithTag("ScrapCount").GetComponent<TMP_Text>();
+            scrapText.text = $"{scrap}";
             //Cursor.visible = false;
-            
+
         }
         else
         {

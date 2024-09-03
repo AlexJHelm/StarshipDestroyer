@@ -800,25 +800,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 572084656}
     m_Modifications:
-    - target: {fileID: 617716785656516440, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1812308606390488552, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: m_RootOrder
       value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812308606390488552, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812308606390488552, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812308606390488552, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1812308606390488552, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -860,41 +844,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2168531619732269967, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168531619732269967, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2347405367583018915, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: m_MaxParticleSize
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914981693145285510, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: m_MaxParticleSize
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310250386512537748, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6849115914163397950, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
       propertyPath: m_Name
       value: VFX_ShipExhaustHolder
-      objectReference: {fileID: 0}
-    - target: {fileID: 8994411187428440649, guid: f2457af255a79954da55e1c4cc4e2df5, type: 3}
-      propertyPath: m_MaxParticleSize
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

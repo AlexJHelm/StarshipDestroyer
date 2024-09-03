@@ -91,35 +91,35 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(6);
     }
 
-    public void HandbookOBJ()
+    public void HandbookPlayer()
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(7);
     }
 
-    public void HandbookShip()
+    public void HandbookOBJ()
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(8);
     }
 
-    public void HandbookFighter()
+    public void HandbookBoost()
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(9);
     }
 
-    public void HandbookSecond()
+    public void HandbookScrap()
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(10);
     }
 
-    public void HandbookMission()
+    public void HandbookShips()
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
@@ -131,6 +131,27 @@ public class Menu : MonoBehaviour
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(12);
+    }
+
+    public void Allocations()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(13);
+    }
+
+    public void Weapons()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(14);
+    }
+
+    public void Launch()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(15);
     }
 
     public void QuitGame()

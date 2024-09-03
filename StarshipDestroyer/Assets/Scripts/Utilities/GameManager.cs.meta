@@ -3,7 +3,37 @@ guid: 48d9c1522c089dc40bbba14a87f7518a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerMissile: {instanceID: 0}
+  - playerLaser: {instanceID: 0}
+  - playerBomb: {instanceID: 0}
+  - enemyPrefab: {instanceID: 0}
+  - bomberPrefab: {instanceID: 0}
+  - defenderPrefab: {instanceID: 0}
+  - allyPrefab: {instanceID: 0}
+  - allyBomberPrefab: {instanceID: 0}
+  - allyDefenderPrefab: {instanceID: 0}
+  - asteroid1: {instanceID: 0}
+  - asteroid2: {instanceID: 0}
+  - asteroid3: {instanceID: 0}
+  - enemyRespawnPos1: {instanceID: 0}
+  - enemyRespawnPos2: {instanceID: 0}
+  - enemyRespawnPos3: {instanceID: 0}
+  - allyRespawnPos1: {instanceID: 0}
+  - allyRespawnPos2: {instanceID: 0}
+  - allyRespawnPos3: {instanceID: 0}
+  - cursorTexture: {fileID: 2800000, guid: f26d0102f4560df41b3cbad81e6b7ae7, type: 3}
+  - fighterText: {instanceID: 0}
+  - bomberText: {instanceID: 0}
+  - defenderText: {instanceID: 0}
+  - remainingText: {instanceID: 0}
+  - scrapText: {instanceID: 0}
+  - healthUpgradeText: {instanceID: 0}
+  - spacecraftUpgradeText: {instanceID: 0}
+  - weaponsUpgradeText: {instanceID: 0}
+  - laserText: {instanceID: 0}
+  - bombText: {instanceID: 0}
+  - missileText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

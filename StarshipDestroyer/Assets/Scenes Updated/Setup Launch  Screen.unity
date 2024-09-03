@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45383734, g: 0.52512455, b: 0.6740622, a: 1}
+  m_IndirectSpecularColor: {r: 0.45383745, g: 0.5251203, b: 0.6740634, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10619,7 +10619,6 @@ GameObject:
   - component: {fileID: 1025717395}
   - component: {fileID: 1025717398}
   - component: {fileID: 1025717397}
-  - component: {fileID: 1025717396}
   m_Layer: 5
   m_Name: Allocation Panel
   m_TagString: Untagged
@@ -10648,21 +10647,6 @@ RectTransform:
   m_AnchoredPosition: {x: 947.9, y: -147}
   m_SizeDelta: {x: 1106.2001, y: 710.22424}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1025717396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025717394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4df6eb66f26e2a9488ad9c8a9481ff89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HoverPanel1: {fileID: 0}
-  HoverPanel2: {fileID: 0}
-  HoverPanel3: {fileID: 0}
 --- !u!114 &1025717397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19508,7 +19492,6 @@ GameObject:
   - component: {fileID: 1842928495}
   - component: {fileID: 1842928498}
   - component: {fileID: 1842928497}
-  - component: {fileID: 1842928496}
   m_Layer: 5
   m_Name: Weapon Panel
   m_TagString: Untagged
@@ -19537,21 +19520,6 @@ RectTransform:
   m_AnchoredPosition: {x: 947.9, y: -264.6}
   m_SizeDelta: {x: 1106.2001, y: 710.22424}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1842928496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842928494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7fd5c2ec2570b744a95c5f7c2b1af84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HoverPanel1: {fileID: 0}
-  HoverPanel2: {fileID: 0}
-  HoverPanel3: {fileID: 0}
 --- !u!114 &1842928497
 MonoBehaviour:
   m_ObjectHideFlags: 0

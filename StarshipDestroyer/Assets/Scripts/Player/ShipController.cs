@@ -17,6 +17,7 @@ public class ShipController : MonoBehaviour
     public Vector3 respawnPos;
     public Camera mainCamera;
     public Camera overlookCamera;
+    public GameObject Othercamera;
     public bool explosionPlayed, respawnTimerActive;
 
     public float deadZoneRadius = .10f;
@@ -53,6 +54,7 @@ public class ShipController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         mainCamera.enabled = true;
         overlookCamera.enabled = false;
+        Othercamera.SetActive(true);
         targetRotation = transform.rotation;
 
         //Sets screen center
@@ -68,6 +70,7 @@ public class ShipController : MonoBehaviour
     {
         if(health > 0)
         {
+
             // Mouse control for pitch and yaw
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
@@ -159,6 +162,7 @@ public class ShipController : MonoBehaviour
         respawnTimerActive = true;
         yield return new WaitForSeconds(3f);
         respawnTimerActive = false;
+        Othercamera.SetActive(true);
         health = 100;
         mainCamera.enabled = true;
         overlookCamera.enabled = false;
@@ -175,6 +179,7 @@ public class ShipController : MonoBehaviour
         mesh.enabled = false;
         mainCamera.enabled = false;
         overlookCamera.enabled = true;
+        Othercamera.SetActive(false);
         StartCoroutine(RespawnTimer());
     }
 

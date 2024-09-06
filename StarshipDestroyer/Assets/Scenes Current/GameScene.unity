@@ -2576,6 +2576,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1991861937}
     - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
+      propertyPath: Othercamera
+      value: 
+      objectReference: {fileID: 1616632405}
+    - target: {fileID: 6447727756929426519, guid: 010830e2a2d7c694aa4a1982cf058516, type: 3}
       propertyPath: destructionVFX
       value: 
       objectReference: {fileID: 505726893580628872, guid: 3648470dec02cc046bbf1d2f281921bd, type: 3}
@@ -6140,6 +6144,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1991861937}
     - target: {fileID: 6447727756929426519, guid: 4e76565f8359f8b4ca1ac31cded1d33f, type: 3}
+      propertyPath: Othercamera
+      value: 
+      objectReference: {fileID: 1616632405}
+    - target: {fileID: 6447727756929426519, guid: 4e76565f8359f8b4ca1ac31cded1d33f, type: 3}
       propertyPath: destructionVFX
       value: 
       objectReference: {fileID: 505726893580628872, guid: 3648470dec02cc046bbf1d2f281921bd, type: 3}
@@ -7141,6 +7149,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1991861937}
+    - target: {fileID: 6447727756929426519, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
+      propertyPath: Othercamera
+      value: 
+      objectReference: {fileID: 1616632405}
     - target: {fileID: 6447727756929426519, guid: 22d752e5f9fce5744b9d0d118cb7a173, type: 3}
       propertyPath: destructionVFX
       value: 

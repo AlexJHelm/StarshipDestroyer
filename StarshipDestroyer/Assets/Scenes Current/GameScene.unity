@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45383745, g: 0.5251203, b: 0.6740634, a: 1}
+  m_IndirectSpecularColor: {r: 0.45383734, g: 0.52512455, b: 0.6740622, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1132,6 +1132,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1090387960080192034, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget1
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 1090387960080192034, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget2
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 1090387960080192034, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget3
+      value: 
+      objectReference: {fileID: 1991861934}
     - target: {fileID: 2570469221110232178, guid: c593b13f18b90884d885799e630475e1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1176,10 +1188,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3262164037758163890, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget1
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 3262164037758163890, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget2
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 3262164037758163890, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget3
+      value: 
+      objectReference: {fileID: 1991861934}
     - target: {fileID: 8642848658499111331, guid: c593b13f18b90884d885799e630475e1, type: 3}
       propertyPath: m_Name
       value: EnemyCapitalShipUpdated (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8709896771369905497, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget1
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 8709896771369905497, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget2
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 8709896771369905497, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: iconTarget3
+      value: 
+      objectReference: {fileID: 1991861934}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3459,6 +3495,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191370238556914736, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget1
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 3191370238556914736, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget2
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 3191370238556914736, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget3
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 4187979360101867583, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget1
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 4187979360101867583, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget2
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 4187979360101867583, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget3
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 6519071540290759399, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget1
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 6519071540290759399, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget2
+      value: 
+      objectReference: {fileID: 1991861934}
+    - target: {fileID: 6519071540290759399, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+      propertyPath: iconTarget3
+      value: 
+      objectReference: {fileID: 1991861934}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4837,6 +4909,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3764630821599617536, guid: ee043f26bc4e9f84eb98f7f28ee9f3b0, type: 3}
+      propertyPath: cursorPauseMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875849774277283368, guid: ee043f26bc4e9f84eb98f7f28ee9f3b0, type: 3}
       propertyPath: m_Name
       value: PauseMenu

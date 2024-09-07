@@ -9438,7 +9438,7 @@ GameObject:
   - component: {fileID: 5250616259823038918}
   - component: {fileID: 4850343340166597243}
   m_Layer: 6
-  m_Name: EnemyCapitolMarker
+  m_Name: EnemyCapitalMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9887,7 +9887,7 @@ GameObject:
   - component: {fileID: 2367204976043279852}
   - component: {fileID: 632613466217471997}
   m_Layer: 0
-  m_Name: 'EnemyCapitolParent '
+  m_Name: 'EnemyCapitalParent '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9912,7 +9912,7 @@ GameObject:
   - component: {fileID: 6308771348219776907}
   - component: {fileID: 6417328257756647521}
   m_Layer: 6
-  m_Name: AllyCapitolMarker
+  m_Name: AllyCapitalMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9959,7 +9959,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c4662791e8e43f469981db86c3e9e19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 881b3284df71c7b4d8d94e4b8995781f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10083,8 +10083,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2570974025171340532}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 146.6, z: 0}
-  m_LocalScale: {x: 0.4633299, y: 0.4633299, z: 0.4633299}
+  m_LocalPosition: {x: 0.495, y: 146.6, z: -4.368}
+  m_LocalScale: {x: 2.0815585, y: 2.0815585, z: 2.0815585}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2367204976043279852}
@@ -10101,7 +10101,7 @@ GameObject:
   - component: {fileID: 8323863179057062429}
   - component: {fileID: 5649362473666693485}
   m_Layer: 0
-  m_Name: AllyCapitolParent
+  m_Name: AllyCapitalParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10212,8 +10212,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4824848978785910339}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 146.6, z: 0}
-  m_LocalScale: {x: 0.4633299, y: 0.4633299, z: 0.4633299}
+  m_LocalPosition: {x: -0.426, y: 146.6, z: -3.302}
+  m_LocalScale: {x: 1.6625311, y: 1.6625311, z: 1.6625311}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8323863179057062429}
@@ -10352,7 +10352,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d7c852dd6edee084f913366c759134f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77dd888c2551dcb4b894c1db94e42f59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

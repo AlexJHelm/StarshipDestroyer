@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
     public void MainMenu()
     {
         GameManager.GM.inGame = false;
+        GameManager.GM.onWinScene = false;
         SceneManager.LoadScene(0);
         AudioManagerScript.instance.Stop("WinMusic");
         AudioManagerScript.instance.Stop("LoseMusic");
@@ -23,7 +24,11 @@ public class Menu : MonoBehaviour
     {
         GameManager.GM.laserSystemActive = true;
         GameManager.GM.inSetup = true;
+        GameManager.GM.onUpgradeScreen = true;
+        GameManager.GM.onLaunchScreen = false;
+        GameManager.GM.onWeaponsScreen = false;
         GameManager.GM.inGame = false;
+        GameManager.GM.onWinScene = false;
         SceneManager.LoadScene(1);
         AudioManagerScript.instance.Stop("WinMusic");
         AudioManagerScript.instance.Stop("LoseMusic");
@@ -56,6 +61,7 @@ public class Menu : MonoBehaviour
             GameManager.GM.canSpawn = true;
             GameManager.GM.asteroidCanSpawn = true;
             GameManager.GM.inSetup = false;
+            GameManager.GM.onLaunchScreen = false;
             GameManager.GM.shipSelected = false;
             GameManager.GM.inGame = true;
             SceneManager.LoadScene(2);
@@ -69,6 +75,7 @@ public class Menu : MonoBehaviour
     public void WinScene()
     {
         GameManager.GM.inGame = false;
+        GameManager.GM.onWinScene = true;
         SceneManager.LoadScene(3);
     }    
     public void LoseScene()
@@ -137,6 +144,9 @@ public class Menu : MonoBehaviour
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
+        GameManager.GM.onUpgradeScreen = false;
+        GameManager.GM.onLaunchScreen = false;
+        GameManager.GM.inSetup = true;
         SceneManager.LoadScene(13);
     }
 
@@ -144,6 +154,10 @@ public class Menu : MonoBehaviour
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
+        GameManager.GM.onUpgradeScreen = false;
+        GameManager.GM.inSetup = false;
+        GameManager.GM.onWeaponsScreen = true;
+        GameManager.GM.onLaunchScreen = false;
         SceneManager.LoadScene(14);
     }
 
@@ -151,6 +165,10 @@ public class Menu : MonoBehaviour
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
+        GameManager.GM.onUpgradeScreen = false;
+        GameManager.GM.inSetup = false;
+        GameManager.GM.onWeaponsScreen = false;
+        GameManager.GM.onLaunchScreen = true;
         SceneManager.LoadScene(15);
     }
 

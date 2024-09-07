@@ -95,12 +95,11 @@ public class ShipAllocation : MonoBehaviour
     public void UnlockSpacecraftUpgrade()
     {
         AudioManagerScript.instance.Play("Click");
-        if (GameManager.GM.scrap >= 25 && GameManager.GM.numOfIncreasedShipAllocations < 10)
+        if (GameManager.GM.scrap >= 25 && GameManager.GM.numOfIncreasedShipAllocations < 5)
         {
             GameManager.GM.scrap -= 25;
             GameManager.GM.numOfIncreasedShipAllocations += 1;
-            GameManager.GM.remainingAllocationSlots = GameManager.GM.remainingAllocationSlots + 1;
-
+            GameManager.GM.remainingAllocationSlots = GameManager.GM.remainingAllocationSlots + 3;
         }
     }
 

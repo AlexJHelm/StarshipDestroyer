@@ -6446,6 +6446,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1061231025279092300, guid: ee043f26bc4e9f84eb98f7f28ee9f3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 3764630821599617536, guid: ee043f26bc4e9f84eb98f7f28ee9f3b0, type: 3}
       propertyPath: cursorPauseMode
       value: 0

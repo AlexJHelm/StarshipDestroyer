@@ -84,7 +84,7 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
-    public void Options()
+    public void OptionsControlMovement()
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
@@ -152,6 +152,27 @@ public class Menu : MonoBehaviour
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(15);
+    }
+
+    public void OptionsControlCombat()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(16);
+    }
+
+    public void OptionsVideo()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(17);
+    }
+
+    public void OptionsAudio()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(18);
     }
 
     public void QuitGame()

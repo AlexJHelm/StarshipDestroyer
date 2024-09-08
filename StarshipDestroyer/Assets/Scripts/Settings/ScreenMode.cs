@@ -9,8 +9,6 @@ public class ScreenMode : MonoBehaviour
     public TMP_Text buttonText;  // Reference to the button text
     private const string FullscreenPrefKey = "FullscreenMode";  // Key for saving fullscreen state
 
-    private static ScreenMode instance;  // Singleton instance to ensure one object
-
     // Method to toggle fullscreen and update the button text
     public void ToggleFullscreen()
     {
@@ -42,18 +40,6 @@ public class ScreenMode : MonoBehaviour
     // Automatically update button text and screen mode based on saved preference
     private void Start()
     {
-        // Prevent duplication of the object when reloading scenes
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);  // Make this object persistent
-        }
-        else
-        {
-            Destroy(gameObject);  // Destroy duplicate instances
-            return;  // Prevent further execution for duplicates
-        }
-
         // Check if fullscreen preference exists, otherwise use the current screen mode
         bool isFullscreen = PlayerPrefs.GetInt(FullscreenPrefKey, Screen.fullScreen ? 1 : 0) == 1;
 

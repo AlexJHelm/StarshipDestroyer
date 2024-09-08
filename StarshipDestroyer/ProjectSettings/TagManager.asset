@@ -55,6 +55,8 @@ TagManager:
   - EnemyCapitolShip
   - AllyCapitolShip
   - DeathCameraPos
+  - ScreenMode
+  - ScreenManager
   layers:
   - Default
   - TransparentFX

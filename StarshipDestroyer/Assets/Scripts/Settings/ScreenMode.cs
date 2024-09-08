@@ -2,16 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;  // Import UI to access Text and Button components
+using UnityEngine.UI;
 
 public class ScreenMode : MonoBehaviour
 {
     public TMP_Text buttonText;  // Reference to the button text
+    private const string FullscreenPrefKey = "FullscreenMode";  // Key for saving fullscreen state
+
+    private static ScreenMode instance;  // Singleton instance to ensure one object
 
     // Method to toggle fullscreen and update the button text
-    public void SetFullscreen(bool isFullscreen)
+    public void ToggleFullscreen()
     {
+        // Toggle fullscreen state
+        bool isFullscreen = !Screen.fullScreen;
         Screen.fullScreen = isFullscreen;
+
+        // Save the fullscreen state
+        PlayerPrefs.SetInt(FullscreenPrefKey, isFullscreen ? 1 : 0);
+        PlayerPrefs.Save();  // Ensure the state is saved immediately
+
+        // Update the button text
         UpdateButtonText(isFullscreen);
     }
 
@@ -28,9 +39,28 @@ public class ScreenMode : MonoBehaviour
         }
     }
 
-    // Optional: Automatically update button text based on initial screen mode
+    // Automatically update button text and screen mode based on saved preference
     private void Start()
     {
-        UpdateButtonText(Screen.fullScreen);
+        // Prevent duplication of the object when reloading scenes
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);  // Make this object persistent
+        }
+        else
+        {
+            Destroy(gameObject);  // Destroy duplicate instances
+            return;  // Prevent further execution for duplicates
+        }
+
+        // Check if fullscreen preference exists, otherwise use the current screen mode
+        bool isFullscreen = PlayerPrefs.GetInt(FullscreenPrefKey, Screen.fullScreen ? 1 : 0) == 1;
+
+        // Apply the saved fullscreen mode
+        Screen.fullScreen = isFullscreen;
+
+        // Update the button text to match the saved state
+        UpdateButtonText(isFullscreen);
     }
 }

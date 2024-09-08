@@ -6450,6 +6450,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3696496663611123678, guid: ee043f26bc4e9f84eb98f7f28ee9f3b0, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3764630821599617536, guid: ee043f26bc4e9f84eb98f7f28ee9f3b0, type: 3}
       propertyPath: cursorPauseMode
       value: 0
@@ -12066,7 +12070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728524680828690571}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1, z: 184.5}
+  m_LocalPosition: {x: 8.5, y: -1, z: 184.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -168,11 +168,18 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(17);
     }
 
-    public void OptionsAudio()
+    public void OptionsAudioMusic()
     {
         AudioManagerScript.instance.Play("Click");
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(18);
+    }
+
+    public void OptionsAudioSFX()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(19);
     }
 
     public void QuitGame()

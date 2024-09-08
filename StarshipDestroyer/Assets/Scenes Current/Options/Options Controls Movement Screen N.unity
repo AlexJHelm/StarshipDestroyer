@@ -4650,7 +4650,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4959567193672863697, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OptionsAudio
+        m_MethodName: OptionsAudioMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -36,6 +36,8 @@ public class ShipController : MonoBehaviour
 
     public bool boosterActive, ammoBoosterActive = false;
 
+    public bool isSlowingDown = false;
+
     //Strafe variables (not currently used)
     //public float strafeSpeed = 7.5f;
     //private float activeStrafeSpeed, strafeAcceleration = 2.0f;
@@ -96,6 +98,18 @@ public class ShipController : MonoBehaviour
                 transform.Rotate(-mouseDistance.y * xLookRotateSpeed * Time.deltaTime, mouseDistance.x * yLookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
             }
 
+            // "S" key is being held down to slow down
+            if (Input.GetKey(KeyCode.S))
+            {
+                baseForwardSpeed = 10f;
+                isSlowingDown = true;
+            }
+            else
+            {
+                baseForwardSpeed = 25f;
+                isSlowingDown = false;
+            }
+
             //Moves ship
             if (boosterActive == true)
             {
@@ -153,6 +167,7 @@ public class ShipController : MonoBehaviour
                 AudioManagerScript.instance.Play("Explosion");
                 explosionPlayed = true;
                 StartCoroutine(ExplosionTimer());
+                Othercamera.SetActive(false);
             }
         }
     }

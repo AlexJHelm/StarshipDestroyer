@@ -12522,9 +12522,12 @@ MonoBehaviour:
   healthBarRectTransform: {fileID: 307501116}
   player: {fileID: 1991861938}
   target: {fileID: 1383609315}
-  activationDistance: 300
+  secondaryTarget: {fileID: 1246069256}
+  defaultActivationDistance: 300
+  reducedActivationDistance: 0
   offScreenPosition: {x: 510, y: 635, z: 0}
   onScreenPosition: {x: 510, y: 462.9, z: 0}
+  slideDuration: 0.5
 --- !u!114 &1383609317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12540,9 +12543,12 @@ MonoBehaviour:
   healthBarRectTransform: {fileID: 701218980}
   player: {fileID: 1991861938}
   target: {fileID: 1383609315}
-  activationDistance: 300
+  secondaryTarget: {fileID: 1120172658}
+  defaultActivationDistance: 300
+  reducedActivationDistance: 0
   offScreenPosition: {x: 0, y: 635, z: 0}
   onScreenPosition: {x: 0, y: 462.9, z: 0}
+  slideDuration: 0.5
 --- !u!114 &1383609318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12558,9 +12564,12 @@ MonoBehaviour:
   healthBarRectTransform: {fileID: 940530335}
   player: {fileID: 1991861938}
   target: {fileID: 1383609315}
-  activationDistance: 300
+  secondaryTarget: {fileID: 717520215}
+  defaultActivationDistance: 300
+  reducedActivationDistance: 0
   offScreenPosition: {x: -510, y: 635, z: 0}
   onScreenPosition: {x: -510, y: 462.9, z: 0}
+  slideDuration: 0.5
 --- !u!1 &1404225149
 GameObject:
   m_ObjectHideFlags: 0
@@ -19494,8 +19503,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046764923}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.683, y: 1.889, z: -0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.6830015, y: 0.668, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19517,9 +19526,12 @@ MonoBehaviour:
   healthBarRectTransform: {fileID: 1243505148}
   player: {fileID: 1991861938}
   target: {fileID: 2046764924}
-  activationDistance: 300
+  secondaryTarget: {fileID: 1280547917}
+  defaultActivationDistance: 300
+  reducedActivationDistance: 0
   offScreenPosition: {x: -510, y: 635, z: 0}
   onScreenPosition: {x: -510, y: 462.9, z: 0}
+  slideDuration: 0.5
 --- !u!114 &2046764926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19535,9 +19547,12 @@ MonoBehaviour:
   healthBarRectTransform: {fileID: 435537232}
   player: {fileID: 1991861938}
   target: {fileID: 2046764924}
-  activationDistance: 300
+  secondaryTarget: {fileID: 1630605148}
+  defaultActivationDistance: 300
+  reducedActivationDistance: 0
   offScreenPosition: {x: 510, y: 635, z: 0}
   onScreenPosition: {x: 510, y: 462.9, z: 0}
+  slideDuration: 0.5
 --- !u!114 &2046764927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19553,9 +19568,12 @@ MonoBehaviour:
   healthBarRectTransform: {fileID: 469557307}
   player: {fileID: 1991861938}
   target: {fileID: 2046764924}
-  activationDistance: 300
+  secondaryTarget: {fileID: 273191686}
+  defaultActivationDistance: 300
+  reducedActivationDistance: 0
   offScreenPosition: {x: 0, y: 635, z: 0}
   onScreenPosition: {x: 0, y: 462.9, z: 0}
+  slideDuration: 0.5
 --- !u!1 &2061527008
 GameObject:
   m_ObjectHideFlags: 0

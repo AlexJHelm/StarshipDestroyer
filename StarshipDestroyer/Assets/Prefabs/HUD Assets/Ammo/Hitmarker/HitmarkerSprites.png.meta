@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_0
+      name: HitmarkerSprites_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e78d829f4d9b4b34ca7766f8ec238a4f
-      internalID: 423376032
+      spriteID: 4169a33233ec0834bb848f187c8c17c1
+      internalID: 1671348471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_1
+      name: HitmarkerSprites_1
       rect:
         serializedVersion: 2
         x: 512
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77f8359a19b16834ea8009c4ad37cf7b
-      internalID: -1894648554
+      spriteID: 4d28c8b27f15e92458c70b40f5fb77d0
+      internalID: 337578805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_2
+      name: HitmarkerSprites_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 697f1527373bcfc48a024f2a05768225
-      internalID: -1553624707
+      spriteID: bca3d151e32ee6f46a36c0bae24b8509
+      internalID: 1738647025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_3
+      name: HitmarkerSprites_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db50fa0713423124a8814018ac925f8c
-      internalID: -1120346032
+      spriteID: b4009ab7c3853f644a57b3af5f814b9b
+      internalID: -871182558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4
+      name: HitmarkerSprites_4
       rect:
         serializedVersion: 2
         x: 2048
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2392a681b283384191c01951ffe55e3
-      internalID: 1409085779
+      spriteID: 6445db3dacdd4d9429e099ac6e52d876
+      internalID: 1090491720
       vertices: []
       indices: 
       edges: []
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheet_0: 423376032
-      spritesheet_1: -1894648554
-      spritesheet_2: -1553624707
-      spritesheet_3: -1120346032
-      spritesheet_4: 1409085779
+      HitmarkerSprites_0: 1671348471
+      HitmarkerSprites_1: 337578805
+      HitmarkerSprites_2: 1738647025
+      HitmarkerSprites_3: -871182558
+      HitmarkerSprites_4: 1090491720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

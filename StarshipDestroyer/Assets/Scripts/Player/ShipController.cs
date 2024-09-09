@@ -38,6 +38,10 @@ public class ShipController : MonoBehaviour
 
     public bool isSlowingDown = false;
 
+    public bool isSpeedingUp = false;
+
+    public float fastForwardSpeed = 35f;
+
     //Strafe variables (not currently used)
     //public float strafeSpeed = 7.5f;
     //private float activeStrafeSpeed, strafeAcceleration = 2.0f;
@@ -103,14 +107,23 @@ public class ShipController : MonoBehaviour
             {
                 baseForwardSpeed = 10f;
                 isSlowingDown = true;
+                isSpeedingUp = false; // Ensure not speeding up when slowing down
+            }
+            // "W" key is being held down to speed up
+            else if (Input.GetKey(KeyCode.W))
+            {
+                baseForwardSpeed = fastForwardSpeed;
+                isSpeedingUp = true;
+                isSlowingDown = false; // Ensure not slowing down when speeding up
             }
             else
             {
-                baseForwardSpeed = 25f;
+                baseForwardSpeed = 25f; // Default forward speed
+                isSpeedingUp = false;
                 isSlowingDown = false;
             }
 
-            //Moves ship
+            // Existing movement logic ...
             if (boosterActive == true)
             {
                 forwardSpeed = boostSpeed;

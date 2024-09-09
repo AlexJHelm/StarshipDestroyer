@@ -52,12 +52,27 @@ public class CameraScript : MonoBehaviour
 
         // Check if the ship is slowing down
         bool isSlowingDown = targetShip.GetComponent<ShipController>().isSlowingDown;
+        bool isSpeedingUp = targetShip.GetComponent<ShipController>().isSpeedingUp;
 
         Vector3 normalOffset = thirdPersonOffset;
 
         Vector3 slowingDownOffset = new Vector3(thirdPersonOffset.x, thirdPersonOffset.y, thirdPersonOffset.z - 10f);
+        Vector3 speedingUpOffset = new Vector3(thirdPersonOffset.x, thirdPersonOffset.y, thirdPersonOffset.z + 10f);
 
-        Vector3 dynamicOffset = Vector3.Lerp(normalOffset, slowingDownOffset, isSlowingDown ? 0.5f : 0.0f); // Adjust the transition speed (0.1f for slow transition)
+        Vector3 dynamicOffset;
+
+        if (isSlowingDown)
+        {
+            dynamicOffset = Vector3.Lerp(normalOffset, slowingDownOffset, 0.5f); // Transition when slowing down
+        }
+        else if (isSpeedingUp)
+        {
+            dynamicOffset = Vector3.Lerp(normalOffset, speedingUpOffset, 0.3f); // Transition when speeding up
+        }
+        else
+        {
+            dynamicOffset = normalOffset; // Default offset
+        }
 
         // If we have more than the desired amount of history, start using the oldest data
         if (prevPositions.Count > cameraLag)

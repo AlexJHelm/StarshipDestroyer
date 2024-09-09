@@ -16604,6 +16604,10 @@ PrefabInstance:
       propertyPath: cursorPauseMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: defendersAllocated
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3565090866975754257, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: m_RootOrder
       value: 4

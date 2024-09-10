@@ -31,6 +31,7 @@ public class EnemyMovement : MonoBehaviour
             Instantiate(destructionVFX, gameObject.transform.position, gameObject.transform.rotation);
             AudioManagerScript.instance.Play("Explosion");
             GameManager.GM.enemyFightersAlive -= 1;
+            GameManager.GM.fightersDestroyed += 1;
             Instantiate(scrap, transform.position, transform.rotation);
             Destroy(gameObject);
         }

@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 5443221796415866703}
   - component: {fileID: 9002641682958310831}
   - component: {fileID: 2824139847414161341}
-  - component: {fileID: 1009217701976389067}
   - component: {fileID: 7531261075589786700}
+  - component: {fileID: -4370264616596702613}
   m_Layer: 8
   m_Name: AllyDefenderPlaceholdShip
   m_TagString: AllyDefender
@@ -163,33 +163,6 @@ MonoBehaviour:
   muzzle: {fileID: 3169446167474414126}
   shotCooldown: 0.25
   aggroRadius: 125
---- !u!54 &1009217701976389067
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075111625352831136}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &7531261075589786700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -211,6 +184,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7513381, y: 0.21636459, z: 0.9735997}
   m_Center: {x: -0.000000074505806, y: 0.00047693774, z: -0.06401341}
+--- !u!114 &-4370264616596702613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075111625352831136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcd31e53d424c34da7e6bd8e0236d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3650674476062028474
 PrefabInstance:
   m_ObjectHideFlags: 0

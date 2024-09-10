@@ -55,6 +55,24 @@ TagManager:
   - EnemyCapitolShip
   - AllyCapitolShip
   - DeathCameraPos
+  - Tier1Owned
+  - Tier2Owned
+  - Tier3Owned
+  - Tier4Owned
+  - Tier5Owned
+  - WeaponsUpgradeOwned
+  - HealthUpgradeOwned
+  - LaserEquipped
+  - BombEquipped
+  - MissileEquipped
+  - AllocatedShipsText
+  - SelectedWeaponText
+  - ConfirmationText
+  - ConfirmationColor
+  - FightersDestroyedText
+  - BombersDestroyedText
+  - DefendersDestroyedText
+  - TotalDestroyedText
   layers:
   - Default
   - TransparentFX

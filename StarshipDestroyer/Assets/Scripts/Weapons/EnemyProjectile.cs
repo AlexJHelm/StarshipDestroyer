@@ -57,11 +57,11 @@ public class EnemyProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.tag == "CapitolShip")
+        /*if (collision.gameObject.tag == "CapitolShip")
         {
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
-        }
+        }*/
 
         if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {

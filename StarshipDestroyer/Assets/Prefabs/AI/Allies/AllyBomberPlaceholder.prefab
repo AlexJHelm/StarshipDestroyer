@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2149856584328447952}
   - component: {fileID: 4842598071320023856}
   - component: {fileID: 9937580174990395}
-  - component: {fileID: 4113573799248107634}
   - component: {fileID: 6901970505337592539}
+  - component: {fileID: 3714747863476155627}
   m_Layer: 8
   m_Name: AllyBomberPlaceholder
   m_TagString: AllyBomber
@@ -123,28 +123,6 @@ MonoBehaviour:
   bombPrefab: {fileID: -8170740403644173222, guid: d08e1313d4388c74ab9350e1c0da3845, type: 3}
   muzzle: {fileID: 7947996272542589533}
   shotCooldown: 5
---- !u!64 &4113573799248107634
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4533635710899036837}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 667713240606638602, guid: 831cf8343f65b234a8fe5bd82861835a, type: 3}
 --- !u!65 &6901970505337592539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -166,6 +144,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9726398, y: 0.36878505, z: 1.3295952}
   m_Center: {x: -0.0000008791685, y: -0.05287245, z: 0.0754601}
+--- !u!114 &3714747863476155627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533635710899036837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcd31e53d424c34da7e6bd8e0236d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7896171434644064756
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 5443221796415866703}
   - component: {fileID: 6233570898976912013}
   - component: {fileID: 9149948211144207809}
-  - component: {fileID: 454004079271630620}
   - component: {fileID: 7955746912000337594}
+  - component: {fileID: -5519866036902614113}
   m_Layer: 7
   m_Name: EnemyDefenderPlaceholdShip
   m_TagString: EnemyDefender
@@ -165,33 +165,6 @@ MonoBehaviour:
   health: 100
   scrap: {fileID: -7081677042374251514, guid: 162b3a6a065e24649b99c010efda57c9, type: 3}
   destructionVFX: {fileID: 1267192337071103082, guid: 9a61c2663280a1e45b9c43cc8ea3c4b0, type: 3}
---- !u!54 &454004079271630620
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075111625352831136}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &7955746912000337594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -213,6 +186,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.79703736, y: 0.18895592, z: 1.1184958}
   m_Center: {x: 0.000008746982, y: 0.0041209045, z: -0.16261595}
+--- !u!114 &-5519866036902614113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075111625352831136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcd31e53d424c34da7e6bd8e0236d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1900121438376118698
 PrefabInstance:
   m_ObjectHideFlags: 0

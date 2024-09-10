@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -50,9 +51,9 @@ public class GameManager : MonoBehaviour
 
     public int scrap = 30;
     int randomSpawnX, randomSpawnY, randomSpawnZ, randomSpawnPos, randomAsteroidNum;
-    public int numOfIncreasedShipAllocations = 1;
+    public int numOfIncreasedShipAllocations = 0;
     public int remainingAllocationSlots;
-    public bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked;
+    public bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked, onUpgradeScreen, onWeaponsScreen, onLaunchScreen, onWinScene;
 
     public bool laserSystemActive, bombSystemActive, missileSystemActive;
 
@@ -62,7 +63,10 @@ public class GameManager : MonoBehaviour
 
     public int maxFighters, maxBombers, maxDefenders;
 
-    public TMP_Text fighterText, bomberText, defenderText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText, laserText, bombText, missileText;
+    public int scrapGained, fightersDestroyed, bombersDestroyed, defendersDestroyed, totalDestroyed;
+
+    public TMP_Text fighterText, bomberText, defenderText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText, laserText, bombText, missileText, 
+        shipsAllocatedText, selectedWeaponText, confirmationText, fightersDestroyedText, bombersDestroyedText, defendersDestroyedText, totalDestroyedText;
 
     //Methods
 
@@ -317,48 +321,135 @@ public class GameManager : MonoBehaviour
             healthUpgradeText = GameObject.FindWithTag("HealthUpgradeText").GetComponent<TMP_Text>();
             weaponsUpgradeText = GameObject.FindWithTag("WeaponsUpgradeText").GetComponent<TMP_Text>();
             spacecraftUpgradeText = GameObject.FindWithTag("SpacecraftUpgradeText").GetComponent<TMP_Text>();
-            laserText = GameObject.FindWithTag("LaserText").GetComponent<TMP_Text>();
-            bombText = GameObject.FindWithTag("BombText").GetComponent<TMP_Text>();
-            missileText = GameObject.FindWithTag("MissileText").GetComponent<TMP_Text>();
 
             remainingText.text = $"Remaining: {remainingAllocationSlots}";
             fighterText.text = $"{fightersAllocated}";
             bomberText.text = $"{bombersAllocated}";
             defenderText.text = $"{defendersAllocated}";
             scrapText.text = $"{scrap}";
-            if(shipHealthUpgradeUnlocked == true)
+
+            if (shipHealthUpgradeUnlocked == true)
             {
+                GameObject.FindWithTag("HealthUpgradeOwned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 healthUpgradeText.text = "Unlocked";
             }
             if (shipWeaponsUpgradeUnlocked == true)
             {
+                GameObject.FindWithTag("WeaponsUpgradeOwned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 weaponsUpgradeText.text = "Unlocked";
             }
-            if (numOfIncreasedShipAllocations >= 10)
+            if (numOfIncreasedShipAllocations == 3)
+            {
+                GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+            }
+            if (numOfIncreasedShipAllocations == 6)
+            {
+                GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier2Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+            }
+            if (numOfIncreasedShipAllocations == 9)
+            {
+                GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier2Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier3Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+            }
+            if (numOfIncreasedShipAllocations == 12)
+            {
+                GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier2Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier3Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier4Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+            }
+            if (numOfIncreasedShipAllocations >= 15)
             {
                 spacecraftUpgradeText.text = "Unlocked";
-            }
-            if(laserSystemActive == true)
+                GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier2Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier3Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier4Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("Tier5Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+            }                                
+        }
+        if(onWeaponsScreen == true)
+        {
+            laserText = GameObject.FindWithTag("LaserText").GetComponent<TMP_Text>();
+            bombText = GameObject.FindWithTag("BombText").GetComponent<TMP_Text>();
+            missileText = GameObject.FindWithTag("MissileText").GetComponent<TMP_Text>();
+
+            if (laserSystemActive == true)
             {
                 laserText.text = "Selected";
-                bombText.text = "Select";
-                missileText.text = "Select";
+                bombText.text = "Equip";
+                missileText.text = "Equip";
+                GameObject.FindWithTag("LaserEquipped").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
             }
             if (bombSystemActive == true)
             {
-                laserText.text = "Select";
+                laserText.text = "Equip";
                 bombText.text = "Selected";
-                missileText.text = "Select";
+                missileText.text = "Equip";
+                GameObject.FindWithTag("BombEquipped").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
             }
             if (missileSystemActive == true)
             {
-                laserText.text = "Select";
-                bombText.text = "Select";
+                laserText.text = "Equip";
+                bombText.text = "Equip";
                 missileText.text = "Selected";
+                GameObject.FindWithTag("MissileEquipped").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
             }
         }
+        if (onLaunchScreen == true)
+        {
+            shipsAllocatedText = GameObject.FindWithTag("AllocatedShipsText").GetComponent<TMP_Text>();
+            selectedWeaponText = GameObject.FindWithTag("SelectedWeaponText").GetComponent<TMP_Text>();
+            confirmationText = GameObject.FindWithTag("ConfirmationText").GetComponent<TMP_Text>();
 
-        if(inGame == true)
+            shipsAllocatedText.text = $"Ships Allocated: {currentlyAllocated}";
+            if (laserSystemActive == true)
+            {
+                selectedWeaponText.text = $"Weapon Selected: Laser";
+            }
+            else if (bombSystemActive == true)
+            {
+                selectedWeaponText.text = $"Weapon Selected: Bomb";
+            }
+            else if (missileSystemActive == true)
+            {
+                selectedWeaponText.text = $"Weapon Selected: Missile";
+            }
+
+            if(remainingAllocationSlots == 0)
+            {
+                confirmationText.text = "Ships Are Allocated";
+                confirmationText.color = new Color32(36, 144, 48, 255);
+                GameObject.FindWithTag("ConfirmationColor").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
+            }
+            else
+            {
+                confirmationText.text = "Allocations Required";
+                confirmationText.color = new Color32(255, 90, 90, 255);
+                GameObject.FindWithTag("ConfirmationColor").gameObject.GetComponent<Image>().color = new Color32(0, 0, 0, 255);
+            }
+        }
+        if (onWinScene)
+        {
+            scrapText = GameObject.FindWithTag("ScrapCount").GetComponent<TMP_Text>();
+            fightersDestroyedText = GameObject.FindWithTag("FightersDestroyedText").GetComponent<TMP_Text>();
+            bombersDestroyedText = GameObject.FindWithTag("BombersDestroyedText").GetComponent<TMP_Text>();
+            defendersDestroyedText = GameObject.FindWithTag("DefendersDestroyedText").GetComponent<TMP_Text>();
+            totalDestroyedText = GameObject.FindWithTag("TotalDestroyedText").GetComponent<TMP_Text>();
+
+            scrapText.text = $"Scrap Gained: {scrapGained + 25}";
+            scrap += 25;
+
+            fightersDestroyedText.text = $"Fighters: {fightersDestroyed}";
+            bombersDestroyedText.text = $"Bombers: {bombersDestroyed}";
+            defendersDestroyedText.text = $"Defenders: {defendersDestroyed}";
+
+            totalDestroyed = fightersDestroyed + bombersDestroyed + defendersDestroyed + 1;
+            totalDestroyedText.text = $"Total: {totalDestroyed}";
+        }
+        if (inGame == true)
         {
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
             Cursor.lockState = CursorLockMode.Confined;
@@ -372,7 +463,7 @@ public class GameManager : MonoBehaviour
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
             Cursor.lockState = CursorLockMode.None;           
             //Cursor.visible = true;
-        }
+        }       
     }
 
     public IEnumerator RespawnTimer()

@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
     public int scrap = 30;
     int randomSpawnX, randomSpawnY, randomSpawnZ, randomSpawnPos, randomAsteroidNum;
-    public int numOfIncreasedShipAllocations = 1;
+    public int numOfIncreasedShipAllocations = 0;
     public int remainingAllocationSlots;
     public bool shipHealthUpgradeUnlocked, shipWeaponsUpgradeUnlocked, onUpgradeScreen, onWeaponsScreen, onLaunchScreen, onWinScene;
 
@@ -338,29 +338,29 @@ public class GameManager : MonoBehaviour
                 GameObject.FindWithTag("WeaponsUpgradeOwned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 weaponsUpgradeText.text = "Unlocked";
             }
-            if (numOfIncreasedShipAllocations == 1)
+            if (numOfIncreasedShipAllocations == 3)
             {
                 GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
             }
-            if (numOfIncreasedShipAllocations == 2)
+            if (numOfIncreasedShipAllocations == 6)
             {
                 GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 GameObject.FindWithTag("Tier2Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
             }
-            if (numOfIncreasedShipAllocations == 3)
+            if (numOfIncreasedShipAllocations == 9)
             {
                 GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 GameObject.FindWithTag("Tier2Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 GameObject.FindWithTag("Tier3Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
             }
-            if (numOfIncreasedShipAllocations == 4)
+            if (numOfIncreasedShipAllocations == 12)
             {
                 GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 GameObject.FindWithTag("Tier2Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 GameObject.FindWithTag("Tier3Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
                 GameObject.FindWithTag("Tier4Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);
             }
-            if (numOfIncreasedShipAllocations >= 5)
+            if (numOfIncreasedShipAllocations >= 15)
             {
                 spacecraftUpgradeText.text = "Unlocked";
                 GameObject.FindWithTag("Tier1Owned").gameObject.GetComponent<Image>().color = new Color32(36, 144, 48, 255);

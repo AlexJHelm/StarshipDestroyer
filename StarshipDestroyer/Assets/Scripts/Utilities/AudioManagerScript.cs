@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -44,4 +45,18 @@ public class AudioManagerScript : MonoBehaviour
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		s.source.Stop();
 	}
+	public void SetVolume(string soundName, float volume)
+	{
+        Sound s = Array.Find(sounds, item => item.name == soundName);
+		if(s != null)
+		{
+			s.source.volume = volume;
+		}
+    }
+
+    public float GetVolume(string soundName)
+    {
+        Sound s = Array.Find(sounds, item => item.name == soundName);
+        return s != null ? s.source.volume : 0f;
+    }
 }

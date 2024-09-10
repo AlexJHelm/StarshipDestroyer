@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45383734, g: 0.52512455, b: 0.6740622, a: 1}
+  m_IndirectSpecularColor: {r: 0.45383745, g: 0.5251203, b: 0.6740634, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6310,7 +6310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952527165}
-  - component: {fileID: 1952527164}
+  - component: {fileID: 1952527166}
   m_Layer: 0
   m_Name: VolumeManager Ingame Music
   m_TagString: Untagged
@@ -6318,21 +6318,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1952527164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952527163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 806965283}
-  volumeTextUI: {fileID: 485376749}
-  targetSoundName: GameMusic
 --- !u!4 &1952527165
 Transform:
   m_ObjectHideFlags: 0
@@ -6348,6 +6333,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1952527166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952527163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b9939dc965f84087db193dee43c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 806965283}
+  volumeTextUI: {fileID: 485376749}
+  targetSoundName: GameMusic
 --- !u!1 &1955380000
 GameObject:
   m_ObjectHideFlags: 0
@@ -6798,7 +6798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2118378993}
-  - component: {fileID: 2118378992}
+  - component: {fileID: 2118378996}
   - component: {fileID: 2118378995}
   - component: {fileID: 2118378994}
   m_Layer: 0
@@ -6808,21 +6808,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2118378992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118378991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 919410464}
-  volumeTextUI: {fileID: 1243762431}
-  targetSoundName: MenuMusic
 --- !u!4 &2118378993
 Transform:
   m_ObjectHideFlags: 0
@@ -6847,7 +6832,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2118378991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d3b9939dc965f84087db193dee43c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 919410464}
@@ -6862,9 +6847,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2118378991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d3b9939dc965f84087db193dee43c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 919410464}
   volumeTextUI: {fileID: 1243762431}
   targetSoundName: WinMusic
+--- !u!114 &2118378996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118378991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b9939dc965f84087db193dee43c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 919410464}
+  volumeTextUI: {fileID: 1243762431}
+  targetSoundName: MenuMusic

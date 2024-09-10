@@ -17,6 +17,7 @@ public class ShipController : MonoBehaviour
     public Vector3 respawnPos;
     public Camera mainCamera;
     public Camera overlookCamera;
+    public Camera otherCamera;
     public bool explosionPlayed, respawnTimerActive;
 
     public float deadZoneRadius = .10f;
@@ -34,6 +35,11 @@ public class ShipController : MonoBehaviour
     private Quaternion targetRotation;
 
     public bool boosterActive, ammoBoosterActive = false;
+
+    public bool isSlowingDown = false;
+    public bool isSpeedingUp = false;
+
+    public float fastForwardSpeed = 35f;
 
     //Strafe variables (not currently used)
     //public float strafeSpeed = 7.5f;
@@ -53,6 +59,7 @@ public class ShipController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         mainCamera.enabled = true;
         overlookCamera.enabled = false;
+        otherCamera.enabled = true;
         targetRotation = transform.rotation;
 
         //Sets screen center
@@ -92,6 +99,26 @@ public class ShipController : MonoBehaviour
             {
                 transform.Rotate(-mouseDistance.y * xLookRotateSpeed * Time.deltaTime, mouseDistance.x * yLookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
             }
+
+            if(Input.GetKey(KeyCode.S))
+            {
+                baseForwardSpeed = 10f;
+                isSlowingDown = true;
+                isSpeedingUp = false;
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                baseForwardSpeed = fastForwardSpeed;
+                isSlowingDown = false;
+                isSpeedingUp = true;
+            }
+            else
+            {
+                baseForwardSpeed = 25f;
+                isSlowingDown = false;
+                isSpeedingUp = false;
+            }
+
 
             //Moves ship
             if (boosterActive == true)
@@ -150,6 +177,7 @@ public class ShipController : MonoBehaviour
                 AudioManagerScript.instance.Play("Explosion");
                 explosionPlayed = true;
                 StartCoroutine(ExplosionTimer());
+                otherCamera.enabled = false;
             }
         }
     }
@@ -161,6 +189,7 @@ public class ShipController : MonoBehaviour
         respawnTimerActive = false;
         health = 100;
         mainCamera.enabled = true;
+        otherCamera.enabled = true;
         overlookCamera.enabled = false;
         mainCamera.transform.position = respawnPos;
         transform.position = respawnPos;

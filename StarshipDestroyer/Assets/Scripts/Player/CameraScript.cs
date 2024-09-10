@@ -50,11 +50,34 @@ public class CameraScript : MonoBehaviour
         prevPositions.Enqueue(targetShip.transform.position);
         prevRotations.Enqueue(targetShip.transform.rotation);
 
+        bool isSlowingDown = targetShip.GetComponent<ShipController>().isSlowingDown;
+        bool isSpeedingUp = targetShip.GetComponent<ShipController>().isSpeedingUp;
+
+        Vector3 normalOffset = thirdPersonOffset;
+
+        Vector3 slowingDownOffset = new Vector3(thirdPersonOffset.x, thirdPersonOffset.y, thirdPersonOffset.z - 10f);
+        Vector3 speedingUpOffset = new Vector3(thirdPersonOffset.x, thirdPersonOffset.y, thirdPersonOffset.z + 10f);
+
+        Vector3 dynamicOffset;
+
+        if (isSlowingDown)
+        {
+            dynamicOffset = Vector3.Lerp(normalOffset, slowingDownOffset, 0.5f);
+        }
+        else if (isSpeedingUp)
+        {
+            dynamicOffset = Vector3.Lerp(normalOffset, speedingUpOffset, 0.3f);
+        }
+        else
+        {
+            dynamicOffset = normalOffset;
+        }
+
         // If we have more than the desired amount of history, start using the oldest data
         if (prevPositions.Count > cameraLag)
         {
             // Get the old position and rotation from the queues
-            Vector3 desiredPosition = prevPositions.Dequeue() + targetShip.transform.TransformDirection(thirdPersonOffset);
+            Vector3 desiredPosition = prevPositions.Dequeue() + targetShip.transform.TransformDirection(dynamicOffset);
             Quaternion desiredRotation = prevRotations.Dequeue();
 
             // Smoothly move the camera to the desired position

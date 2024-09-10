@@ -431,7 +431,7 @@ public class GameManager : MonoBehaviour
                 GameObject.FindWithTag("ConfirmationColor").gameObject.GetComponent<Image>().color = new Color32(0, 0, 0, 255);
             }
         }
-        if (onWinScene)
+        /*if (onWinScene)
         {
             scrapText = GameObject.FindWithTag("ScrapCount").GetComponent<TMP_Text>();
             fightersDestroyedText = GameObject.FindWithTag("FightersDestroyedText").GetComponent<TMP_Text>();
@@ -448,7 +448,7 @@ public class GameManager : MonoBehaviour
 
             totalDestroyed = fightersDestroyed + bombersDestroyed + defendersDestroyed + 1;
             totalDestroyedText.text = $"Total: {totalDestroyed}";
-        }
+        }*/
         if (inGame == true)
         {
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);

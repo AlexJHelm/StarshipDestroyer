@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes Updated/Main Menu Scene N.unity
-    guid: 70e77bfabdc64644292b49c145154a7d
+    path: Assets/Scenes Current/Main Menu/Main Menu Scene N2.unity
+    guid: 87574b9efdd88154095af26a2d4bbd61
   - enabled: 1
     path: Assets/Scenes Updated/Setup Upgrades Screen N.unity
     guid: 86ce014b4682e2a49b9c1afca5b32838
@@ -15,35 +15,35 @@ EditorBuildSettings:
     path: Assets/Scenes Updated/GameScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes Updated/WinScene N.unity
-    guid: 3b63fa306f555e549847935fc166f0d0
+    path: Assets/Scenes Current/Win_Lose/WinScene N2.unity
+    guid: f2e2b9f05d7c6084c994a6816f885d76
   - enabled: 1
-    path: Assets/Scenes Updated/Scenes Old/LoseScene.unity
-    guid: c9ee7376a66f29d4aa63797fdcb10921
+    path: Assets/Scenes Current/Win_Lose/LoseScene N2.unity
+    guid: 9cd97a2e824d7e947bf8445485b1c298
   - enabled: 1
-    path: Assets/Scenes Updated/Credits Screen N.unity
-    guid: c5e97d2192ef0dc4194af41d4ff52a1b
+    path: Assets/Scenes Current/Other/Credits Screen N2.unity
+    guid: 48536f9757592134890368aa26dad336
   - enabled: 1
-    path: Assets/Scenes Updated/Options Screen N.unity
-    guid: fab57cdc384ffc042b64008e11bef432
+    path: Assets/Scenes Current/Options/Options Controls Movement Screen N2.unity
+    guid: 5b77eb2c6e7d348408ebe65cbdc80f25
   - enabled: 1
-    path: Assets/Scenes Updated/Handbook Player Screen N.unity
-    guid: e8c1ec32adf225844a593c3c1677134c
+    path: Assets/Scenes Current/Handbook/Handbook Player Screen N2.unity
+    guid: d637d5523954d9a419705e726cb03d5c
   - enabled: 1
-    path: Assets/Scenes Updated/Handbook OBJ Screen N.unity
-    guid: 0873d3392174fb0498458737b77da8bd
+    path: Assets/Scenes Current/Handbook/Handbook OBJ Screen N2.unity
+    guid: 858b00e99b210c74eb803b772638c0ec
   - enabled: 1
-    path: Assets/Scenes Updated/Handbook Boost Screen N.unity
-    guid: e59a62188c5f2e54ca97847c2715741b
+    path: Assets/Scenes Current/Handbook/Handbook Boost Screen N2.unity
+    guid: ddc09793036bff641beb0a1f9dce0639
   - enabled: 1
-    path: Assets/Scenes Updated/Handbook Scrap Screen N.unity
-    guid: 21fc834802762724d86052feec191557
+    path: Assets/Scenes Current/Handbook/Handbook Scrap Screen N2.unity
+    guid: c42c990db2befdc45a976a54948be620
   - enabled: 1
-    path: Assets/Scenes Updated/Handbook Ships Screen N.unity
-    guid: ec2caab0e2deb144ab3119e65c29ef70
+    path: Assets/Scenes Current/Handbook/Handbook Ships Screen N2.unity
+    guid: 3a0a0c3097200d4419512aca556ab4ac
   - enabled: 1
-    path: Assets/Scenes Updated/News Screen N.unity
-    guid: 7eee327518ab4374ebce35b703ab6923
+    path: Assets/Scenes Current/Other/News Screen N2.unity
+    guid: fd48028c60e016447818a631be67e337
   - enabled: 1
     path: Assets/Scenes Updated/Setup Allocation Screen N.unity
     guid: d1d51e21d042d344387c4cec9c353288
@@ -53,4 +53,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes Updated/Setup Launch  Screen N.unity
     guid: 30f090a5bfe2c7e4b96b05185b0f8e65
+  - enabled: 1
+    path: Assets/Scenes Current/Options/Options Controls Combat Screen N2.unity
+    guid: 973cdcefe968d4845a793ab9a77dce47
+  - enabled: 1
+    path: Assets/Scenes Current/Options/Options Video Screen N2.unity
+    guid: d15ee7663114ffa41a8b23aaeecfc9f6
+  - enabled: 1
+    path: Assets/Scenes Current/Options/Options Audio Music Screen N2.unity
+    guid: 9ca42ebfeb69f15449fc385f81c682a3
+  - enabled: 1
+    path: Assets/Scenes Current/Options/Options Audio SFX Screen N2.unity
+    guid: d5b2e8fe38b5cf74f8e82f15a34fc100
   m_configObjects: {}

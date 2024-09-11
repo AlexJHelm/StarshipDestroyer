@@ -8,7 +8,8 @@ public class CameraShake : MonoBehaviour
 {
     private CinemachineVirtualCamera CinemachineVirtualCamera;
     private float Shakeintensity = 1f;
-    private float ShakeTime = 0.2f;
+    public float ShakeTime = 0.2f;
+    public bool cameraShaking, shakeStarted = false;
 
     private float timer;
     private CinemachineBasicMultiChannelPerlin _cbmcp;
@@ -40,9 +41,14 @@ public class CameraShake : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (cameraShaking == true)
         {
-            ShakeCamera();
+            if(shakeStarted == false)
+            {
+                ShakeCamera();
+                shakeStarted = true;
+            }
+            
         }
 
         if (timer > 0)
@@ -52,6 +58,8 @@ public class CameraShake : MonoBehaviour
             if (timer <= 0)
             {
                 StopShake();
+                cameraShaking = false;
+                shakeStarted = false;
             }
         }
     }

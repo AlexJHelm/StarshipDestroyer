@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
 
             if (canSpawn == true)
             {
-                while(enemyFightersAlive < maxFighters)
+                while(enemyFightersAlive < maxFighters * 2)
                 {
                     randomSpawnPos = Random.Range(0, 4);
                     if(randomSpawnPos <= 1)
@@ -174,7 +174,7 @@ public class GameManager : MonoBehaviour
                     enemyFightersAlive += 1;
                 }
 
-                while (enemyBombersAlive < maxBombers)
+                while (enemyBombersAlive < maxBombers * 2)
                 {
                     randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour
                     enemyBombersAlive += 1;
                 }
 
-                while (enemyDefendersAlive < maxDefenders)
+                while (enemyDefendersAlive < maxDefenders * 2)
                 {
                     randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
@@ -477,5 +477,10 @@ public class GameManager : MonoBehaviour
         asteroidCanSpawn = false;
         yield return new WaitForSeconds(15f);
         asteroidCanSpawn = true;
-    }  
+    }
+    
+    public IEnumerator CameraShakeTimer()
+    {
+        
+    }
 }

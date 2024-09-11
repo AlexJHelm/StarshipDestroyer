@@ -9,6 +9,7 @@ public class Weakpoints : MonoBehaviour
     public float weakpointHealth = 100;
     public bool canTakeDamage = true;
     public bool takingDamage = false;
+    public GameObject enemyWeaponsVFX, enemyBridgeVFX, enemyThrustersVFX, allyWeaponsVFX, allyBridgeVFX, allyThrustersVFX;
 
     public GameObject gm;
 
@@ -39,21 +40,38 @@ public class Weakpoints : MonoBehaviour
             {
                 if (gameObject.tag == "EnemyWeapons")
                 {
+                    Instantiate(enemyWeaponsVFX, gameObject.transform.position, gameObject.transform.rotation);
                     gm.GetComponent<GameManager>().enemyWeaponsDestroyed = true;
                 }
                 else if (gameObject.tag == "EnemyBridge")
                 {
+                    Instantiate(enemyBridgeVFX, gameObject.transform.position, gameObject.transform.rotation);
                     gm.GetComponent<GameManager>().enemyBridgeDestroyed = true;
                 }
                 else
                 {
+                    Instantiate(enemyThrustersVFX, gameObject.transform.position, gameObject.transform.rotation);
                     gm.GetComponent<GameManager>().enemyThrustersDestroyed = true;
                 }
                 gm.GetComponent<GameManager>().enemyWeakpointsDestroyed++;               
             }
             else
             {
-                gm.GetComponent<GameManager>().allyWeakpointsDestroyed++;
+                if (gameObject.tag == "AllyWeapons")
+                {
+                    Instantiate(allyWeaponsVFX, gameObject.transform.position, gameObject.transform.rotation);
+                    gm.GetComponent<GameManager>().allyWeakpointsDestroyed++;
+                }
+                else if (gameObject.tag == "AllyBridge")
+                {
+                    Instantiate(allyBridgeVFX, gameObject.transform.position, gameObject.transform.rotation);
+                    gm.GetComponent<GameManager>().allyWeakpointsDestroyed++;
+                }
+                else if(gameObject.tag == "AllyThrusters")
+                {
+                    Instantiate(allyThrustersVFX, gameObject.transform.position, gameObject.transform.rotation);
+                    gm.GetComponent<GameManager>().allyWeakpointsDestroyed++;
+                }              
             }          
             isDestroyed = true;           
         }

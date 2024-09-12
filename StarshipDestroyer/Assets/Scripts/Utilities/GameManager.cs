@@ -479,8 +479,8 @@ public class GameManager : MonoBehaviour
         asteroidCanSpawn = true;
     }
     
-    public IEnumerator CameraShakeTimer()
+    /*public IEnumerator CameraShakeTimer()
     {
         
-    }
+    }*/
 }

@@ -20959,6 +20959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 455491204}
+  playerHud: {fileID: 0}
   isPaused: 0
   allowedSceneName: GameScene
 --- !u!4 &2096097640

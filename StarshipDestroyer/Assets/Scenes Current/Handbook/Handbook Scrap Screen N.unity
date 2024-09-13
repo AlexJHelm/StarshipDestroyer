@@ -2482,9 +2482,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Scrap is obtained through missions,
+    Scrap is obtained from missions
 
-    destroyed ships, and asteroids '
+    and taking out enemies  '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77ad86847612d884b87ded0105439c5a, type: 2}
   m_sharedMaterial: {fileID: 5192993848974311574, guid: 77ad86847612d884b87ded0105439c5a, type: 2}
@@ -4062,8 +4062,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nUse scrap in the menu to purchase\nupgrades for the next fight\n\nUpgrades
-    like allocation the player \nfleet or buffing the overall health of \nyour ships"
+  m_text: "\nUse scrap in the menu to purchase\nupgrades\n\nUpgrades can allocation
+    the player \nfleet or changing the overall health \nof your ships"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77ad86847612d884b87ded0105439c5a, type: 2}
   m_sharedMaterial: {fileID: 5192993848974311574, guid: 77ad86847612d884b87ded0105439c5a, type: 2}

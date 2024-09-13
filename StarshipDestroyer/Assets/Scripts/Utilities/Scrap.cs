@@ -17,7 +17,15 @@ public class Scrap : MonoBehaviour
         if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
             GameManager.GM.scrap += 1;
+
+            ScrapTxt scrapTxt = FindObjectOfType<ScrapTxt>();
+            if (scrapTxt != null)
+            {
+                scrapTxt.ShowScrapCanvas();
+            }
+
             Destroy(gameObject);
+
         }
     }
 }

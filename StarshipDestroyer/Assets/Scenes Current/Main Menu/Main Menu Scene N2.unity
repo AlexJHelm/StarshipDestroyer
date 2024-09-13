@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45383734, g: 0.52512455, b: 0.6740622, a: 1}
+  m_IndirectSpecularColor: {r: 0.45383745, g: 0.5251203, b: 0.6740634, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8783,9 +8783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 276960055}
-  volumeTextUI: {fileID: 1820160238}
-  targetSoundName: Engine
 --- !u!114 &949434399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8798,9 +8795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 276960055}
-  volumeTextUI: {fileID: 1820160238}
-  targetSoundName: Missiles
 --- !u!114 &949434400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8813,9 +8807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 276960055}
-  volumeTextUI: {fileID: 1820160238}
-  targetSoundName: Laser
 --- !u!114 &949434401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8828,9 +8819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 276960055}
-  volumeTextUI: {fileID: 1820160238}
-  targetSoundName: Explosion
 --- !u!114 &949434402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8843,9 +8831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 276960055}
-  volumeTextUI: {fileID: 1820160238}
-  targetSoundName: Hover
 --- !u!114 &949434403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8858,9 +8843,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 276960055}
-  volumeTextUI: {fileID: 1820160238}
-  targetSoundName: Hit
 --- !u!1 &953826807
 GameObject:
   m_ObjectHideFlags: 0
@@ -10957,9 +10939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 100285610}
-  volumeTextUI: {fileID: 728460264}
-  targetSoundName: GameMusic
 --- !u!1 &1220983442
 GameObject:
   m_ObjectHideFlags: 0
@@ -11139,9 +11118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 991049705}
-  volumeTextUI: {fileID: 1159073000}
-  targetSoundName: Click
 --- !u!1 &1244672091
 GameObject:
   m_ObjectHideFlags: 0
@@ -14730,9 +14706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 262652104}
-  volumeTextUI: {fileID: 1454201776}
-  targetSoundName: LoseMusic
 --- !u!114 &1585922593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14745,9 +14718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 262652104}
-  volumeTextUI: {fileID: 1454201776}
-  targetSoundName: WinMusic
 --- !u!114 &1585922594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14760,9 +14730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa43064ac26886d4091610e0d65c4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 262652104}
-  volumeTextUI: {fileID: 1454201776}
-  targetSoundName: MenuMusic
 --- !u!1 &1590113172
 GameObject:
   m_ObjectHideFlags: 0
@@ -16599,7 +16566,7 @@ PrefabInstance:
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: cursorTexture
       value: 
-      objectReference: {fileID: 2800000, guid: f26d0102f4560df41b3cbad81e6b7ae7, type: 3}
+      objectReference: {fileID: 2800000, guid: d8817dc57c2edea4fbc16dd5318f46e0, type: 3}
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: cursorPauseMode
       value: 0

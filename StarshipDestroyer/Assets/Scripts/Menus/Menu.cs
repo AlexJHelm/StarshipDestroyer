@@ -12,6 +12,8 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(0);
         AudioManagerScript.instance.Stop("WinMusic");
         AudioManagerScript.instance.Stop("LoseMusic");
+        AudioManagerScript.instance.Stop("GameMusic");
+        AudioManagerScript.instance.Stop("Engine");
         AudioManagerScript.instance.Play("Click");
         if (GameManager.GM.menuMusicPlaying == false)
         {

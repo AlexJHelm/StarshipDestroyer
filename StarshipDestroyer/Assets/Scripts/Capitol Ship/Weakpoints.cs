@@ -53,6 +53,10 @@ public class Weakpoints : MonoBehaviour
             }
             else
             {
+                if(gameObject.tag == "AllyThrusters")
+                {
+                    Destroy(GameObject.FindWithTag("AllyEngineExhaust"));
+                }
                 gm.GetComponent<GameManager>().allyWeakpointsDestroyed++;
             }          
             isDestroyed = true;           

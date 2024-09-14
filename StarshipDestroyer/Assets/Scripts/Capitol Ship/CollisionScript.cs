@@ -6,7 +6,6 @@ public class CollisionScript : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Entered");
         if (collision.gameObject.tag == "CapitolShip" || collision.gameObject.tag == "Asteroid" || collision.gameObject.tag == "Asteroid2" || collision.gameObject.tag == "Asteroid3" ||
             collision.gameObject.tag == "EnemyBridge" || collision.gameObject.tag == "EnemyWeapons" || collision.gameObject.tag == "EnemyThrusters" || collision.gameObject.tag == "AllyBridge" ||
             collision.gameObject.tag == "AllyWeapons" || collision.gameObject.tag == "AllyThrusters")
@@ -47,6 +46,6 @@ public class CollisionScript : MonoBehaviour
                 Debug.Log("Destroyed");
             }
 
-        }
+        }       
     }
 }

@@ -451,6 +451,7 @@ public class GameManager : MonoBehaviour
         }*/
         if (inGame == true)
         {
+            Vector2 hotSpot = new Vector2(cursorTexture.width / 2f, cursorTexture.height / 2f);
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
             Cursor.lockState = CursorLockMode.Confined;
             scrapText = GameObject.FindWithTag("ScrapCount").GetComponent<TMP_Text>();

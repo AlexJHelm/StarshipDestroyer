@@ -73,6 +73,9 @@ TagManager:
   - BombersDestroyedText
   - DefendersDestroyedText
   - TotalDestroyedText
+  - OutOfBounds
+  - AllyEngineExhaust
+  - EnemyEngineExhaust
   layers:
   - Default
   - TransparentFX

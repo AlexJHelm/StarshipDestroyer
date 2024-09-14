@@ -17953,8 +17953,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PREPARE FOR BATTLE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9046330967d00634a872ad6cef9eab21, type: 2}
-  m_sharedMaterial: {fileID: 1171131639105092522, guid: 9046330967d00634a872ad6cef9eab21, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab9291e44006b6f4d856fa80adfe4f8d, type: 2}
+  m_sharedMaterial: {fileID: 5013438990236063970, guid: ab9291e44006b6f4d856fa80adfe4f8d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18014,7 +18014,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1724.9219, w: -71.975006}
+  m_margin: {x: -250.91135, y: 0, z: -1956.7366, w: -71.975006}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

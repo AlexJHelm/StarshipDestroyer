@@ -215,7 +215,13 @@ PrefabInstance:
       propertyPath: iconTarget3
       value: 
       objectReference: {fileID: 1991861934}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
+    - {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
+    - {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
+    - {fileID: 3853419956692593452, guid: c593b13f18b90884d885799e630475e1, type: 3}
+    - {fileID: 6504892624675860967, guid: c593b13f18b90884d885799e630475e1, type: 3}
+    - {fileID: 8138937313849045166, guid: c593b13f18b90884d885799e630475e1, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1696182932976012679, guid: c593b13f18b90884d885799e630475e1, type: 3}
     - {fileID: 5716896754955303123, guid: c593b13f18b90884d885799e630475e1, type: 3}
@@ -612,7 +618,13 @@ PrefabInstance:
       propertyPath: iconTarget3
       value: 
       objectReference: {fileID: 1991861934}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6581633456135640788, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+    - {fileID: 1557794824060446047, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+    - {fileID: 8480859200539894801, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+    - {fileID: 5022358321204847063, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+    - {fileID: 6961881164257801961, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
+    - {fileID: 4644776501859645016, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7095570560600793299, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
     - {fileID: 8490810781190268837, guid: 2bebcdd6b2da31840a1b34d451bcb980, type: 3}
@@ -635,8 +647,9 @@ GameObject:
   - component: {fileID: 889159546}
   - component: {fileID: 889159549}
   - component: {fileID: 889159548}
+  - component: {fileID: 889159550}
   m_Layer: 0
-  m_Name: VCAM
+  m_Name: VCAM Lose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,6 +738,27 @@ MonoBehaviour:
   thirdPersonOffset: {x: -0.0006, y: 1.32, z: 6}
   positionSmoothSpeed: 0.05
   rotationSmoothSpeed: 0.05
+--- !u!95 &889159550
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889159545}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9a8e9ad0b07eb74ba0f305d878a1794, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &948762050
 GameObject:
   m_ObjectHideFlags: 3

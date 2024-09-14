@@ -64,5 +64,11 @@ EditorBuildSettings:
     guid: 9ca42ebfeb69f15449fc385f81c682a3
   - enabled: 1
     path: Assets/Scenes Current/Options/Options Audio SFX Screen N.unity
-    guid: cbf3647ef6fba40488c304977b14f532
+    guid: d5b2e8fe38b5cf74f8e82f15a34fc100
+  - enabled: 1
+    path: Assets/Scenes Current/Game Scene/CutsceneWin.unity
+    guid: 86e92be502e74f248bf32a59bc99c56f
+  - enabled: 1
+    path: Assets/Scenes Current/Game Scene/CutsceneLose.unity
+    guid: e1c525cefa221f8459ba2589663abc8b
   m_configObjects: {}

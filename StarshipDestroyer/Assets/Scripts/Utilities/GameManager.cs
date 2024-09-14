@@ -392,14 +392,14 @@ public class GameManager : MonoBehaviour
         fadeController.FadeOut();
 
         // load the win cutscene
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(20);
         AudioManagerScript.instance.Stop("GameMusic");
         AudioManagerScript.instance.Stop("Engine");
         inGame = false;
 
         // Load the score
-        //yield return new WaitForSeconds(3f);
-        //SceneManager.LoadScene(3);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(3);
     }
 
     public IEnumerator LoseGame()
@@ -412,13 +412,13 @@ public class GameManager : MonoBehaviour
         fadeController.FadeOut();
 
         // load the lose cutscene
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(21);
         AudioManagerScript.instance.Stop("GameMusic");
         AudioManagerScript.instance.Stop("Engine");
         inGame = false;
 
         // Load the score
-       // yield return new WaitForSeconds(3f);
-       // SceneManager.LoadScene(4);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(4);
     }
 }

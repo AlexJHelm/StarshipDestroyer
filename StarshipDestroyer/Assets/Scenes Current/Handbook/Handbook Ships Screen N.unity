@@ -4759,7 +4759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Missle System - Fast Shot \nHeavy Damage - Low Charge Time\n\nBombing
+  m_text: "Missile System - Fast Shot \nHeavy Damage - Low Charge Time\n\nBombing
     System - Slow Shot\nHeavy Damage - Avg Charge Time\n\nLaser System - Rapid Shots\nLight
     Damage - Avg Charge Time"
   m_isRightToLeft: 0

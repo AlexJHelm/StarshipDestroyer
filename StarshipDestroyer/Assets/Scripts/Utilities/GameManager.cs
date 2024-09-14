@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inGame == true)
+        if (inGame == true)
         {
             enemyRespawnPos1 = GameObject.FindWithTag("EnemyRespawnPos1").transform;
             allyRespawnPos1 = GameObject.FindWithTag("RespawnPos1").transform;
@@ -152,14 +152,14 @@ public class GameManager : MonoBehaviour
 
             if (canSpawn == true)
             {
-                while(enemyFightersAlive < maxFighters)
+                while (enemyFightersAlive < maxFighters)
                 {
                     randomSpawnPos = Random.Range(0, 4);
-                    if(randomSpawnPos <= 1)
+                    if (randomSpawnPos <= 1)
                     {
                         Instantiate(enemyPrefab, enemyRespawnPos1.position, transform.rotation);
                     }
-                    else if(randomSpawnPos > 1 && randomSpawnPos <= 2)
+                    else if (randomSpawnPos > 1 && randomSpawnPos <= 2)
                     {
                         Instantiate(enemyPrefab, enemyRespawnPos2.position, transform.rotation);
                     }
@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
                     {
                         Instantiate(enemyPrefab, enemyRespawnPos3.position, transform.rotation);
                     }
-                    
+
                     enemyFightersAlive += 1;
                 }
 
@@ -259,9 +259,9 @@ public class GameManager : MonoBehaviour
                         Instantiate(allyDefenderPrefab, allyRespawnPos3.position, transform.rotation);
                     }
                     defendersAlive += 1;
-                }               
+                }
                 StartCoroutine(RespawnTimer());
-                
+
             }
             if (asteroidCanSpawn == true)
             {
@@ -273,7 +273,7 @@ public class GameManager : MonoBehaviour
                 {
                     Instantiate(asteroid1, new Vector3(randomSpawnX, randomSpawnY, randomSpawnZ), transform.rotation);
                 }
-                else if(randomAsteroidNum > 1 && randomAsteroidNum <= 2)
+                else if (randomAsteroidNum > 1 && randomAsteroidNum <= 2)
                 {
                     Instantiate(asteroid2, new Vector3(randomSpawnX, randomSpawnY, randomSpawnZ), transform.rotation);
                 }
@@ -281,30 +281,20 @@ public class GameManager : MonoBehaviour
                 {
                     Instantiate(asteroid3, new Vector3(randomSpawnX, randomSpawnY, randomSpawnZ), transform.rotation);
                 }
-                                   
+
                 StartCoroutine(AsteroidTimer());
             }
 
             //Win triggered if all enemy weakpoints are destroyed
             if (enemyWeakpointsDestroyed >= 3)
             {
-                //Win Game
-                SceneManager.LoadScene(3);
-                AudioManagerScript.instance.Stop("GameMusic");
-                AudioManagerScript.instance.Stop("Engine");
-                AudioManagerScript.instance.Play("WinMusic");
-                inGame = false;
+                StartCoroutine(WinGame());
             }
 
             //Loss triggered if all ally weakpoints are destroyed
             if (allyWeakpointsDestroyed >= 3)
             {
-                //Lose Game
-                SceneManager.LoadScene(4);
-                AudioManagerScript.instance.Stop("GameMusic");
-                AudioManagerScript.instance.Stop("Engine");
-                AudioManagerScript.instance.Play("LoseMusic");
-                inGame = false;
+                StartCoroutine(LoseGame());
             }
         }
         
@@ -387,5 +377,48 @@ public class GameManager : MonoBehaviour
         asteroidCanSpawn = false;
         yield return new WaitForSeconds(15f);
         asteroidCanSpawn = true;
-    }  
+    }
+
+    //Cutscene Stuff
+
+    public BlackScreen fadeController;
+    public IEnumerator WinGame()
+    {
+        yield return new WaitForSeconds(5f);
+        fadeController.FadeIn();
+
+        AudioManagerScript.instance.Play("WinMusic");
+        yield return new WaitForSeconds(5f); // Wait for seconds
+        fadeController.FadeOut();
+
+        // load the win cutscene
+        SceneManager.LoadScene(3);
+        AudioManagerScript.instance.Stop("GameMusic");
+        AudioManagerScript.instance.Stop("Engine");
+        inGame = false;
+
+        // Load the score
+        //yield return new WaitForSeconds(3f);
+        //SceneManager.LoadScene(3);
+    }
+
+    public IEnumerator LoseGame()
+    {
+        yield return new WaitForSeconds(5f);
+        fadeController.FadeIn();
+
+        AudioManagerScript.instance.Play("LoseMusic");
+        yield return new WaitForSeconds(5f);  // Wait for seconds
+        fadeController.FadeOut();
+
+        // load the lose cutscene
+        SceneManager.LoadScene(4);
+        AudioManagerScript.instance.Stop("GameMusic");
+        AudioManagerScript.instance.Stop("Engine");
+        inGame = false;
+
+        // Load the score
+       // yield return new WaitForSeconds(3f);
+       // SceneManager.LoadScene(4);
+    }
 }

@@ -182,6 +182,20 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(19);
     }
 
+    public void CutsceneWin()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(20);
+    }
+
+    public void CutsceneLose()
+    {
+        AudioManagerScript.instance.Play("Click");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(21);
+    }
+
     public void QuitGame()
     {
         AudioManagerScript.instance.Play("Click");

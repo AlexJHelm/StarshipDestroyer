@@ -17,7 +17,8 @@ public class ShipController : MonoBehaviour
     public Vector3 respawnPos;
     public Camera mainCamera;
     public Camera overlookCamera;
-    public Camera otherCamera;
+    public GameObject otherCamera;
+    public GameObject VCAM;
     public bool explosionPlayed, respawnTimerActive;
 
     public float deadZoneRadius = .10f;
@@ -59,7 +60,8 @@ public class ShipController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         mainCamera.enabled = true;
         overlookCamera.enabled = false;
-        otherCamera.enabled = true;
+        otherCamera.SetActive(true);
+        VCAM.SetActive(true);
         targetRotation = transform.rotation;
 
         //Sets screen center
@@ -177,7 +179,8 @@ public class ShipController : MonoBehaviour
                 AudioManagerScript.instance.Play("Explosion");
                 explosionPlayed = true;
                 StartCoroutine(ExplosionTimer());
-                otherCamera.enabled = false;
+                otherCamera.SetActive(false);
+                VCAM.SetActive(false);
             }
         }
     }
@@ -186,10 +189,11 @@ public class ShipController : MonoBehaviour
     {
         respawnTimerActive = true;
         yield return new WaitForSeconds(3f);
+        otherCamera.SetActive(true);
+        VCAM.SetActive(true);
         respawnTimerActive = false;
         health = 100;
         mainCamera.enabled = true;
-        otherCamera.enabled = true;
         overlookCamera.enabled = false;
         mainCamera.transform.position = respawnPos;
         transform.position = respawnPos;
@@ -202,8 +206,10 @@ public class ShipController : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         mesh.enabled = false;
-        mainCamera.enabled = false;
         overlookCamera.enabled = true;
+        mainCamera.enabled = false;      
+        otherCamera.SetActive(false);
+        VCAM.SetActive(false);
         StartCoroutine(RespawnTimer());
     }
 

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes Updated/Setup Upgrades Screen N.unity
     guid: 86ce014b4682e2a49b9c1afca5b32838
   - enabled: 1
-    path: Assets/Scenes Updated/GameScene.unity
+    path: Assets/Scenes Current/GameScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes Current/Win_Lose/WinScene N2.unity
@@ -27,20 +27,20 @@ EditorBuildSettings:
     path: Assets/Scenes Current/Options/Options Controls Movement Screen N2.unity
     guid: 5b77eb2c6e7d348408ebe65cbdc80f25
   - enabled: 1
-    path: Assets/Scenes Current/Handbook/Handbook Player Screen N2.unity
-    guid: d637d5523954d9a419705e726cb03d5c
+    path: Assets/Scenes Current/Handbook/Handbook Player Screen Js.unity
+    guid: 8eb24e740e194f34d81c1c4741c631e0
   - enabled: 1
-    path: Assets/Scenes Current/Handbook/Handbook OBJ Screen N2.unity
-    guid: 858b00e99b210c74eb803b772638c0ec
+    path: Assets/Scenes Current/Handbook/Handbook OBJ Screen Js.unity
+    guid: 0e6a80be8f8b6ab4cbc8b0fec1ac608f
   - enabled: 1
-    path: Assets/Scenes Current/Handbook/Handbook Boost Screen N2.unity
-    guid: ddc09793036bff641beb0a1f9dce0639
+    path: Assets/Scenes Current/Handbook/Handbook Boost Screen Js.unity
+    guid: 53e53a8e8c9aedf4f967329c97397528
   - enabled: 1
-    path: Assets/Scenes Current/Handbook/Handbook Scrap Screen N2.unity
-    guid: c42c990db2befdc45a976a54948be620
+    path: Assets/Scenes Current/Handbook/Handbook Scrap Screen Js.unity
+    guid: 051fe890160658f449ee4c170563fbfc
   - enabled: 1
-    path: Assets/Scenes Current/Handbook/Handbook Ships Screen N2.unity
-    guid: 3a0a0c3097200d4419512aca556ab4ac
+    path: Assets/Scenes Current/Handbook/Handbook Ships Screen Js.unity
+    guid: 372ad98e0d9e2894fa15332feb8d98f1
   - enabled: 1
     path: Assets/Scenes Current/Other/News Screen N2.unity
     guid: fd48028c60e016447818a631be67e337
@@ -65,4 +65,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes Current/Options/Options Audio SFX Screen N2.unity
     guid: d5b2e8fe38b5cf74f8e82f15a34fc100
+  - enabled: 1
+    path: Assets/Scenes Current/Game Scene/CutsceneWin Js.unity
+    guid: 86e92be502e74f248bf32a59bc99c56f
+  - enabled: 1
+    path: Assets/Scenes Current/Game Scene/CutsceneLose Js.unity
+    guid: e1c525cefa221f8459ba2589663abc8b
   m_configObjects: {}

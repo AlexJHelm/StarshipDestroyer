@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public bool enemyWeaponsDestroyed;
     public bool enemyBridgeDestroyed;
     public bool enemyThrustersDestroyed;
+    public bool cutscenePlaying;
 
     public bool inGame = false;
     public bool inSetup = false;
@@ -292,22 +293,22 @@ public class GameManager : MonoBehaviour
             if (enemyWeakpointsDestroyed >= 3)
             {
                 //Win Game
-                SceneManager.LoadScene(3);
-                AudioManagerScript.instance.Stop("GameMusic");
-                AudioManagerScript.instance.Stop("Engine");
-                AudioManagerScript.instance.Play("WinMusic");
-                inGame = false;
+                if(cutscenePlaying == false)
+                {
+                    cutscenePlaying = true;
+                    StartCoroutine(WinGame());
+                }
             }
 
             //Loss triggered if all ally weakpoints are destroyed
             if (allyWeakpointsDestroyed >= 3)
             {
                 //Lose Game
-                SceneManager.LoadScene(4);
-                AudioManagerScript.instance.Stop("GameMusic");
-                AudioManagerScript.instance.Stop("Engine");
-                AudioManagerScript.instance.Play("LoseMusic");
-                inGame = false;
+                if (cutscenePlaying == false)
+                {
+                    cutscenePlaying = true;
+                    StartCoroutine(LoseGame());
+                }
             }
         }
         
@@ -479,9 +480,56 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(15f);
         asteroidCanSpawn = true;
     }
-    
-    /*public IEnumerator CameraShakeTimer()
+
+    public BlackScreen fadeController;
+
+    public IEnumerator WinGame()
     {
-        
-    }*/
+        yield return new WaitForSeconds(5f);
+        fadeController.FadeIn();
+
+        AudioManagerScript.instance.Play("WinMusic");
+        yield return new WaitForSeconds(2f); // Wait for seconds
+        fadeController.FadeOut();
+
+        // load the win cutscene
+        SceneManager.LoadScene(20);
+        Cursor.visible = false;
+        AudioManagerScript.instance.Stop("GameMusic");
+        AudioManagerScript.instance.Stop("Engine");
+        inGame = false;
+
+        // Load the score
+        yield return new WaitForSeconds(5f);
+        fadeController.FadeIn();
+        yield return new WaitForSeconds(2f);
+        fadeController.FadeOut();
+        SceneManager.LoadScene(3);
+        Cursor.visible = true;
+    }
+
+    public IEnumerator LoseGame()
+    {
+        yield return new WaitForSeconds(5f);
+        fadeController.FadeIn();
+
+        AudioManagerScript.instance.Play("LoseMusic");
+        yield return new WaitForSeconds(2f);  // Wait for seconds
+        fadeController.FadeOut();
+
+        // load the lose cutscene
+        SceneManager.LoadScene(21);
+        Cursor.visible = false;
+        AudioManagerScript.instance.Stop("GameMusic");
+        AudioManagerScript.instance.Stop("Engine");
+        inGame = false;
+
+        // Load the score
+        yield return new WaitForSeconds(5f);
+        fadeController.FadeIn();
+        yield return new WaitForSeconds(2f);
+        fadeController.FadeOut();
+        SceneManager.LoadScene(4);
+        Cursor.visible = true;
+    }
 }

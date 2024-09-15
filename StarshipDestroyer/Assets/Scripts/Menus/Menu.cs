@@ -51,6 +51,7 @@ public class Menu : MonoBehaviour
             GameManager.GM.maxDefenders = GameManager.GM.defendersAllocated;
             GameManager.GM.enemyWeakpointsDestroyed = 0;
             GameManager.GM.allyWeakpointsDestroyed = 0;
+            GameManager.GM.cutscenePlaying = false;
             GameManager.GM.enemyBridgeDestroyed = false;
             GameManager.GM.enemyWeaponsDestroyed = false;
             GameManager.GM.enemyThrustersDestroyed = false;
@@ -202,6 +203,21 @@ public class Menu : MonoBehaviour
         GameManager.GM.inGame = false;
         SceneManager.LoadScene(19);
     }
+
+    public void CutsceneWin()
+    {
+        AudioManagerScript.instance.Stop("Engine");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(20);
+    }
+
+    public void CutsceneLose()
+    {
+        AudioManagerScript.instance.Stop("Engine");
+        GameManager.GM.inGame = false;
+        SceneManager.LoadScene(21);
+    }
+
 
     public void QuitGame()
     {

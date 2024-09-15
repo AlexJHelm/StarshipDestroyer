@@ -76,6 +76,7 @@ TagManager:
   - OutOfBounds
   - AllyEngineExhaust
   - EnemyEngineExhaust
+  - VCAM
   layers:
   - Default
   - TransparentFX

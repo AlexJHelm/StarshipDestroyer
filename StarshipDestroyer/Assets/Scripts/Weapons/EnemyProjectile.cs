@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class EnemyProjectile : MonoBehaviour
 {
     //Variable Declarations
 
     Rigidbody rb;
-    public GameObject mainCamera;
+    public GameObject VCAM;
     public GameObject hitVFX;
     float shotForce = 2500f;
     int damage = 10;
@@ -67,7 +68,7 @@ public class EnemyProjectile : MonoBehaviour
         if (collision.gameObject.tag == "PlayerLaser" || collision.gameObject.tag == "PlayerBomb" || collision.gameObject.tag == "PlayerMissile")
         {
             collision.gameObject.GetComponent<ShipController>().health -= damage;
-            mainCamera.GetComponent<CameraShake>().cameraShaking = true;
+            //VCAM.GetComponent<CameraShake>().cameraShaking = true;
             Instantiate(hitVFX, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }

@@ -7,6 +7,7 @@ public class Weakpoints : MonoBehaviour
     //Variable Declaration
 
     public float weakpointHealth = 100;
+    public float maxWeakpointHealth = 100;
     public bool canTakeDamage = true;
     public bool takingDamage = false;
 

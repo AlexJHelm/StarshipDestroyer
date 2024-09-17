@@ -83,8 +83,6 @@ public class Menu : MonoBehaviour
     public void WinScene()
     {
         GameManager.GM.inGame = false;
-        GameManager.GM.scrapGained += 25;
-        GameManager.GM.scrap += 25;
         GameManager.GM.onWinScene = true;
         SceneManager.LoadScene(3);
     }    

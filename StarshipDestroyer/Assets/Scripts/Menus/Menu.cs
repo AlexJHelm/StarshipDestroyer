@@ -61,6 +61,11 @@ public class Menu : MonoBehaviour
             GameManager.GM.enemyBombersAlive = 0;
             GameManager.GM.defendersAlive = 0;
             GameManager.GM.enemyDefendersAlive = 0;
+            GameManager.GM.scrapGained = 0;
+            GameManager.GM.fightersDestroyed = 0;
+            GameManager.GM.bombersDestroyed = 0;
+            GameManager.GM.defendersDestroyed = 0;
+            GameManager.GM.totalDestroyed = 0;
             GameManager.GM.canSpawn = true;
             GameManager.GM.asteroidCanSpawn = true;
             GameManager.GM.inSetup = false;

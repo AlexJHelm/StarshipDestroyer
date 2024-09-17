@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     public int maxFighters, maxBombers, maxDefenders;
 
-    public int scrapGained, fightersDestroyed, bombersDestroyed, defendersDestroyed, totalDestroyed;
+    public int scrapGained, fightersDestroyed, bombersDestroyed, defendersDestroyed, totalDestroyed, numOfAsteroids;
 
     public TMP_Text fighterText, bomberText, defenderText, remainingText, scrapText, healthUpgradeText, spacecraftUpgradeText, weaponsUpgradeText, laserText, bombText, missileText, 
         shipsAllocatedText, selectedWeaponText, confirmationText, fightersDestroyedText, bombersDestroyedText, defendersDestroyedText, totalDestroyedText;
@@ -267,7 +267,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(RespawnTimer());
                 
             }
-            if (asteroidCanSpawn == true)
+            if (asteroidCanSpawn == true || numOfAsteroids <= 20)
             {
                 randomSpawnX = Random.Range(-250, 380);
                 randomSpawnY = Random.Range(-50, 140);
@@ -285,6 +285,7 @@ public class GameManager : MonoBehaviour
                 {
                     Instantiate(asteroid3, new Vector3(randomSpawnX, randomSpawnY, randomSpawnZ), transform.rotation);
                 }
+                numOfAsteroids++;
                                    
                 StartCoroutine(AsteroidTimer());
             }

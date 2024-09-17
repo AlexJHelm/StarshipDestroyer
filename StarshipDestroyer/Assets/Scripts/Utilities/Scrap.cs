@@ -10,6 +10,7 @@ public class Scrap : MonoBehaviour
     {
         //Assigns projectile rigidbody
         rb = GetComponent<Rigidbody>();
+        StartCoroutine(scrapTimer());
     }
 
     private void Update()
@@ -30,5 +31,11 @@ public class Scrap : MonoBehaviour
             }
             Destroy(gameObject);
         }
+    }
+
+    public IEnumerator scrapTimer()
+    {
+        yield return new WaitForSeconds(30f);
+        Destroy(gameObject);
     }
 }

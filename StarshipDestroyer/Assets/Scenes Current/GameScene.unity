@@ -1272,7 +1272,7 @@ RectTransform:
   - {fileID: 916351506}
   - {fileID: 276465981}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2125,7 +2125,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &182664748
 MonoBehaviour:
@@ -2794,6 +2794,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
     - target: {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX1
+      value: 
+      objectReference: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
+    - target: {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX2
+      value: 
+      objectReference: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
+    - target: {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX3
+      value: 
+      objectReference: {fileID: 3234162823733489064, guid: 54958d83ce53e70469c6cd7d48d709ea, type: 3}
+    - target: {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX4
+      value: 
+      objectReference: {fileID: 1693458666168167605, guid: 81b7fe0ba847cb54f81d0fbb591748ea, type: 3}
+    - target: {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX5
+      value: 
+      objectReference: {fileID: 1366486483256063288, guid: ba640fb1cd342fa41a9d7b49dfac1a0d, type: 3}
+    - target: {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX6
+      value: 
+      objectReference: {fileID: 4424817634358146465, guid: c573d0fd2e8610f42a9a1fca142e6653, type: 3}
+    - target: {fileID: 782559559185778658, guid: c593b13f18b90884d885799e630475e1, type: 3}
       propertyPath: enemyWeaponsVFX
       value: 
       objectReference: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
@@ -2870,6 +2894,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
     - target: {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX1
+      value: 
+      objectReference: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
+    - target: {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX2
+      value: 
+      objectReference: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
+    - target: {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX3
+      value: 
+      objectReference: {fileID: 3234162823733489064, guid: 54958d83ce53e70469c6cd7d48d709ea, type: 3}
+    - target: {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX4
+      value: 
+      objectReference: {fileID: 1693458666168167605, guid: 81b7fe0ba847cb54f81d0fbb591748ea, type: 3}
+    - target: {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX5
+      value: 
+      objectReference: {fileID: 1366486483256063288, guid: ba640fb1cd342fa41a9d7b49dfac1a0d, type: 3}
+    - target: {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX6
+      value: 
+      objectReference: {fileID: 4424817634358146465, guid: c573d0fd2e8610f42a9a1fca142e6653, type: 3}
+    - target: {fileID: 4953138904225983325, guid: c593b13f18b90884d885799e630475e1, type: 3}
       propertyPath: enemyWeaponsVFX
       value: 
       objectReference: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
@@ -2901,6 +2949,30 @@ PrefabInstance:
       propertyPath: enemyBridgeVFX
       value: 
       objectReference: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
+    - target: {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX1
+      value: 
+      objectReference: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
+    - target: {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX2
+      value: 
+      objectReference: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
+    - target: {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX3
+      value: 
+      objectReference: {fileID: 3234162823733489064, guid: 54958d83ce53e70469c6cd7d48d709ea, type: 3}
+    - target: {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX4
+      value: 
+      objectReference: {fileID: 1693458666168167605, guid: 81b7fe0ba847cb54f81d0fbb591748ea, type: 3}
+    - target: {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX5
+      value: 
+      objectReference: {fileID: 1366486483256063288, guid: ba640fb1cd342fa41a9d7b49dfac1a0d, type: 3}
+    - target: {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
+      propertyPath: destructionVFX6
+      value: 
+      objectReference: {fileID: 4424817634358146465, guid: c573d0fd2e8610f42a9a1fca142e6653, type: 3}
     - target: {fileID: 5766754314259529418, guid: c593b13f18b90884d885799e630475e1, type: 3}
       propertyPath: enemyWeaponsVFX
       value: 
@@ -6254,7 +6326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809046057922260669, guid: 7690908557270b348a791df7c303d673, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4809046057922260669, guid: 7690908557270b348a791df7c303d673, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6585,6 +6657,12 @@ MonoBehaviour:
   canTakeDamage: 1
   takingDamage: 0
   gm: {fileID: 0}
+  destructionVFX1: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
+  destructionVFX2: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
+  destructionVFX3: {fileID: 3234162823733489064, guid: 54958d83ce53e70469c6cd7d48d709ea, type: 3}
+  destructionVFX4: {fileID: 1693458666168167605, guid: 81b7fe0ba847cb54f81d0fbb591748ea, type: 3}
+  destructionVFX5: {fileID: 1366486483256063288, guid: ba640fb1cd342fa41a9d7b49dfac1a0d, type: 3}
+  destructionVFX6: {fileID: 4424817634358146465, guid: c573d0fd2e8610f42a9a1fca142e6653, type: 3}
 --- !u!1 &639499091
 GameObject:
   m_ObjectHideFlags: 0
@@ -16341,68 +16419,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494487874}
   m_CullTransparentMesh: 1
---- !u!1001 &1494515602
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 30.102222
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 212.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -117
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143127308862874515, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9217821095598517570, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-      propertyPath: m_Name
-      value: GamePlay Music Object
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2106539677813000544, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7c6c9ec1b485b064daa392c0c3bac8fb, type: 3}
 --- !u!1 &1514320021
 GameObject:
   m_ObjectHideFlags: 0
@@ -18898,7 +18914,7 @@ RectTransform:
   - {fileID: 688937553}
   - {fileID: 1560288026}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19684,7 +19700,7 @@ Transform:
   m_Children:
   - {fileID: 1961309263}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1744715233
 GameObject:
@@ -20501,6 +20517,12 @@ MonoBehaviour:
   canTakeDamage: 1
   takingDamage: 0
   gm: {fileID: 0}
+  destructionVFX1: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
+  destructionVFX2: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
+  destructionVFX3: {fileID: 3234162823733489064, guid: 54958d83ce53e70469c6cd7d48d709ea, type: 3}
+  destructionVFX4: {fileID: 1693458666168167605, guid: 81b7fe0ba847cb54f81d0fbb591748ea, type: 3}
+  destructionVFX5: {fileID: 1366486483256063288, guid: ba640fb1cd342fa41a9d7b49dfac1a0d, type: 3}
+  destructionVFX6: {fileID: 4424817634358146465, guid: c573d0fd2e8610f42a9a1fca142e6653, type: 3}
 --- !u!65 &1835946230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22080,6 +22102,12 @@ MonoBehaviour:
   canTakeDamage: 1
   takingDamage: 0
   gm: {fileID: 0}
+  destructionVFX1: {fileID: 974921667125053229, guid: 42e0317506e736548af689436ac0c916, type: 3}
+  destructionVFX2: {fileID: 2251607722082407599, guid: a6d3cec261b22ba41ab30261578a2730, type: 3}
+  destructionVFX3: {fileID: 3234162823733489064, guid: 54958d83ce53e70469c6cd7d48d709ea, type: 3}
+  destructionVFX4: {fileID: 1693458666168167605, guid: 81b7fe0ba847cb54f81d0fbb591748ea, type: 3}
+  destructionVFX5: {fileID: 1366486483256063288, guid: ba640fb1cd342fa41a9d7b49dfac1a0d, type: 3}
+  destructionVFX6: {fileID: 4424817634358146465, guid: c573d0fd2e8610f42a9a1fca142e6653, type: 3}
 --- !u!114 &1984710967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23194,7 +23222,7 @@ Transform:
   m_Children:
   - {fileID: 1849404040}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084143004
 GameObject:

@@ -501,12 +501,14 @@ public class GameManager : MonoBehaviour
         inGame = false;
 
         // Load the score
+        AudioManagerScript.instance.Play("ExplosionFinale");
         yield return new WaitForSeconds(5f);
         fadeController.FadeIn();
         yield return new WaitForSeconds(2f);
         fadeController.FadeOut();
         scrapGained += 25;
         scrap += 25;
+        AudioManagerScript.instance.Stop("ExplosionFinale");
         SceneManager.LoadScene(3);
         Cursor.visible = true;
     }
@@ -528,10 +530,12 @@ public class GameManager : MonoBehaviour
         inGame = false;
 
         // Load the score
+        AudioManagerScript.instance.Play("ExplosionFinale");
         yield return new WaitForSeconds(5f);
         fadeController.FadeIn();
         yield return new WaitForSeconds(2f);
         fadeController.FadeOut();
+        AudioManagerScript.instance.Stop("ExplosionFinale");
         SceneManager.LoadScene(4);
         Cursor.visible = true;
     }

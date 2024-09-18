@@ -591,6 +591,13 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: ExplosionFinale
+    clip: {fileID: 8300000, guid: cf1c0251e0d352e41974b69691d4c604, type: 3}
+    mixer: {fileID: 0}
+    volume: 0.521
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &52826370
 Transform:
   m_ObjectHideFlags: 0
@@ -11708,7 +11715,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099105307}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d18bd18815c93e54dae5f46e43d24ca6, type: 3}
   m_Name: 

@@ -10,7 +10,7 @@ public class CollisionScript : MonoBehaviour
             collision.gameObject.tag == "EnemyBridge" || collision.gameObject.tag == "EnemyWeapons" || collision.gameObject.tag == "EnemyThrusters" || collision.gameObject.tag == "AllyBridge" ||
             collision.gameObject.tag == "AllyWeapons" || collision.gameObject.tag == "AllyThrusters")
         { 
-            if(this.tag == "PlayerLaser" || this.tag == "PlayerBomb" || this.tag == "Playermissile")
+            if(this.tag == "PlayerLaser" || this.tag == "PlayerBomb" || this.tag == "PlayerMissile")
             {
                 gameObject.GetComponent<ShipController>().health = 0;
                 Debug.Log("Destroyed");

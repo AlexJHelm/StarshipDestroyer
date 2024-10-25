@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
 
             if (canSpawn == true)
             {
-                while(enemyFightersAlive < maxFighters * 2)
+                while(enemyFightersAlive < maxFighters * 3)
                 {
                     randomSpawnPos = Random.Range(0, 4);
                     if(randomSpawnPos <= 1)
@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour
                     enemyFightersAlive += 1;
                 }
 
-                while (enemyBombersAlive < maxBombers * 2)
+                while (enemyBombersAlive < maxBombers * 3)
                 {
                     randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)
@@ -193,7 +193,7 @@ public class GameManager : MonoBehaviour
                     enemyBombersAlive += 1;
                 }
 
-                while (enemyDefendersAlive < maxDefenders * 2)
+                while (enemyDefendersAlive < maxDefenders * 3)
                 {
                     randomSpawnPos = Random.Range(0, 4);
                     if (randomSpawnPos <= 1)

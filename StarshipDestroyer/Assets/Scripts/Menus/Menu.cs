@@ -225,6 +225,10 @@ public class Menu : MonoBehaviour
     public void QuitGame()
     {
         AudioManagerScript.instance.Play("Click");
+        PlayerPrefs.SetInt("Scrap", GameManager.GM.scrap);
+        PlayerPrefs.SetInt("Allocations", GameManager.GM.numOfIncreasedShipAllocations);
+        PlayerPrefs.SetInt("HealthUpgradeUnlocked", (GameManager.GM.shipHealthUpgradeUnlocked ? 1 : 0));
+        PlayerPrefs.SetInt("WeaponsUpgradeUnlocked", (GameManager.GM.shipWeaponsUpgradeUnlocked ? 1 : 0));
         Application.Quit();
     }
 }

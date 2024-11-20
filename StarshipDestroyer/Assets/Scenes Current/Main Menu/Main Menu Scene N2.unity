@@ -24225,7 +24225,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: scrap
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: asteroid1
@@ -24254,6 +24254,10 @@ PrefabInstance:
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: cursorPauseMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
+      propertyPath: menuMusicPlaying
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1724005332963331816, guid: ec9db29ac2097ff49a548bb15588f7f3, type: 3}
       propertyPath: defendersAllocated

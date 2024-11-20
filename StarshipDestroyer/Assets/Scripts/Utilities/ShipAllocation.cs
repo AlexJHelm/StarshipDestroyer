@@ -98,7 +98,7 @@ public class ShipAllocation : MonoBehaviour
         if (GameManager.GM.scrap >= 25 && GameManager.GM.numOfIncreasedShipAllocations < 5)
         {
             GameManager.GM.scrap -= 25;
-            GameManager.GM.numOfIncreasedShipAllocations += 3;
+            GameManager.GM.numOfIncreasedShipAllocations += 1;
             GameManager.GM.remainingAllocationSlots = GameManager.GM.remainingAllocationSlots + 3;
         }
     }

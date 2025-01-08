@@ -91,36 +91,47 @@ public class AllyBomberMovement : MonoBehaviour
         Move();
     }
 
+    //Turn Function
     void Turn()
     {
+        //Initially checks to see if the enemy weapons are destroyed
         if (GameManager.GM.enemyWeaponsDestroyed == false)
         {
+            //If the enemy weapons game object exists and is the main target, perform following actions
             if (mainTarget == GameObject.FindWithTag("EnemyWeapons").transform)
             {
+                //Updates position in respect to enemy weapons
                 Vector3 pos = (mainTarget.position + new Vector3(80, 0, 0)) - transform.position;
+                //Sets new rotation for new position
                 Quaternion rotation = Quaternion.LookRotation(pos);
+                //Creates the rotation for new position
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
             }
+            //If the main target is not the enemy weapons, then perform these following actions
             else
             {
+                //General position update
                 Vector3 pos = (mainTarget.position - new Vector3(50, 0, 0)) - transform.position;
+                //Sets new rotation for new position
                 Quaternion rotation = Quaternion.LookRotation(pos);
+                //Creates the rotation for new position
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
             }
         }
+        //If enemy weapons are destroyed, perform these following actions
         else
         {
+            //General position update
             Vector3 pos = (mainTarget.position - new Vector3(50, 0, 0)) - transform.position;
+            //Sets new rotation for new position
             Quaternion rotation = Quaternion.LookRotation(pos);
+            //Creates the rotation for new position
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationalDamp * Time.deltaTime);
         }
-
     }
 
     private void Move()
     {
-
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
-
     }
 }

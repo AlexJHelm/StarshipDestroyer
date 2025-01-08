@@ -97,37 +97,41 @@ public class AllyBomberAttack : MonoBehaviour
         }
     }
 
+    //Function to check if target is in front of game object
     bool InFront()
     {
+        //Sets directions and angle
         Vector3 directionToTarget = transform.position - target.position;
         float angle = Vector3.Angle(transform.forward, directionToTarget);
 
+        //Checks if the targets is in between 158 and 202 degrees infront of game object
         if (Mathf.Abs(angle) > 158 && Mathf.Abs(angle) < 202)
         {
+            //Debug to visualize the angle
             Debug.DrawLine(transform.position, target.position, Color.green);
             return true;
         }
 
+        //Debug to visualize the angle
         Debug.DrawLine(transform.position, target.position, Color.yellow);
         return false;
     }
 
+    //Function to check if target is within line of sight of game object
     bool HaveLineOfSight()
     {
+        //Creates the raycast and direction to target
         RaycastHit hit;
-
         Vector3 direction = target.position - transform.position;
-        //Debug.DrawRay(shot.transform.position, direction, Color.red);
 
+        //Sends out raycast, and if it hits any of the weakpoints, return true, otherwise, return false
         if (Physics.Raycast(muzzle.position, direction, out hit, range))
         {
             if (hit.transform.CompareTag("EnemyThrusters") || hit.transform.CompareTag("EnemyBridge") || hit.transform.CompareTag("EnemyWeapons"))
             {
-                Debug.Log("Bomber has LoS");
                 return true;
             }
         }
-
         return false;
     }
 
